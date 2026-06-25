@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shop - Ryom Remedies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&amp;family=Urbanist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-highest": "#e1e3e4", secondary: "#8a5100", "on-primary-fixed": "#00201c", "on-secondary-fixed-variant": "#693c00", error: "#ba1a1a", "surface-container-low": "#f3f4f5", "secondary-fixed-dim": "#ffb86f", "on-tertiary-fixed-variant": "#7b2f15", "on-surface-variant": "#3d4947", "surface-container": "#edeeef", "surface-variant": "#e1e3e4", "on-secondary-container": "#673b00", "on-primary-fixed-variant": "#005048", "inverse-primary": "#5edac8", "on-tertiary-container": "#571500", "on-primary-container": "#00332d", "secondary-fixed": "#ffdcbe", "accent-dark": "#D9841A", "primary-container": "#10a696", "surface-dark": "#1A1A2E", "surface-dim": "#d9dadb", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "on-primary": "#ffffff", "on-background": "#191c1d", "outline-variant": "#bcc9c6", "tertiary-fixed": "#ffdbd0", "text-primary": "#1F2937", "inverse-surface": "#2e3132", "on-secondary": "#ffffff", "error-container": "#ffdad6", surface: "#f8f9fa", "primary-fixed-dim": "#5edac8", "on-error": "#ffffff", "tertiary-container": "#dc7959", "on-tertiary-fixed": "#3a0b00", background: "#f8f9fa", "on-tertiary": "#ffffff", "on-surface": "#191c1d", "tertiary-fixed-dim": "#ffb59e", "on-secondary-fixed": "#2c1600", primary: "#006b60", "surface-tint": "#006b60", "primary-dark": "#0D8A7D", "primary-fixed": "#7df7e4", tertiary: "#99452a", "surface-container-high": "#e7e8e9", "whatsapp-green": "#25D366", "text-muted": "#6B7280", "secondary-container": "#fc9d2a", "inverse-on-surface": "#f0f1f2", "surface-bright": "#f8f9fa", outline: "#6d7a77"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"section-gap": "80px", "grid-gutter": "24px", "stack-lg": "24px", "stack-md": "16px", "container-max": "1280px", "stack-sm": "8px", "card-padding": "32px"}, fontFamily: {caption: ["Urbanist"], "body-lg": ["Urbanist"], "headline-lg-mobile": ["Lexend"], "body-md": ["Urbanist"], "headline-md": ["Lexend"], "label-md": ["Urbanist"], "headline-xl": ["Lexend"], "headline-lg": ["Lexend"], headline: ["Lexend"], display: ["Lexend"], body: ["urbanist"], label: ["urbanist"]}, fontSize: {caption: ["12px", {lineHeight: "1.4", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "headline-lg-mobile": ["28px", {lineHeight: "1.2", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "600"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600"}], "headline-xl": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/90 dark:bg-surface-dark/90 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary flex items-center gap-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all rounded-lg p-2" href="#">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+                Ryom Remedies
+            </a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md text-label-md font-label-md" href="/" target="_top">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md text-label-md font-label-md" href="/about" target="_top">About Us</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md text-label-md font-label-md" href="/services" target="_top">Our Services</a>
+<!-- Active Item -->
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary px-3 py-2 text-label-md font-label-md" href="/products" target="_top">Our Products</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md text-label-md font-label-md" href="/careers" target="_top">Careers</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md text-label-md font-label-md" href="/contact" target="_top">Contact Us</a>
+</nav>
+<!-- Trailing Action & Mobile Toggle -->
+<div class="flex items-center gap-4">
+<button class="hidden md:inline-flex bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-6 py-2.5 rounded-lg text-label-md font-label-md font-bold transition-colors active:scale-95 duration-150 shadow-sm hover:shadow-md">
+                    Order Now
+                </button>
+<button aria-label="Menu" class="md:hidden p-2 text-on-surface hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Page Banner -->
+<section class="relative w-full h-[300px] md:h-[400px] flex flex-col justify-center items-center bg-surface-dark overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" data-alt="A macro photograph of scientific laboratory equipment, specifically glowing blue and teal glass beakers and microscopes, representing advanced pharmaceutical research and development. The lighting is moody and clinical, typical of a modern high-tech biotech lab." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZGejS0hBtj-_O_PHtlh4TDeND0nD517weYw0_i7PzPO1u3oKtVrQSJN4Ulnuqt88UAs03PV9Utn0miHSRawGJU6KaQFLJKFgU92AsR3PMk9MOQ4lUa1lddZV98JAn7g8dcv-MYwab4rWFTyoq13hip72SpsQZPndn97sIjwWBSwF85Kj0QBk71P8_RgnBYzdemyySUqMVNLaMkiZd4pI8hMHTHlpW2Jt0A-crVHhh4rUdxhFrOkt-4svmxnzDvbduf06tohiiKQg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/90 to-surface-dark/40"></div>
+<div class="relative z-10 text-center px-4 flex flex-col items-center gap-stack-sm">
+<h1 class="text-headline-xl font-headline-xl text-on-primary">Shop</h1>
+<div class="flex items-center gap-2 text-on-primary/80 text-label-md font-label-md">
+<a class="hover:text-on-primary transition-colors" href="/" target="_top">Ryom Remedies</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary-fixed-dim font-bold">Our Products</span>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<main class="max-w-container-max mx-auto px-6 py-section-gap">
+<div class="flex flex-col md:flex-row gap-grid-gutter">
+<!-- Left Sidebar (Filters) -->
+<aside class="w-full md:w-1/4 shrink-0">
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-card-padding shadow-sm sticky top-24">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-stack-lg pb-4 border-b border-outline-variant/30">Categories</h2>
+<ul class="flex flex-col gap-2">
+<li>
+<a class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md group" href="#">
+<span>Pain &amp; Inflammation</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full text-caption font-caption group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">(2)</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md group" href="#">
+<span>Anti Biotics</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full text-caption font-caption group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">(4)</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md group" href="#">
+<span>Anti Allergic</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full text-caption font-caption group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">(1)</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md group" href="#">
+<span>Anti Emetic</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full text-caption font-caption group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">(1)</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md group" href="#">
+<span>GI Disorders</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full text-caption font-caption group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">(2)</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Right Column (Product Grid) -->
+<section class="w-full md:w-3/4">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-grid-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-container/10 transition-all duration-300 flex flex-col h-full">
+<div class="relative pt-[80%] bg-surface flex items-center justify-center p-4">
+<img alt="Ryoalert-LC Packaging" class="absolute inset-0 w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" data-alt="A professional studio shot of a pharmaceutical medicine box labeled 'Ryoalert-LC'. The packaging is clean white with teal and orange branding accents, indicating a high-quality clinical product. The background is pure white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmQ-KjUzKhJvw5DXEzOQ5kuv-U5OWAiJlpOPHIr-iqLqzXR6V0dkGD32dLwXDWPm29CkLQHAsNf5-1tLzkfrJQoBiuFCSNz_xbbeXbKLek3Hc8vTOdM7rvAgRMhIjQuJb4ez2cpxez3oZSVaKnOEdFAne9vfXsl-JsmQeZy1XCZTt_yb8rbQp0B8DaaqYdNFsiGRqpN8b3NSZys0JLIepY7OCagh54N1UE8xqfllQmAfTuUBg1n8i2Xu3Lgr90TINklippN3fxQ6A"/>
+</div>
+<div class="p-6 flex flex-col flex-grow text-center items-center gap-stack-md border-t border-outline-variant/20">
+<h3 class="text-headline-md font-headline-md text-on-surface line-clamp-2">Ryoalert-LC</h3>
+<div class="mt-auto pt-2">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-2.5 rounded-lg text-label-md font-label-md hover:bg-primary-dark transition-colors w-full group-hover:shadow-md" href="#">
+                                    Read More
+                                </a>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-container/10 transition-all duration-300 flex flex-col h-full">
+<div class="relative pt-[80%] bg-surface flex items-center justify-center p-4">
+<img alt="Ryocort Packaging" class="absolute inset-0 w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" data-alt="A professional studio shot of a pharmaceutical medicine box labeled 'Ryocort'. The packaging is clean white with red and teal branding accents, indicating a high-quality clinical product. The background is pure white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6sCgemfipUo2N0cgMcRGO08udkVXj4P1Ug_E5sDDOKHi9UuCDJSVXVa5pcCAumhCXSQzDiDI-fjFhUlinyF0uqmpq0dZNMiLQWPtYQKLCdjijTnYAsY-fzCGmLKZUJmPnmQLzatqLTppDWQ76qMqNbmgx5QUFQpGgK-pArT5RPJLoQans4q8ZxdhvAx2SMoVivyUSthW3k9CbkPG27uXqMFNBWllySVoDZCIiK_QljhWNWldPA6ByAxQ6zZBXTuw7drzI7dLl5e8"/>
+</div>
+<div class="p-6 flex flex-col flex-grow text-center items-center gap-stack-md border-t border-outline-variant/20">
+<h3 class="text-headline-md font-headline-md text-on-surface line-clamp-2">Ryocort</h3>
+<div class="mt-auto pt-2">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-2.5 rounded-lg text-label-md font-label-md hover:bg-primary-dark transition-colors w-full group-hover:shadow-md" href="#">
+                                    Read More
+                                </a>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-container/10 transition-all duration-300 flex flex-col h-full">
+<div class="relative pt-[80%] bg-surface flex items-center justify-center p-4">
+<img alt="Ryomace P Packaging" class="absolute inset-0 w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" data-alt="A professional studio shot of a pharmaceutical medicine box labeled 'Ryomace P'. The packaging is clean white with deep green and teal branding accents, indicating a high-quality clinical product. The background is pure white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFPTKMCRYgO2WnRkhqVQ19eNAPTTOPL0S-PA4VlPDi8i_IzKXKMen_3Yy143SkK5JZbngpv5y-iP7ZXEsp7wY-g3oUwxTQRPgPC895gJw3Kdn7WTbSoObxxJ2jY9GK_YCmrNnSAZwDl0PLgiXgQo7Uc6L9jRUcDMc14qRmSf-QDBROlCb0juN-0RgIO2zPZm1_6MqOKOD6X0t3DRKfb-52VmctHwk2n_FO39q3qa2hRpX2gRp4UgvI-QU1fF95fsUAKZ6efAx5NCk"/>
+</div>
+<div class="p-6 flex flex-col flex-grow text-center items-center gap-stack-md border-t border-outline-variant/20">
+<h3 class="text-headline-md font-headline-md text-on-surface line-clamp-2">Ryomace P</h3>
+<div class="mt-auto pt-2">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-2.5 rounded-lg text-label-md font-label-md hover:bg-primary-dark transition-colors w-full group-hover:shadow-md" href="#">
+                                    Read More
+                                </a>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-container/10 transition-all duration-300 flex flex-col h-full">
+<div class="relative pt-[80%] bg-surface flex items-center justify-center p-4">
+<img alt="Ryomentin Packaging" class="absolute inset-0 w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" data-alt="A professional studio shot of a pharmaceutical medicine box labeled 'Ryomentin'. The packaging is clean white with beige and teal branding accents, indicating a high-quality clinical product. The background is pure white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUICSJTWbyFa8vFEnY2FkCokw4Le5qrtD-PrRBMJcGlTSKfnjyuUvJWwRDcAP3zBbiFvlxwXV55Qi12ruOZmqYaqdOloUgMz3yiAnWlwtY_Hj_HGIl9Cwk76rkvmJjPJcFQ12bCCVK8NJHFhdxX1Fwl79GJupduo4NU924sedsutKWiEyPEuJFgaOjjchnP3lYVrZ0JCQ4o64LpuDGfLQVE9CfwxAmYcMEtbQwaeaOzEbbdxUBKSNxfHI-ZsjqVRpJy0prhDKIpGw"/>
+</div>
+<div class="p-6 flex flex-col flex-grow text-center items-center gap-stack-md border-t border-outline-variant/20">
+<h3 class="text-headline-md font-headline-md text-on-surface line-clamp-2">Ryomentin</h3>
+<div class="mt-auto pt-2">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-2.5 rounded-lg text-label-md font-label-md hover:bg-primary-dark transition-colors w-full group-hover:shadow-md" href="#">
+                                    Read More
+                                </a>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-container/10 transition-all duration-300 flex flex-col h-full">
+<div class="relative pt-[80%] bg-surface flex items-center justify-center p-4">
+<img alt="Ryomentin Dry Syrup Packaging" class="absolute inset-0 w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" data-alt="A professional studio shot of a pharmaceutical liquid suspension bottle labeled 'Ryomentin Dry Syrup'. The bottle is white plastic with a clean label featuring teal typography, representing pediatric clinical care. The background is pure white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoSOOxIYf5sUfhtgw5VTKy4jokMQnRXM6RPmrJKmGb4Y6P5AU2-yM0VDvJmAGmT9C_k2DFLyiqdMmdqxJ5PxpKO7eYjtI15R902xvzuk0d5Kx7JtxPhKv6e__LfO7VN2yPVnRjw8dORcEBVzthcxNtWY1HobQsOTi2JOJzLJWXbFWIjKsungnxvFpR7yiIyfuPwFY2lt5w-Qa4eKAkOVLxJTstTNIA-hB0zX5HnevKhtCMyTgG9OaLNJCXAysObpP976KPc0O3fH4"/>
+</div>
+<div class="p-6 flex flex-col flex-grow text-center items-center gap-stack-md border-t border-outline-variant/20">
+<h3 class="text-headline-md font-headline-md text-on-surface line-clamp-2">Ryomentin Dry Syrup</h3>
+<div class="mt-auto pt-2">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-2.5 rounded-lg text-label-md font-label-md hover:bg-primary-dark transition-colors w-full group-hover:shadow-md" href="#">
+                                    Read More
+                                </a>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-container/10 transition-all duration-300 flex flex-col h-full">
+<div class="relative pt-[80%] bg-surface flex items-center justify-center p-4">
+<img alt="Ryomicin 250 Packaging" class="absolute inset-0 w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" data-alt="A professional studio shot of a pharmaceutical medicine box labeled 'Ryomicin 250'. The packaging is clean white with light blue and teal branding accents, indicating a high-quality clinical product. The background is pure white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeP4yCLZIVHanOJULVK0dwYrIpBEENJhROrDSsxmWwYGXOP5dRkDXoAhATugYY_2SCFDRP11Q_C4dbm2uT87Hihr_p5FLSffnO9pYk8srky-aqoWM193dbKks0G2QD7xQKOnlNZXtAb2vPmr-rTPcDgriinHJf2xYbO8QZv4rJPBvfa_jvhPfZQ_hGd1GJ0WnSoCy7VG7KHQVxxmQMfY600nm28oErg04m21Yzr-TC7Zp33D3rXFfwtBF4-7S25L1tqwRzWMAR4sE"/>
+</div>
+<div class="p-6 flex flex-col flex-grow text-center items-center gap-stack-md border-t border-outline-variant/20">
+<h3 class="text-headline-md font-headline-md text-on-surface line-clamp-2">Ryomicin 250</h3>
+<div class="mt-auto pt-2">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-2.5 rounded-lg text-label-md font-label-md hover:bg-primary-dark transition-colors w-full group-hover:shadow-md" href="#">
+                                    Read More
+                                </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-dark w-full mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter px-6 py-section-gap max-w-container-max mx-auto text-on-primary">
+<!-- Brand Column -->
+<div class="flex flex-col gap-stack-md">
+<a class="text-headline-md font-headline-md text-on-primary flex items-center gap-2 mb-4" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+                    Ryom Remedies
+                </a>
+<p class="text-body-md font-body-md text-on-primary/80 max-w-xs">
+                    Committed to delivering high-quality, innovative healthcare solutions. Your health, our priority.
+                </p>
+<div class="flex gap-4 mt-4">
+<a class="w-10 h-10 rounded-full bg-surface/10 flex items-center justify-center hover:bg-secondary-container transition-colors text-on-primary hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined text-sm">link</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface/10 flex items-center justify-center hover:bg-secondary-container transition-colors text-on-primary hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<!-- Links Column -->
+<div class="flex flex-col gap-stack-md">
+<h4 class="text-headline-md font-headline-md text-on-primary mb-2">Quick Links</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-on-primary/80 hover:text-on-primary text-label-md font-label-md hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">chevron_right</span> Home
+                    </a>
+<a class="text-on-primary/80 hover:text-on-primary text-label-md font-label-md hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">chevron_right</span> About Us
+                    </a>
+<a class="text-on-primary/80 hover:text-on-primary text-label-md font-label-md hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">chevron_right</span> Our Services
+                    </a>
+<a class="text-secondary-container font-bold text-label-md font-label-md hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">chevron_right</span> Our Products
+                    </a>
+<a class="text-on-primary/80 hover:text-on-primary text-label-md font-label-md hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">chevron_right</span> Careers
+                    </a>
+<a class="text-on-primary/80 hover:text-on-primary text-label-md font-label-md hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">chevron_right</span> Blogs
+                    </a>
+<a class="text-on-primary/80 hover:text-on-primary text-label-md font-label-md hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">chevron_right</span> FAQs
+                    </a>
+<a class="text-on-primary/80 hover:text-on-primary text-label-md font-label-md hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">chevron_right</span> Contact Us
+                    </a>
+</nav>
+</div>
+<!-- Contact Column -->
+<div class="flex flex-col gap-stack-md">
+<h4 class="text-headline-md font-headline-md text-on-primary mb-2">Contact</h4>
+<ul class="flex flex-col gap-4 text-body-md font-body-md text-on-primary/80">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined mt-1">location_on</span>
+<span>Ahmedabad, Gujarat, India.</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">call</span>
+<span>+91 88888 88888</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">mail</span>
+<span>info@ryomremedies.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-on-primary/10 mt-8 py-6 text-center text-body-md font-body-md text-on-primary/60">
+<p>© Copyright 2026 Ryom Remedies Pvt. Ltd. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- Floating Action Button -->
+<a aria-label="Chat on WhatsApp" class="bg-whatsapp-green dark:bg-whatsapp-green text-white rounded-full p-4 fixed bottom-8 right-8 z-50 shadow-xl shadow-whatsapp-green/20 hover:scale-110 hover:shadow-2xl transition-all duration-300 animate-pulse flex items-center justify-center" href="#">
+<span class="material-symbols-outlined" style="font-size: 28px; font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+</body></html>
