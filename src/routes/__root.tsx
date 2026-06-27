@@ -7,10 +7,9 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -37,16 +36,11 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
+        <h1 className="text-xl font-semibold text-foreground">This page didn't load</h1>
         <p className="mt-2 text-sm text-muted-foreground">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
@@ -77,20 +71,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Companion Care Connect is a web application designed to facilitate communication and coordination for caregiving." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Companion Care Connect is a web application designed to facilitate communication and coordination for caregiving." },
+      { title: "Ryom Remedies" },
+      {
+        name: "description",
+        content:
+          "Ryom Remedies offers wellness-focused care, services, products, and guidance for healthier living.",
+      },
+      { name: "author", content: "Ryom Remedies" },
+      { property: "og:title", content: "Ryom Remedies" },
+      {
+        property: "og:description",
+        content:
+          "Explore Ryom Remedies services, products, careers, articles, and contact information.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Companion Care Connect is a web application designed to facilitate communication and coordination for caregiving." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/630cfde5-4dfc-4d5f-a627-092a3621d0bb/id-preview-d2832568--67cc89f0-3c96-4f62-b13b-1a5681e2d87f.lovable.app-1782410653127.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/630cfde5-4dfc-4d5f-a627-092a3621d0bb/id-preview-d2832568--67cc89f0-3c96-4f62-b13b-1a5681e2d87f.lovable.app-1782410653127.png" },
+      { name: "twitter:title", content: "Ryom Remedies" },
+      {
+        name: "twitter:description",
+        content:
+          "Explore Ryom Remedies services, products, careers, articles, and contact information.",
+      },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Urbanist:wght@400;500;600;700&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
