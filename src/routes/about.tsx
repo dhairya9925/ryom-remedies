@@ -1,9 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
+  Award,
   BriefcaseMedical,
   CheckCircle2,
+  Compass,
   FlaskConical,
+  Globe,
   HeartPulse,
+  Scale,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
@@ -27,18 +31,8 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const heroImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCoPhfGVIWGNWFVCalJHCyAKBIKZQeq6BTC77iU4ZgpUnnX-YBRumuHxDWVkBQ2EjM6ozIB5Q0i2DIjj7pmxS1LVzJMX25uM1rXRyp--clW6SV4jtGfTulrx65SLDQqTbROtN8tykk73RHU6rn7xGBOrsHIxWrJYYkNkhh2kzkegRIDttOOjTIeYx9isJWbpyih8WtcDhfJHwSetn4eOYYVHEKwpk6R-TOKWuaXq7BsK5otBCUsuWdwvUpo394QfZIlZIGZWt0jCS4";
-
-const whoWeAreImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCV1l-MYvsKR55jCHP59FmmphFXb_VJB0rUDXBstepfwQzrHz7kteyZPtwKu9ik1RGgxiBMF_77smScOFOgT6J_Vm58MQ3uEVzd6STud_lI4BV1P-yJutRr37nXPYC-RZD3IyZIlWW8QV1IRW52G-mOPj0hSF3H_ESiQIZXPDml438QlK2N-ZNLhyyCOg_uMgFKNqzbQqvlDQuQhpTa7SqE61ckwICArPAPQFOteFToJDFdgQ-dl3mFrLdy2VNVhgJkGeyGBim7EbE";
-
-const overview = [
-  "The name Ryom holds deep cultural and symbolic significance. Traditionally recognized as a masculine name in Korean culture, it embodies strength, resilience, and leadership.",
-  "The essence of Ryom also represents the vibrations of OM, a sacred sound that signifies harmony, balance, and well-being.",
-  "At Ryom Remedies, we are guided by our core philosophy of Spreading Health, Spreading Happiness. We believe access to quality healthcare is a fundamental right and not a privilege.",
-  "The official incorporation date of Ryom Remedies, October 14, 2024, marks the beginning of a new chapter in this mission.",
-];
+const heroImage = "/page-header-bg-1-1.jpg";
+const whoWeAreImage = "/juin-us-bg.png";
 
 const missionItems = [
   "Delivering high-quality medicines that improve lives.",
@@ -73,56 +67,158 @@ function AboutPage() {
         </p>
       </PageHero>
 
-      <OverviewSection />
+      {/* ── Brand Motto Section ──────────────────────────── */}
+      <Section tone="white" className="text-center">
+        <div className="mx-auto max-w-3xl space-y-4">
+          <p className="text-sm font-bold uppercase tracking-widest text-[#fc9d2a]">Our Motto</p>
+          <h2 className="text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+            Spreading Health, Spreading Happiness
+          </h2>
+          <div className="mx-auto h-1 w-20 rounded-full bg-[#fc9d2a]" />
+          <p className="mt-6 text-lg leading-8 text-[#3d4947]">
+            At Ryom Remedies, we are guided by a simple yet powerful vision: to make high-quality,
+            affordable healthcare accessible to all. We believe that good health is the foundation of
+            a happy life, and through our unwavering commitment, we strive to bring safe, effective,
+            and ethically produced medicines to people around the world.
+          </p>
+        </div>
+      </Section>
 
-      <WhoWeAreSection />
+      {/* ── Name Significance ───────────────────────────── */}
+      <Section tone="light" className="relative overflow-hidden">
+        <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#10a696]/5 blur-3xl" aria-hidden="true" />
+        <div className="relative mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <p className="text-sm font-bold uppercase tracking-widest text-[#006b60]">Our Identity</p>
+            <h2 className="mt-2 text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+              What's in a Name?
+            </h2>
+          </div>
 
-      <MissionVisionSection />
-    </RyomSiteLayout>
-  );
-}
+          <div className="grid gap-8 md:grid-cols-2">
+            {/* RYOM Card */}
+            <div className="flex flex-col rounded-2xl border border-[#bcc9c6]/40 bg-white p-8 shadow-sm transition hover:shadow-md">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#e7f7f4] text-[#006b60]">
+                <Sparkles className="h-6 w-6" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+                RYOM – Strength & Leadership
+              </h3>
+              <p className="mt-4 leading-relaxed text-[#3d4947]">
+                Traditionally recognized as a masculine name in Korean culture, it embodies strength,
+                resilience, and leadership. More than just a name, RYOM stands for power and
+                determination, values that align with our vision of making a meaningful impact in the
+                healthcare and pharmaceutical industry.
+              </p>
+            </div>
 
-function OverviewSection() {
-  return (
-    <Section tone="white" className="relative overflow-hidden">
-      <div
-        className="absolute right-0 top-0 h-56 w-56 rounded-full bg-[#10a696]/10 blur-3xl"
-        aria-hidden="true"
-      />
-      <div className="relative grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div className="lg:sticky lg:top-28">
-          <SectionHeader
-            eyebrow="Overview"
-            title="Spreading Health, Spreading Happiness"
-            description="Ryom Remedies is built around a simple promise: dependable medicines, ethical partnerships, and better access to healthcare."
-          />
-          <div className="rounded-lg bg-[#006b60] p-6 text-white shadow-lg">
-            <Sparkles className="mb-5 h-8 w-8 text-[#fc9d2a]" aria-hidden="true" />
-            <p className="text-2xl font-bold [font-family:Lexend,system-ui,sans-serif]">
-              Strength, harmony, and healthcare excellence.
-            </p>
-            <p className="mt-4 leading-7 text-white/80">
-              The name Ryom reflects resilience and balance, values that guide how we serve
-              healthcare professionals, stockists, chemists, and patients.
-            </p>
+            {/* OM Card */}
+            <div className="flex flex-col rounded-2xl border border-[#bcc9c6]/40 bg-white p-8 shadow-sm transition hover:shadow-md">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#ffdcbe] text-[#8a5100]">
+                <HeartPulse className="h-6 w-6" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-bold text-[#8a5100] [font-family:Lexend,system-ui,sans-serif]">
+                OM – Harmony & Healing
+              </h3>
+              <p className="mt-4 leading-relaxed text-[#3d4947]">
+                The essence of RYOM goes beyond its linguistic roots—it also represents the vibrations
+                of "OM," a sacred sound that signifies harmony, balance, and well-being. In the
+                healthcare and pharmaceutical sectors, these principles resonate deeply, as the
+                industry is built on the foundation of care, healing, and continuous innovation.
+              </p>
+            </div>
           </div>
         </div>
+      </Section>
 
-        <div className="grid gap-4">
-          {overview.map((item, index) => (
-            <article
-              key={item}
-              className="grid gap-4 rounded-lg border border-[#e1e3e4] bg-[#f8f9fa] p-5 shadow-sm sm:grid-cols-[48px_1fr] sm:p-6"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#ffdcbe] text-lg font-bold text-[#8a5100] [font-family:Lexend,system-ui,sans-serif]">
-                {index + 1}
+      {/* ── Pillars / Commitments ───────────────────────── */}
+      <Section tone="white" className="relative">
+        <div className="relative mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <p className="text-sm font-bold uppercase tracking-widest text-[#fc9d2a]">Core Commitments</p>
+            <h2 className="mt-2 text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+              Healthcare Built Around Access & Trust
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* Pillar 1 */}
+            <div className="flex gap-5 rounded-xl border border-[#e1e3e4] bg-[#f8f9fa] p-6 shadow-sm">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e7f7f4] text-[#006b60]">
+                <Compass className="h-6 w-6" />
               </div>
-              <p className="text-base leading-7 text-[#3d4947]">{item}</p>
-            </article>
-          ))}
+              <div>
+                <h4 className="text-lg font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+                  Healthcare Access is a Right
+                </h4>
+                <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
+                  We believe that access to quality healthcare is a fundamental right and not a privilege.
+                  Every medicine we produce and every initiative we undertake is centered on this belief,
+                  striving to bridge global healthcare gaps.
+                </p>
+              </div>
+            </div>
+
+            {/* Pillar 2 */}
+            <div className="flex gap-5 rounded-xl border border-[#e1e3e4] bg-[#f8f9fa] p-6 shadow-sm">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e7f7f4] text-[#006b60]">
+                <Globe className="h-6 w-6" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+                  Global Access & Reliability
+                </h4>
+                <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
+                  We are committed to enhancing global healthcare access, ensuring high-quality medicines
+                  reach those who need them most. We focus on research, ethical practices, regulatory
+                  excellence, and innovation.
+                </p>
+              </div>
+            </div>
+
+            {/* Pillar 3 */}
+            <div className="flex gap-5 rounded-xl border border-[#e1e3e4] bg-[#f8f9fa] p-6 shadow-sm">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e7f7f4] text-[#006b60]">
+                <Award className="h-6 w-6" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+                  A New Chapter (Est. 2024)
+                </h4>
+                <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
+                  Our official incorporation on October 14, 2024, marked the beginning of a dedicated
+                  mission to make a lasting impact in the pharmaceutical world, ensuring quality
+                  healthcare remains a fundamental global right.
+                </p>
+              </div>
+            </div>
+
+            {/* Pillar 4 */}
+            <div className="flex gap-5 rounded-xl border border-[#e1e3e4] bg-[#f8f9fa] p-6 shadow-sm">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e7f7f4] text-[#006b60]">
+                <Scale className="h-6 w-6" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+                  Ethical & Affordable Solutions
+                </h4>
+                <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
+                  We maintain strict adherence to quality and safety standards while keeping medicines
+                  affordable, serving chemists, stockists, healthcare professionals, and patients
+                  with trust and reliability.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </Section>
+      </Section>
+
+      {/* ── Who We Are Section ──────────────────────────── */}
+      <WhoWeAreSection />
+
+      {/* ── Mission & Vision ────────────────────────────── */}
+      <MissionVisionSection />
+    </RyomSiteLayout>
   );
 }
 
@@ -221,3 +317,4 @@ function MissionVisionSection() {
     </Section>
   );
 }
+

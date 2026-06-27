@@ -23,8 +23,7 @@ export const Route = createFileRoute("/faqs")({
   component: FaqsPage,
 });
 
-const heroImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCYUk6xNCZIBGnX4_j4gZNkI_a2UI-6WMEM6xMcWcvywHjG8rZHXui16tkU6XLYg-rDyZxgItp4x6zEyp5ikeO8WQggaNvmY-0XRN1vCTGOg3gV0NOtd-jCSjvTH8COZwOZriehFK7rnV9-ChIMub4M6LBFD4bYtZCnxgS3x_v93nFhKeaWDIwgWUjiTic313sXQMwWtyazM98QqMrIlOkhtVy9z4Jm-qr6fWTwIjycv-WGAJIOLzr6ZuzLbe1L10JID-mlZyQGLHU";
+const heroImage = "/page-header-bg-1-1.jpg";
 
 const faqs = [
   {

@@ -23,11 +23,9 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-const heroImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCZa84J3ZApmnd4btEIsoawlpF_KO__x9vmGEBZrLKAcoe8Hra2WjljaZ1LcRL69YXZMTStgvI9CIGKjmT_2eCPZAEIyw5yKfKSegcqsybY5lPKQhd2pnosCHR87NYL8SIvSb82TiVFwC4NzDn7ES8nBGWRgKrT6-re7-daKKKbp_Q6_qgEg_xhlmyRCyQmB7cLWZ21023FwSDx1JR_VxzcWZtsS6UK2IH6ziaUQgWeAct_Z-7tpTKuqoB-wZevtxQ6dJuhJkd-yIM";
+const heroImage = "/page-header-bg-1-1.jpg";
 
-const labImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCmKiV8pd7B_uXVw8DDlkIIC-xSZzM6rjUbBPy-3z-jKG44p-DxzXIogVwFNw9UxC-GT63H6dNu1dyXYij2jVGyhztfESYWN3mCK_18MFNxknj61etq8moT44FFwrDYRH1B9x1TwWHZ4LeT_bbAktAZHPZzWLTuoogBot2fnxfqA3_MWGZyv1x6wjL8iZOoq8hh9jaGeHFtnzzek7F4V7g1U3Vy5LTo7_RzStJWeWgm9WlRcCJ-xKJp9qBUWpTFDZNXc_X78SrMyi4";
+const labImage = "/man-contact.png";
 
 function MapFallback() {
   return (

@@ -1,12 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BadgeCheck, FlaskConical, ShieldCheck, Truck } from "lucide-react";
-import {
-  FeatureCard,
-  PageHero,
-  RyomSiteLayout,
-  Section,
-  SectionHeader,
-} from "@/components/RyomSiteLayout";
+import { PageHero, RyomSiteLayout, Section } from "@/components/RyomSiteLayout";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -20,33 +14,35 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
 });
 
-const heroImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDf96OSqyEC6pXQzbkRPEaXUYs7mTbI3-vS0R-Ec_M9jlG-H9alewxn_87VFO7HCdYfJ57s8u7lmTFWMSzNpwvoz9gteZ0OcXbtXDrhPweGQvMcWwNzQ8Za3hUD1Lbh8Xp53Gf1hy8arhQF916uL6S7GAWolBDDQ3jlBnLZgdF-ww594UlOuwEyBsNPUQ_-om2mIFa2QNBZYLa_LGJ6yP7CZz-kTsG0po2DY28pZkpVLIQb3fbBQSDbpYQOjWwBvqApbb4EJz0JjuY";
+const heroImage = "/page-header-bg-1-1.jpg";
+
+const introText =
+  "We are committed to providing high-quality pharmaceutical products tailored to the needs of chemists, stockists, and healthcare institutions. Our B2B pharmaceutical solutions are designed to ensure a seamless and efficient supply chain, enabling retailers and distributors to access safe, effective, and affordable medicines. By focusing on both product excellence and operational efficiency, we help businesses in the pharmaceutical sector maintain a consistent supply of essential medications, ultimately improving patient care and public health.";
 
 const services = [
   {
     title: "Affordable & Ethical Healthcare Solutions",
     description:
-      "Our affordable pricing strategies, combined with ethical business practices, help patients receive dependable treatments without unnecessary barriers.",
-    icon: <FlaskConical className="h-6 w-6" aria-hidden="true" />,
+      "We believe that healthcare should be accessible to all. Our affordable pricing strategies, combined with ethical business practices, ensure that patients receive the best possible treatments without financial barriers.",
+    icon: FlaskConical,
   },
   {
-    title: "Quality Manufacturing Partnerships",
+    title: "WHO-Approved Manufacturing Partner",
     description:
-      "We work with manufacturing partners that follow strong quality systems, helping every medicine we supply remain safe, effective, and reliable.",
-    icon: <BadgeCheck className="h-6 w-6" aria-hidden="true" />,
+      "Our products are manufactured in facilities that meet WHO's stringent quality standards, guaranteeing compliance with international regulatory requirements. This ensures that every medicine we supply is safe, effective, and reliable.",
+    icon: BadgeCheck,
   },
   {
     title: "Strong Distribution Network",
     description:
-      "Our supply approach is optimized for speed, accuracy, and reliability so retailers, stockists, and healthcare providers can maintain availability.",
-    icon: <Truck className="h-6 w-6" aria-hidden="true" />,
+      "We have built a robust and efficient distribution system, allowing us to reach a wide network of retailers, stockists, and healthcare providers. Our supply chain is optimized for speed, accuracy, and reliability, ensuring that our products are available whenever and wherever they are needed.",
+    icon: Truck,
   },
   {
     title: "Commitment to Quality & Compliance",
     description:
-      "From manufacturing to distribution, we prioritize safety, compliance, documentation, and ethical practices.",
-    icon: <ShieldCheck className="h-6 w-6" aria-hidden="true" />,
+      "Quality is at the heart of everything we do. From manufacturing to distribution, we adhere to the highest industry standards, ensuring that every product meets strict regulatory guidelines. Our dedication to compliance, safety, and ethical business practices makes us a trusted partner in the pharmaceutical industry.",
+    icon: ShieldCheck,
   },
 ];
 
@@ -60,29 +56,47 @@ function ServicesPage() {
         </p>
       </PageHero>
 
-      <Section tone="teal">
-        <div className="max-w-4xl text-lg leading-8 text-white/85">
-          <p>
-            We provide high-quality pharmaceutical products tailored to the needs of chemists,
-            stockists, and healthcare institutions. Our B2B solutions support a seamless and
-            efficient supply chain so businesses can access safe, effective, and affordable
-            medicines.
-          </p>
+      <Section tone="teal" className="relative overflow-hidden py-16 sm:py-20">
+        {/* Intro text */}
+        <div className="mx-auto max-w-4xl text-lg leading-8 text-white/95">
+          <p>{introText}</p>
         </div>
-      </Section>
 
-      <Section>
-        <SectionHeader
-          eyebrow="Why Choose Ryom"
-          title="Services built for dependable pharmaceutical supply"
-          description="Each service area is represented as reusable content data, ready to be sourced from a CMS later."
-        />
-        <div className="grid gap-6 md:grid-cols-2">
-          {services.map((service) => (
-            <FeatureCard key={service.title} {...service} />
-          ))}
+        {/* Why choose? Header */}
+        <div className="mt-16 mb-10 text-left">
+          <h2 className="text-3xl font-bold text-[#fc9d2a] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+            Why choose?
+          </h2>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid gap-8 md:grid-cols-2">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={service.title}
+                className="group flex items-center gap-6 rounded-2xl bg-white p-6 md:p-8 shadow-lg border border-[#e1e3e4]/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              >
+                {/* Centered left icon block */}
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#e7f7f4] text-[#006b60] transition-all duration-300 group-hover:bg-[#006b60] group-hover:text-white">
+                  <Icon className="h-8 w-8" aria-hidden="true" />
+                </div>
+                {/* Right content block */}
+                <div className="flex-1 text-[#191c1d]">
+                  <h3 className="text-xl font-bold text-[#006b60] [font-family:Lexend,system-ui,sans-serif] leading-snug">
+                    {service.title}
+                  </h3>
+                  <p className="mt-3 text-sm text-[#3d4947] leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </Section>
     </RyomSiteLayout>
   );
 }
+

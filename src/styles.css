@@ -144,6 +144,375 @@
 }
 
 /* ═══════════════════════════════════════════════════════════
+   Hero Slider
+   ═══════════════════════════════════════════════════════════ */
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  min-height: 640px;
+  overflow: hidden;
+  background: #00201c;
+}
+
+/* ── Background images ───────────────────────────────────── */
+
+.hero-slider__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform, opacity;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.hero-slider__bg--active {
+  opacity: 0.75;
+  z-index: 1;
+}
+
+.hero-slider__bg--active.hero-slider__bg--next {
+  animation: slider-bg-in-next 1.2s ease forwards;
+}
+
+.hero-slider__bg--active.hero-slider__bg--prev {
+  animation: slider-bg-in-prev 1.2s ease forwards;
+}
+
+.hero-slider__bg--hidden {
+  opacity: 0;
+  z-index: 0;
+  transform: scale(1.08);
+}
+
+@keyframes slider-bg-in-next {
+  from {
+    opacity: 0;
+    transform: scale(1.1) translateX(3%);
+  }
+  to {
+    opacity: 0.75;
+    transform: scale(1.05) translateX(0);
+  }
+}
+
+@keyframes slider-bg-in-prev {
+  from {
+    opacity: 0;
+    transform: scale(1.1) translateX(-3%);
+  }
+  to {
+    opacity: 0.75;
+    transform: scale(1.05) translateX(0);
+  }
+}
+
+/* ── Dark overlay ────────────────────────────────────────── */
+
+.hero-slider__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(0, 32, 28, 0.92) 0%,
+    rgba(0, 32, 28, 0.65) 45%,
+    transparent 100%
+  );
+}
+
+/* ── Inner container ─────────────────────────────────────── */
+
+.hero-slider__inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 80rem;
+  min-height: 640px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .hero-slider__inner {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/* ── Content card ────────────────────────────────────────── */
+
+.hero-slider__card {
+  max-width: 38rem;
+  border-left: 4px solid #006b60;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 1.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+@media (min-width: 640px) {
+  .hero-slider__card {
+    padding: 2.5rem;
+  }
+}
+
+.hero-slider__card--enter-next {
+  animation: slider-card-enter-next 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-slider__card--enter-prev {
+  animation: slider-card-enter-prev 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slider-card-enter-next {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slider-card-enter-prev {
+  from {
+    opacity: 0;
+    transform: translateY(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Typography ──────────────────────────────────────────── */
+
+.hero-slider__heading {
+  font-family: Lexend, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.15;
+  color: #006b60;
+}
+
+@media (min-width: 640px) {
+  .hero-slider__heading {
+    font-size: 2.5rem;
+  }
+}
+
+.hero-slider__heading-highlight {
+  display: block;
+  color: #fc9d2a;
+}
+
+.hero-slider__description {
+  margin-top: 1.25rem;
+  padding-left: 1rem;
+  border-left: 2px solid #bcc9c6;
+  font-size: 1.125rem;
+  line-height: 2;
+  color: #3d4947;
+}
+
+/* ── CTA buttons ─────────────────────────────────────────── */
+
+.hero-slider__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.hero-slider__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.hero-slider__btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-slider__btn--primary {
+  background: #006b60;
+  color: white;
+}
+
+.hero-slider__btn--primary:hover {
+  background: #0d8a7d;
+}
+
+.hero-slider__btn--outline {
+  background: white;
+  color: #006b60;
+  border: 1px solid #006b60;
+}
+
+.hero-slider__btn--outline:hover {
+  background: #f3f4f5;
+}
+
+/* ── Arrow buttons ───────────────────────────────────────── */
+
+.hero-slider__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  transform: translateY(-50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s;
+}
+
+@media (min-width: 768px) {
+  .hero-slider__arrow {
+    display: flex;
+  }
+}
+
+.hero-slider__arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.hero-slider__arrow--prev {
+  left: 1rem;
+}
+
+.hero-slider__arrow--next {
+  right: 1rem;
+}
+
+/* ── Dot navigation ──────────────────────────────────────── */
+
+.hero-slider__dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.hero-slider__dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+}
+
+.hero-slider__dot:hover {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hero-slider__dot--active {
+  border-color: #fc9d2a;
+  background: #fc9d2a;
+  transform: scale(1.2);
+}
+
+/* ── Progress bar ────────────────────────────────────────── */
+
+.hero-slider__progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-slider__progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #006b60, #fc9d2a);
+  animation: slider-progress linear forwards;
+}
+
+@keyframes slider-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ── Spinning Logo ───────────────────────────────────────── */
+
+.hero-slider__spinning-logo-container {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .hero-slider__spinning-logo-container {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+    z-index: 10;
+    pointer-events: none;
+  }
+}
+
+.hero-slider__spinning-logo {
+  width: 4rem;
+  height: 4rem;
+  animation: spin-slow 20s linear infinite;
+  opacity: 0.95;
+}
+
+@media (min-width: 640px) {
+  .hero-slider__spinning-logo {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-slider__spinning-logo {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
    Leaflet Map – Contact Page
    ═══════════════════════════════════════════════════════════ */
 

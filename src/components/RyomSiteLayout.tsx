@@ -10,6 +10,7 @@ import {
   MessageCircle,
   Phone,
   Share2,
+  ShieldCheck,
   ShoppingBag,
   X,
 } from "lucide-react";
@@ -305,7 +306,7 @@ export function ButtonLink({
         variant === "primary" && "bg-[#006b60] text-white hover:bg-[#0d8a7d]",
         variant === "secondary" && "bg-[#fc9d2a] text-white hover:bg-[#d9841a]",
         variant === "outline" &&
-          "border border-[#006b60] bg-white text-[#006b60] hover:bg-[#f3f4f5]",
+        "border border-[#006b60] bg-white text-[#006b60] hover:bg-[#f3f4f5]",
       )}
     >
       {children}
@@ -372,14 +373,32 @@ export function SplitFeature({
 }) {
   return (
     <div className="grid items-center gap-10 lg:grid-cols-2">
-      <div className="relative">
-        <div className="absolute -inset-3 rotate-2 rounded-lg bg-[#e7f7f4]" aria-hidden="true" />
+      <div className="group relative">
+        <div
+          className="absolute -inset-3 rotate-3 rounded-2xl bg-[#d6e3e1] transition-transform duration-500 group-hover:rotate-6"
+          aria-hidden="true"
+        />
         <img
           src={image}
           alt=""
-          className="relative h-[420px] w-full rounded-lg border border-[#e1e3e4] object-cover shadow-lg"
+          className="relative z-10 h-[420px] w-full rounded-xl border border-[#e1e3e4] object-cover shadow-lg"
           loading="lazy"
         />
+        {/* Floating Badge */}
+        <div
+          className="absolute -bottom-6 -right-6 z-20 flex animate-bounce items-center gap-4 rounded-xl border border-[#e1e3e4] bg-white p-4 shadow-xl"
+          style={{ animationDuration: "3s" }}
+        >
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e7f7f4]">
+            <ShieldCheck className="h-6 w-6 text-[#006b60]" aria-hidden="true" />
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">
+              Certified
+            </p>
+            <p className="text-sm font-bold text-[#006b60]">WHO Approved</p>
+          </div>
+        </div>
       </div>
       <div>
         <p className="mb-3 text-sm font-bold text-[#fc9d2a]">{eyebrow}</p>

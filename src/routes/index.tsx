@@ -3,12 +3,13 @@ import { Award, FlaskConical, HeartPulse, ShieldCheck } from "lucide-react";
 import {
   ButtonLink,
   FeatureCard,
-  HomeHero,
   RyomSiteLayout,
   Section,
   SectionHeader,
   SplitFeature,
 } from "@/components/RyomSiteLayout";
+import HeroSlider from "@/components/HeroSlider";
+import type { HeroSlide } from "@/components/HeroSlider";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,11 +23,41 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const heroImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCvWuqnRAOFjrMtlX_6C1Gr-5OgAHU7g_xJCljPLp-KiQC1k9YrtCmp_bPo-zv-NQDpXXPuEw9rIT3zdOgLac9TS-uxcJAu32kwOn30vj5wlEgl8mOvLdBliDzmK8txtXVK29AjfYsLUAjdfI3X3CrPU7eAJixXAIR_Pr1yGx_t6ftP8XmWLWOgfu-3Nn6Zkv63HQUhGh44SmTV4pjkqwiNIgDWD4YKokzKm7-NLVU3yucgf9yXDDcLF-kIhMkRhheOPEL97TFIDWQ";
+/* ──────────────────────────────────────────────────────────
+   Slider slides – matching WordPress hero carousel
+   ────────────────────────────────────────────────────────── */
 
-const aboutImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAPKIDEP911ltTcHT4ZZhnPOiZgPHBBugWihn2jFFR0PvLhh6aHqV69doTyxKEu1XJutHbAPNhD-orGJqnVxjqBixQgVs3mGg9GrpTJkD5suqsQAiyk_XZlWP3fPS0499kCL9w_3-9JBl1KgyzxsCKXBIuxDj4G1ekduFEM8YW2OAy5uvg5DZEeeeICBK4_h5BM3x7LV2RVjzpIKDvrx4gX39-1OEyYRtNszabIGw_YJrp_ZkwNeW7kY7quoFK3hsaj3vciBs-7tVs";
+const heroSlides: HeroSlide[] = [
+  {
+    title: "Your Trusted",
+    highlight: "Pharmaceutical Partner",
+    description:
+      "Ethical & Reliable Healthcare Solutions delivering high-quality, affordable medicines accessible to all.",
+    image: "/slider-1-1.png",
+    primaryCta: { label: "Explore Products", to: "/products" },
+    secondaryCta: { label: "Partner With Us", to: "/contact" },
+  },
+  {
+    title: "Spreading Health,",
+    highlight: "Spreading Happiness",
+    description:
+      "We believe good health is the foundation of a happy life. Making high-quality, affordable medicines accessible to all.",
+    image: "/slider-1-2.jpg",
+    primaryCta: { label: "About Us", to: "/about" },
+    secondaryCta: { label: "Our Services", to: "/services" },
+  },
+  {
+    title: "WHO-Approved",
+    highlight: "Manufacturing Partner",
+    description:
+      "Affordable & High-Quality Medicines — our strategic collaboration ensures the highest standards of quality and affordability.",
+    image: "/slider-1-3.jpg",
+    primaryCta: { label: "Our Products", to: "/products" },
+    secondaryCta: { label: "Contact Us", to: "/contact" },
+  },
+];
+
+const aboutImage = "/about-2-1.png";
 
 const highlights = [
   {
@@ -51,30 +82,45 @@ const highlights = [
 function Index() {
   return (
     <RyomSiteLayout activePath="/">
-      <HomeHero
-        title="Your Trusted"
-        highlight="Pharmaceutical Partner"
-        description="Ethical and reliable healthcare solutions delivering high-quality, affordable medicines accessible to all."
-        image={heroImage}
-        primaryCta={{ label: "Explore Products", to: "/products" }}
-        secondaryCta={{ label: "Partner With Us", to: "/contact" }}
-      />
+      <HeroSlider slides={heroSlides} interval={5000} />
 
-      <Section tone="teal">
+      <Section tone="teal" className="pt-8 sm:pt-16">
+        {/* Mobile only centered spinning logo */}
+        <div className="mx-auto mb-8 flex justify-center sm:hidden">
+          <img
+            src="/Pneumonic Hi Res.png"
+            className="h-28 w-28 animate-[spin_20s_linear_infinite] opacity-95"
+            alt="Spinning Logo"
+          />
+        </div>
         <SectionHeader
           centered
           inverse
-          title="Ryom Remedies Pvt. Ltd. - Spreading Health, Spreading Happiness"
-          description="We believe good health is the foundation of a happy life. Guided by this philosophy, Ryom Remedies works to make high-quality, affordable medicines accessible to all."
+          title="Ryom Remedies Pvt. Ltd. – Spreading Health, Spreading Happiness"
         />
-        <div className="mx-auto max-w-4xl space-y-5 text-center text-lg leading-8 text-white/85">
+        <div className="mx-auto max-w-4xl space-y-6 text-center text-lg leading-8 text-white/90">
           <p>
-            As a visionary pharmaceutical company, we strive to bridge healthcare gaps by delivering
-            safe, effective, and ethical medical solutions to people across the world.
+            At Ryom Remedies Pvt. Ltd., we believe that good health is the foundation of a happy life.
+            Guided by our motto, “Spreading Health, Spreading Happiness,” we are committed to making
+            high-quality, affordable medicines accessible to all, ensuring that no one is left behind
+            in the journey toward well-being.
           </p>
           <p>
-            Every formulation we create is a step toward a healthier society, where access to
-            essential treatments is a right, not a privilege.
+            As a visionary pharmaceutical company, we strive to bridge healthcare gaps by delivering
+            safe, effective, and ethical medical solutions to people across the world. Our strategic
+            collaboration with a WHO-approved manufacturing partner enables us to maintain the highest
+            standards of quality while ensuring affordability. This allows us to serve chemists,
+            stockists, healthcare professionals, and patients with trust and reliability.
+          </p>
+          <p>
+            We understand that medicine is more than just a product—it is a lifeline, a source of relief,
+            and a promise of hope. Every formulation we create is a step toward a healthier society,
+            where access to essential treatments is a right, not a privilege.
+          </p>
+          <p className="font-semibold text-white">
+            Join us in our mission to bring smiles, restore health, and uplift lives—because true
+            happiness begins with good health. Together, we can make quality healthcare a reality
+            for everyone, everywhere.
           </p>
         </div>
       </Section>
@@ -83,16 +129,20 @@ function Index() {
         <SplitFeature
           image={aboutImage}
           eyebrow="About Us"
-          title="A name rooted in strength, harmony, and healthcare excellence"
+          title="The Meaning and Significance of Ryom – A Name Rooted in Strength"
           cta={{ label: "Read More", to: "/about" }}
         >
           <p>
-            The name Ryom reflects strength, resilience, and leadership. It also resonates with the
-            vibrations of OM, symbolizing harmony, balance, and well-being.
+            Traditionally recognized as a masculine name in Korean culture, it embodies strength,
+            resilience, and leadership. More than just a name, RYOM stands for power and determination,
+            values that align with our vision of making a meaningful impact in the healthcare and
+            pharmaceutical industry.
           </p>
           <p>
-            These values align with our mission to make a meaningful impact in healthcare through
-            reliable medicines, ethical partnerships, and accessible solutions.
+            The essence of RYOM goes beyond its linguistic roots—it also represents the Vibrations of
+            "OM," a sacred sound that signifies harmony, balance, and well-being. In the healthcare
+            and pharmaceutical sectors, these principles resonate deeply, as the industry is built on
+            the foundation of care, healing, and the continuous pursuit of innovation to improve lives.
           </p>
         </SplitFeature>
       </Section>
@@ -141,3 +191,4 @@ function Index() {
     </RyomSiteLayout>
   );
 }
+

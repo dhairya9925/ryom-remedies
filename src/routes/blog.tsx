@@ -31,8 +31,7 @@ export const Route = createFileRoute("/blog")({
   component: BlogPage,
 });
 
-const heroImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuADJ4NgsSYopfoO0JYidjoxgrLhpSAkQ2RZbbNpM5-9pPmI7dm-J5BBaFDM4txoLvu3la5OIM6LqUAJ2SwQ_l8hwnBenH8N6IqFpjtIthoP3KD-5XskSm43NpjLXtQWMMy0FV3EbyU_wrElhlM-gMhkHr2DlSkWUVdctxw9ttUoQqFCoX6MvFXupiq4sWm2Wp4JU49sZO_3h7ghWV56wnDNnSqfd1rO9C1cpZzgkEwM7cs12TAxWtELAmFFb-ZTWWQMjOFcRam-Sic";
+const heroImage = "/page-header-bg-1-1.jpg";
 
 const posts = [
   {
@@ -41,8 +40,7 @@ const posts = [
     icon: Microscope,
     day: "22",
     month: "Apr",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCj59as2aFncyFqXEG-xei9d0HDIJ2doWpBC5zA65DfydLJ9VJFNxlWGt5To9ETE-3UlZusU_onrlXDoHR2FKH1RLv6cy4A7HAfSLxpgYZrfwRGvAVk2uyAxNZKoNxmtMtAelYP-rMZ0AQ_qE3Xjl5qXSUcY1Aq_zRlumrycuk4dM1b-RT1hzi8bMkw7hTLtKpHjajWmIlHU91-zzvveyGypc8j2b--QPSJh1hDubzqX2itXaZQHYA3UeER31CQm1nrLWEsH5S7Clw",
+    image: "/blog-7.jpg",
     summary:
       "Exploring the latest technological advancements shaping clinical trials, patient care, and access to dependable medicines.",
   },
@@ -52,8 +50,7 @@ const posts = [
     icon: Sparkles,
     day: "22",
     month: "Apr",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAsXRun8L-UdYcZc0PH3-deQgaeyyKivRVOzZZ8t9Yk935ptlBVWQ3owrMDsyNPzVP0-fpZXOSU8dKgsEgEOxgYQTSOnpz-Ku-ONFYg-LEGJfQAEgHP-K_EW8ddKXhHOCpgA6n5NdwGAlTYtVVOmg3o47iIP8Sz10Ox2ppUcZZdZpNGpndAHNnAhaEVmnr1C8JlLrwoLAncaM3Fm8xXl7-flkj_e8dGBmt_0aQxsA6CyAF9V1wH1EJpgk2WzeuGlZNIOoh-knjMlQ4",
+    image: "/blog-3.jpg",
     summary:
       "A look at our latest formulations and how thoughtful product development supports better healthcare outcomes.",
   },
@@ -63,8 +60,7 @@ const posts = [
     icon: Scale,
     day: "22",
     month: "Apr",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCQk4qaYhqomuqyfxBge7f-k5YXsjrB1dp91rCq4EeGFLjjaHbjDvN9rqdvYwrcMBDHPLTAXB8V28L0UQu0vr0ctucvNSV8NFjWEd0b3PoNztcUuWxTrAqLEbHX79AMMxrfsldNCGfQ5MQ1ESn691Kb2UjacLnCU_8QW_yI-SKXLDHhDHdJHXKvPukR_-rCcslaViguFjjifw1e3Iy1kuBVFRCJ5xCO3UvOARos2HmDUuY4k1y_FlhLupoDw9hvhrqrOMA3_a_wYRc",
+    image: "/blog-2.jpg",
     summary:
       "Navigating pharmaceutical standards and our commitment to quality, traceability, and ethical business practices.",
   },
@@ -74,8 +70,7 @@ const posts = [
     icon: Pill,
     day: "22",
     month: "Apr",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuClJ7pK0QB4Y22qpjrt07-U5sSYUJ3xsuSINprFr02duSZmFx920zy5phAhw6oXOF9H0K59AqXFJC0ivQQyFTGiIGgn7YTW0crGLf4gW2L-Q49OMozcgFrazKQ0AWxJyKh8SUbdsH-IN79V8KwZA-PgyQqjNMBPVFCNwt6tFyHyq5b_FyIByzKgMF0e-Rw5T2SkAZ0-t4KXrhAKyOjjUch168oZZvaxrV4wu6Ciz_NlZz2Z2KN5OAtnpfQH5xPwu6eFgtnpblLODjk",
+    image: "/blog-1.jpg",
     summary:
       "Practical guidance for patients and caregivers to use prescribed medicines safely and consistently.",
   },

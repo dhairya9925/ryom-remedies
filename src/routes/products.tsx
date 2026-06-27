@@ -19,8 +19,7 @@ export const Route = createFileRoute("/products")({
   component: ProductsPage,
 });
 
-const heroImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBZGejS0hBtj-_O_PHtlh4TDeND0nD517weYw0_i7PzPO1u3oKtVrQSJN4Ulnuqt88UAs03PV9Utn0miHSRawGJU6KaQFLJKFgU92AsR3PMk9MOQ4lUa1lddZV98JAn7g8dcv-MYwab4rWFTyoq13hip72SpsQZPndn97sIjwWBSwF85Kj0QBk71P8_RgnBYzdemyySUqMVNLaMkiZd4pI8hMHTHlpW2Jt0A-crVHhh4rUdxhFrOkt-4svmxnzDvbduf06tohiiKQg";
+const heroImage = "/page-header-bg-1-1.jpg";
 
 const categories = [
   ["Pain & Inflammation", 2],
@@ -33,33 +32,27 @@ const categories = [
 const products = [
   {
     name: "Ryoalert-LC",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCmQ-KjUzKhJvw5DXEzOQ5kuv-U5OWAiJlpOPHIr-iqLqzXR6V0dkGD32dLwXDWPm29CkLQHAsNf5-1tLzkfrJQoBiuFCSNz_xbbeXbKLek3Hc8vTOdM7rvAgRMhIjQuJb4ez2cpxez3oZSVaKnOEdFAne9vfXsl-JsmQeZy1XCZTt_yb8rbQp0B8DaaqYdNFsiGRqpN8b3NSZys0JLIepY7OCagh54N1UE8xqfllQmAfTuUBg1n8i2Xu3Lgr90TINklippN3fxQ6A",
+    image: "/products/ryoalert-lc.jpg",
   },
   {
     name: "Ryocort",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB6sCgemfipUo2N0cgMcRGO08udkVXj4P1Ug_E5sDDOKHi9UuCDJSVXVa5pcCAumhCXSQzDiDI-fjFhUlinyF0uqmpq0dZNMiLQWPtYQKLCdjijTnYAsY-fzCGmLKZUJmPnmQLzatqLTppDWQ76qMqNbmgx5QUFQpGgK-pArT5RPJLoQans4q8ZxdhvAx2SMoVivyUSthW3k9CbkPG27uXqMFNBWllySVoDZCIiK_QljhWNWldPA6ByAxQ6zZBXTuw7drzI7dLl5e8",
+    image: "/products/ryocort.jpg",
   },
   {
     name: "Ryomace P",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBFPTKMCRYgO2WnRkhqVQ19eNAPTTOPL0S-PA4VlPDi8i_IzKXKMen_3Yy143SkK5JZbngpv5y-iP7ZXEsp7wY-g3oUwxTQRPgPC895gJw3Kdn7WTbSoObxxJ2jY9GK_YCmrNnSAZwDl0PLgiXgQo7Uc6L9jRUcDMc14qRmSf-QDBROlCb0juN-0RgIO2zPZm1_6MqOKOD6X0t3DRKfb-52VmctHwk2n_FO39q3qa2hRpX2gRp4UgvI-QU1fF95fsUAKZ6efAx5NCk",
+    image: "/products/ryomace-p.jpg",
   },
   {
     name: "Ryomentin",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBUICSJTWbyFa8vFEnY2FkCokw4Le5qrtD-PrRBMJcGlTSKfnjyuUvJWwRDcAP3zBbiFvlxwXV55Qi12ruOZmqYaqdOloUgMz3yiAnWlwtY_Hj_HGIl9Cwk76rkvmJjPJcFQ12bCCVK8NJHFhdxX1Fwl79GJupduo4NU924sedsutKWiEyPEuJFgaOjjchnP3lYVrZ0JCQ4o64LpuDGfLQVE9CfwxAmYcMEtbQwaeaOzEbbdxUBKSNxfHI-ZsjqVRpJy0prhDKIpGw",
+    image: "/products/ryomentin.jpg",
   },
   {
     name: "Ryomentin Dry Syrup",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAoSOOxIYf5sUfhtgw5VTKy4jokMQnRXM6RPmrJKmGb4Y6P5AU2-yM0VDvJmAGmT9C_k2DFLyiqdMmdqxJ5PxpKO7eYjtI15R902xvzuk0d5Kx7JtxPhKv6e__LfO7VN2yPVnRjw8dORcEBVzthcxNtWY1HobQsOTi2JOJzLJWXbFWIjKsungnxvFpR7yiIyfuPwFY2lt5w-Qa4eKAkOVLxJTstTNIA-hB0zX5HnevKhtCMyTgG9OaLNJCXAysObpP976KPc0O3fH4",
+    image: "/products/ryomentin-dry-syrup.jpg",
   },
   {
     name: "Ryomicin 250",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBeP4yCLZIVHanOJULVK0dwYrIpBEENJhROrDSsxmWwYGXOP5dRkDXoAhATugYY_2SCFDRP11Q_C4dbm2uT87Hihr_p5FLSffnO9pYk8srky-aqoWM193dbKks0G2QD7xQKOnlNZXtAb2vPmr-rTPcDgriinHJf2xYbO8QZv4rJPBvfa_jvhPfZQ_hGd1GJ0WnSoCy7VG7KHQVxxmQMfY600nm28oErg04m21Yzr-TC7Zp33D3rXFfwtBF4-7S25L1tqwRzWMAR4sE",
+    image: "/products/ryomicin-250.jpg",
   },
 ];
 
