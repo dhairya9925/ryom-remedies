@@ -487,10 +487,13 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
         <div>
           <Link
             to="/"
-            className="flex items-center gap-2 text-2xl font-bold [font-family:Lexend,system-ui,sans-serif]"
+            className="flex items-center"
           >
-            <FlaskConical className="h-7 w-7 text-[#fc9d2a]" aria-hidden="true" />
-            Ryom Remedies
+            <img
+              src="/RYOM.png"
+              alt="Ryom Remedies Logo"
+              className="h-24 w-auto object-contain"
+            />
           </Link>
           <p className="mt-5 max-w-sm text-base leading-7 text-white/80">
             Pioneering advanced pharmaceutical solutions for a healthier tomorrow. Committed to
