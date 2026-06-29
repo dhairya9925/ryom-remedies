@@ -606,3 +606,43 @@
   background: white;
   box-shadow: 0 4px 12px rgba(0, 107, 96, 0.12);
 }
+
+/* ═══════════════════════════════════════════════════════════
+   Touch Device Behavior Overrides (@media hover: none)
+   ═══════════════════════════════════════════════════════════ */
+
+@media (hover: none) {
+  /* On touch-only devices, disable the sticky translate and shadow hover styles */
+  [class*="hover:-translate-y-"]:hover,
+  [class*="hover:shadow-"]:hover {
+    transform: none !important;
+    box-shadow: var(--tw-shadow) !important;
+  }
+
+  /* Specifically disable group-hover badge background/text color sticky shifts on mobile */
+  .group:hover .group-hover\:bg-\[\#006b60\] {
+    background-color: #e7f7f4 !important;
+    color: #006b60 !important;
+  }
+  
+  .group:hover .group-hover\:text-white {
+    color: inherit !important;
+  }
+
+  /* Tap active state: Quick, temporary scale-down press feedback when tapped */
+  [class*="hover:-translate-y-"]:active,
+  [class*="hover:scale-"]:active,
+  .group:active {
+    transform: scale(0.97) !important;
+    transition: transform 0.1s ease !important;
+  }
+
+  /* Button active state tap feedback */
+  button:active,
+  a:active,
+  .hero-slider__btn:active {
+    transform: scale(0.96) !important;
+    transition: transform 0.1s ease !important;
+  }
+}
+

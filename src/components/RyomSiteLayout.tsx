@@ -66,10 +66,13 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
         <Link
           to="/"
-          className="flex items-center gap-2 text-xl font-bold text-[#006b60] transition-transform hover:scale-[0.98] sm:text-2xl [font-family:Lexend,system-ui,sans-serif]"
+          className="flex items-center transition-transform hover:scale-[0.98]"
         >
-          <FlaskConical className="h-7 w-7 text-[#fc9d2a]" aria-hidden="true" />
-          <span>Ryom Remedies</span>
+          <img
+            src="/RYOM.png"
+            alt="Ryom Remedies Logo"
+            className="h-8 w-auto object-contain sm:h-10"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
