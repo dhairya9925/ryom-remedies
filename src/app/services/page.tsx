@@ -1,18 +1,20 @@
-import { createFileRoute } from "@tanstack/react-router";
+import type { Metadata } from "next";
 import { BadgeCheck, FlaskConical, ShieldCheck, Truck } from "lucide-react";
 import { PageHero, RyomSiteLayout, Section } from "@/components/RyomSiteLayout";
 
-export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Our Services - Ryom Remedies" },
-      { name: "description", content: "Pharmaceutical services offered by Ryom Remedies." },
-      { property: "og:title", content: "Our Services - Ryom Remedies" },
-      { property: "og:description", content: "Pharmaceutical services offered by Ryom Remedies." },
-    ],
-  }),
-  component: ServicesPage,
-});
+export const metadata: Metadata = {
+  title: "Our Services",
+  description: "Pharmaceutical services offered by Ryom Remedies.",
+  openGraph: {
+    title: "Our Services - Ryom Remedies",
+    description: "Pharmaceutical services offered by Ryom Remedies.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Our Services - Ryom Remedies",
+    description: "Pharmaceutical services offered by Ryom Remedies.",
+  },
+};
 
 const heroImage = "/page-header-bg-1-1.jpg";
 
@@ -46,7 +48,7 @@ const services = [
   },
 ];
 
-function ServicesPage() {
+export default function ServicesPage() {
   return (
     <RyomSiteLayout activePath="/services">
       <PageHero title="Our Services" eyebrow="B2B Pharmaceutical Solutions" image={heroImage}>
@@ -99,4 +101,3 @@ function ServicesPage() {
     </RyomSiteLayout>
   );
 }
-

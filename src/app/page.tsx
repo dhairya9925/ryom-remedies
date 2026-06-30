@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import type { Metadata } from "next";
 import { Award, FlaskConical, HeartPulse, ShieldCheck } from "lucide-react";
 import {
   ButtonLink,
@@ -11,17 +11,21 @@ import {
 import HeroSlider from "@/components/HeroSlider";
 import type { HeroSlide } from "@/components/HeroSlider";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Ryom Remedies - Your Trusted Pharmaceutical Partner" },
-      { name: "description", content: "Ryom Remedies — quality pharmaceuticals you can trust." },
-      { property: "og:title", content: "Ryom Remedies" },
-      { property: "og:description", content: "Your trusted pharmaceutical partner." },
-    ],
-  }),
-  component: Index,
-});
+export const metadata: Metadata = {
+  title: {
+    absolute: "Ryom Remedies - Your Trusted Pharmaceutical Partner",
+  },
+  description: "Ryom Remedies — quality pharmaceuticals you can trust.",
+  openGraph: {
+    title: "Ryom Remedies",
+    description: "Your trusted pharmaceutical partner.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Ryom Remedies",
+    description: "Your trusted pharmaceutical partner.",
+  },
+};
 
 /* ──────────────────────────────────────────────────────────
    Slider slides – matching WordPress hero carousel
@@ -79,7 +83,7 @@ const highlights = [
   },
 ];
 
-function Index() {
+export default function Index() {
   return (
     <RyomSiteLayout activePath="/">
       <HeroSlider slides={heroSlides} interval={5000} />
@@ -100,22 +104,22 @@ function Index() {
         />
         <div className="mx-auto max-w-4xl space-y-6 text-center text-lg leading-8 text-white/90">
           <p>
-            At Ryom Remedies Pvt. Ltd., we believe that good health is the foundation of a happy life.
-            Guided by our motto, “Spreading Health, Spreading Happiness,” we are committed to making
-            high-quality, affordable medicines accessible to all, ensuring that no one is left behind
-            in the journey toward well-being.
+            At Ryom Remedies Pvt. Ltd., we believe that good health is the foundation of a happy
+            life. Guided by our motto, “Spreading Health, Spreading Happiness,” we are committed to
+            making high-quality, affordable medicines accessible to all, ensuring that no one is
+            left behind in the journey toward well-being.
           </p>
           <p>
             As a visionary pharmaceutical company, we strive to bridge healthcare gaps by delivering
             safe, effective, and ethical medical solutions to people across the world. Our strategic
-            collaboration with a WHO-approved manufacturing partner enables us to maintain the highest
-            standards of quality while ensuring affordability. This allows us to serve chemists,
-            stockists, healthcare professionals, and patients with trust and reliability.
+            collaboration with a WHO-approved manufacturing partner enables us to maintain the
+            highest standards of quality while ensuring affordability. This allows us to serve
+            chemists, stockists, healthcare professionals, and patients with trust and reliability.
           </p>
           <p>
-            We understand that medicine is more than just a product—it is a lifeline, a source of relief,
-            and a promise of hope. Every formulation we create is a step toward a healthier society,
-            where access to essential treatments is a right, not a privilege.
+            We understand that medicine is more than just a product—it is a lifeline, a source of
+            relief, and a promise of hope. Every formulation we create is a step toward a healthier
+            society, where access to essential treatments is a right, not a privilege.
           </p>
           <p className="font-semibold text-white">
             Join us in our mission to bring smiles, restore health, and uplift lives—because true
@@ -134,15 +138,16 @@ function Index() {
         >
           <p>
             Traditionally recognized as a masculine name in Korean culture, it embodies strength,
-            resilience, and leadership. More than just a name, RYOM stands for power and determination,
-            values that align with our vision of making a meaningful impact in the healthcare and
-            pharmaceutical industry.
+            resilience, and leadership. More than just a name, RYOM stands for power and
+            determination, values that align with our vision of making a meaningful impact in the
+            healthcare and pharmaceutical industry.
           </p>
           <p>
-            The essence of RYOM goes beyond its linguistic roots—it also represents the Vibrations of
-            "OM," a sacred sound that signifies harmony, balance, and well-being. In the healthcare
-            and pharmaceutical sectors, these principles resonate deeply, as the industry is built on
-            the foundation of care, healing, and the continuous pursuit of innovation to improve lives.
+            The essence of RYOM goes beyond its linguistic roots—it also represents the Vibrations
+            of "OM," a sacred sound that signifies harmony, balance, and well-being. In the
+            healthcare and pharmaceutical sectors, these principles resonate deeply, as the industry
+            is built on the foundation of care, healing, and the continuous pursuit of innovation to
+            improve lives.
           </p>
         </SplitFeature>
       </Section>
@@ -191,4 +196,3 @@ function Index() {
     </RyomSiteLayout>
   );
 }
-

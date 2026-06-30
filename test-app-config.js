@@ -1,2 +1,0 @@
-import { defineConfig } from "@tanstack/react-start/config";
-console.log(defineConfig);

@@ -1,4 +1,7 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
+import type { Map as LeafletMapInstance } from "leaflet";
 import { MapPin } from "lucide-react";
 
 /* ──────────────────────────────────────────────────────────
@@ -35,7 +38,7 @@ export default function LeafletMap({
   className = "",
 }: LeafletMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<any>(null);
+  const mapInstanceRef = useRef<LeafletMapInstance | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -46,7 +49,6 @@ export default function LeafletMap({
     async function init() {
       /* Dynamic import keeps the server-side bundle clean */
       const L = (await import("leaflet")).default;
-      await import("leaflet/dist/leaflet.css");
 
       if (cancelled || !containerRef.current) return;
 
@@ -96,7 +98,7 @@ export default function LeafletMap({
           `<div style="font-family:Lexend,system-ui,sans-serif;font-weight:600;font-size:14px;color:#006b60;min-width:160px;text-align:center;padding:4px 0;">
              ${popupText}
            </div>`,
-          { className: "ryom-popup" }
+          { className: "ryom-popup" },
         )
         .openPopup();
 

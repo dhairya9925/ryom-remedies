@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ArrowRight,
   ChevronLeft,
@@ -11,25 +12,22 @@ import {
 } from "lucide-react";
 import { PageHero, RyomSiteLayout } from "@/components/RyomSiteLayout";
 
-export const Route = createFileRoute("/blog")({
-  head: () => ({
-    meta: [
-      { title: "Blog - Ryom Remedies" },
-      {
-        name: "description",
-        content:
-          "Read Ryom Remedies articles on healthcare trends, product updates, compliance, and safe medicine use.",
-      },
-      { property: "og:title", content: "Blog - Ryom Remedies" },
-      {
-        property: "og:description",
-        content:
-          "Healthcare insights, product updates, and pharmaceutical guidance from Ryom Remedies.",
-      },
-    ],
-  }),
-  component: BlogPage,
-});
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Read Ryom Remedies articles on healthcare trends, product updates, compliance, and safe medicine use.",
+  openGraph: {
+    title: "Blog - Ryom Remedies",
+    description:
+      "Healthcare insights, product updates, and pharmaceutical guidance from Ryom Remedies.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Blog - Ryom Remedies",
+    description:
+      "Healthcare insights, product updates, and pharmaceutical guidance from Ryom Remedies.",
+  },
+};
 
 const heroImage = "/page-header-bg-1-1.jpg";
 
@@ -76,7 +74,7 @@ const posts = [
   },
 ];
 
-function BlogPage() {
+export default function BlogPage() {
   return (
     <RyomSiteLayout activePath="/blog">
       <PageHero title="Blog" eyebrow="Insights & Updates" image={heroImage}>
@@ -179,7 +177,7 @@ function BlogCard({ post }: { post: (typeof posts)[number] }) {
         </h3>
         <p className="mt-3 flex-1 text-sm leading-6 text-[#6b7280]">{post.summary}</p>
         <Link
-          to="/contact"
+          href="/contact"
           className="mt-6 inline-flex items-center justify-between rounded-lg bg-[#f3f4f5] px-4 py-3 text-sm font-bold text-[#006b60] transition hover:bg-[#e7e8e9] hover:text-[#d9841a]"
         >
           Read More

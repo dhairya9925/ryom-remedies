@@ -1,6 +1,8 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import type { RoutePath } from "./RyomSiteLayout";
 
@@ -86,10 +88,11 @@ export default function HeroSlider({ slides, interval = 5000 }: HeroSliderProps)
       {slides.map((s, i) => (
         <div
           key={i}
-          className={`hero-slider__bg ${i === current
-            ? `hero-slider__bg--active hero-slider__bg--${direction}`
-            : "hero-slider__bg--hidden"
-            }`}
+          className={`hero-slider__bg ${
+            i === current
+              ? `hero-slider__bg--active hero-slider__bg--${direction}`
+              : "hero-slider__bg--hidden"
+          }`}
           style={{ backgroundImage: `url("${s.image}")` }}
           aria-hidden={i !== current}
         />
@@ -109,22 +112,19 @@ export default function HeroSlider({ slides, interval = 5000 }: HeroSliderProps)
 
       {/* ── Content card ───────────────────────────────── */}
       <div className="hero-slider__inner">
-        <div
-          key={current}
-          className={`hero-slider__card hero-slider__card--enter-${direction}`}
-        >
+        <div key={current} className={`hero-slider__card hero-slider__card--enter-${direction}`}>
           <h1 className="hero-slider__heading">
             {slide.title}
             <span className="hero-slider__heading-highlight">{slide.highlight}</span>
           </h1>
           <p className="hero-slider__description">{slide.description}</p>
           <div className="hero-slider__ctas">
-            <Link to={slide.primaryCta.to} className="hero-slider__btn hero-slider__btn--primary">
+            <Link href={slide.primaryCta.to} className="hero-slider__btn hero-slider__btn--primary">
               {slide.primaryCta.label}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <Link
-              to={slide.secondaryCta.to}
+              href={slide.secondaryCta.to}
               className="hero-slider__btn hero-slider__btn--outline"
             >
               {slide.secondaryCta.label}

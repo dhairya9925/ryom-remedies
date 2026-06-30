@@ -1,22 +1,24 @@
-import { createFileRoute } from "@tanstack/react-router";
+import type { Metadata } from "next";
 import { Award, Brain, Heart, Mail, TrendingUp } from "lucide-react";
 import { PageHero, RyomSiteLayout, Section } from "@/components/RyomSiteLayout";
 
-export const Route = createFileRoute("/careers")({
-  head: () => ({
-    meta: [
-      { title: "Careers - Ryom Remedies" },
-      { name: "description", content: "Join the Ryom Remedies team." },
-      { property: "og:title", content: "Careers - Ryom Remedies" },
-      { property: "og:description", content: "Join the Ryom Remedies team." },
-    ],
-  }),
-  component: CareersPage,
-});
+export const metadata: Metadata = {
+  title: "Careers",
+  description: "Join the Ryom Remedies team.",
+  openGraph: {
+    title: "Careers - Ryom Remedies",
+    description: "Join the Ryom Remedies team.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Careers - Ryom Remedies",
+    description: "Join the Ryom Remedies team.",
+  },
+};
 
 const heroImage = "/page-header-bg-1-1.jpg";
 
-function CareersPage() {
+export default function CareersPage() {
   return (
     <RyomSiteLayout activePath="/careers">
       <PageHero title="Careers" eyebrow="Join Our Mission" image={heroImage}>
@@ -31,7 +33,8 @@ function CareersPage() {
           {/* Introduction */}
           <div className="space-y-6 text-lg leading-relaxed text-white/95">
             <p className="text-2xl font-bold text-[#fc9d2a] mb-4 [font-family:Lexend,system-ui,sans-serif]">
-              Careers at Ryom Remedies Private Limited: Join Our Mission to Spread Health &amp; Happiness.
+              Careers at Ryom Remedies Private Limited: Join Our Mission to Spread Health &amp;
+              Happiness.
             </p>
             <p>
               At Ryom, we are more than just a pharmaceutical company—we are a team of passionate
@@ -59,18 +62,21 @@ function CareersPage() {
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <Heart className="h-6 w-6 text-[#fc9d2a] fill-current mt-1 shrink-0" aria-hidden="true" />
+                <Heart
+                  className="h-6 w-6 text-[#fc9d2a] fill-current mt-1 shrink-0"
+                  aria-hidden="true"
+                />
                 <div>
-                  <strong className="text-[#ffdcbe] font-semibold">Impactful Work:</strong> Help doctors
-                  and healthcare providers access quality medicines for better patient care.
+                  <strong className="text-[#ffdcbe] font-semibold">Impactful Work:</strong> Help
+                  doctors and healthcare providers access quality medicines for better patient care.
                 </div>
               </li>
               <li className="flex items-start gap-4">
                 <Award className="h-6 w-6 text-[#fc9d2a] mt-1 shrink-0" aria-hidden="true" />
                 <div>
-                  <strong className="text-[#ffdcbe] font-semibold">Career Progression:</strong> Fast-track
-                  your growth with structured training, performance incentives, and leadership
-                  opportunities.
+                  <strong className="text-[#ffdcbe] font-semibold">Career Progression:</strong>{" "}
+                  Fast-track your growth with structured training, performance incentives, and
+                  leadership opportunities.
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -91,7 +97,8 @@ function CareersPage() {
             </h2>
             <ul className="space-y-4 text-lg pl-2 border-l-2 border-[#fc9d2a]/50">
               <li className="pl-4 relative before:absolute before:left-[-5px] before:top-2.5 before:w-2 before:h-2 before:bg-[#fc9d2a] before:rounded-full">
-                Individuals with a background in pharma sales or a passion for the healthcare industry.
+                Individuals with a background in pharma sales or a passion for the healthcare
+                industry.
               </li>
               <li className="pl-4 relative before:absolute before:left-[-5px] before:top-2.5 before:w-2 before:h-2 before:bg-[#fc9d2a] before:rounded-full">
                 Excellent communication and persuasion skills.
@@ -135,4 +142,3 @@ function CareersPage() {
     </RyomSiteLayout>
   );
 }
-

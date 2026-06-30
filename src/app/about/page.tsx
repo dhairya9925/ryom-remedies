@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import type { Metadata } from "next";
+import Link from "next/link";
 import {
   Award,
   BriefcaseMedical,
@@ -13,23 +14,19 @@ import {
 } from "lucide-react";
 import { PageHero, RyomSiteLayout, Section, SectionHeader } from "@/components/RyomSiteLayout";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Us - Ryom Remedies" },
-      {
-        name: "description",
-        content: "Learn about Ryom Remedies — our mission, values, and team.",
-      },
-      { property: "og:title", content: "About Us - Ryom Remedies" },
-      {
-        property: "og:description",
-        content: "Learn about Ryom Remedies — our mission, values, and team.",
-      },
-    ],
-  }),
-  component: AboutPage,
-});
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn about Ryom Remedies — our mission, values, and team.",
+  openGraph: {
+    title: "About Us - Ryom Remedies",
+    description: "Learn about Ryom Remedies — our mission, values, and team.",
+  },
+  twitter: {
+    card: "summary",
+    title: "About Us - Ryom Remedies",
+    description: "Learn about Ryom Remedies — our mission, values, and team.",
+  },
+};
 
 const heroImage = "/page-header-bg-1-1.jpg";
 const whoWeAreImage = "/juin-us-bg.png";
@@ -57,7 +54,7 @@ const whoWeAreCards = [
   },
 ];
 
-function AboutPage() {
+export default function AboutPage() {
   return (
     <RyomSiteLayout activePath="/about">
       <PageHero title="About" eyebrow="Who We Are" image={heroImage}>
@@ -77,19 +74,24 @@ function AboutPage() {
           <div className="mx-auto h-1 w-20 rounded-full bg-[#fc9d2a]" />
           <p className="mt-6 text-lg leading-8 text-[#3d4947]">
             At Ryom Remedies, we are guided by a simple yet powerful vision: to make high-quality,
-            affordable healthcare accessible to all. We believe that good health is the foundation of
-            a happy life, and through our unwavering commitment, we strive to bring safe, effective,
-            and ethically produced medicines to people around the world.
+            affordable healthcare accessible to all. We believe that good health is the foundation
+            of a happy life, and through our unwavering commitment, we strive to bring safe,
+            effective, and ethically produced medicines to people around the world.
           </p>
         </div>
       </Section>
 
       {/* ── Name Significance ───────────────────────────── */}
       <Section tone="light" className="relative overflow-hidden">
-        <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#10a696]/5 blur-3xl" aria-hidden="true" />
+        <div
+          className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#10a696]/5 blur-3xl"
+          aria-hidden="true"
+        />
         <div className="relative mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <p className="text-sm font-bold uppercase tracking-widest text-[#006b60]">Our Identity</p>
+            <p className="text-sm font-bold uppercase tracking-widest text-[#006b60]">
+              Our Identity
+            </p>
             <h2 className="mt-2 text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
               What's in a Name?
             </h2>
@@ -105,10 +107,10 @@ function AboutPage() {
                 RYOM – Strength & Leadership
               </h3>
               <p className="mt-4 leading-relaxed text-[#3d4947]">
-                Traditionally recognized as a masculine name in Korean culture, it embodies strength,
-                resilience, and leadership. More than just a name, RYOM stands for power and
-                determination, values that align with our vision of making a meaningful impact in the
-                healthcare and pharmaceutical industry.
+                Traditionally recognized as a masculine name in Korean culture, it embodies
+                strength, resilience, and leadership. More than just a name, RYOM stands for power
+                and determination, values that align with our vision of making a meaningful impact
+                in the healthcare and pharmaceutical industry.
               </p>
             </div>
 
@@ -121,10 +123,10 @@ function AboutPage() {
                 OM – Harmony & Healing
               </h3>
               <p className="mt-4 leading-relaxed text-[#3d4947]">
-                The essence of RYOM goes beyond its linguistic roots—it also represents the vibrations
-                of "OM," a sacred sound that signifies harmony, balance, and well-being. In the
-                healthcare and pharmaceutical sectors, these principles resonate deeply, as the
-                industry is built on the foundation of care, healing, and continuous innovation.
+                The essence of RYOM goes beyond its linguistic roots—it also represents the
+                vibrations of "OM," a sacred sound that signifies harmony, balance, and well-being.
+                In the healthcare and pharmaceutical sectors, these principles resonate deeply, as
+                the industry is built on the foundation of care, healing, and continuous innovation.
               </p>
             </div>
           </div>
@@ -135,7 +137,9 @@ function AboutPage() {
       <Section tone="white" className="relative">
         <div className="relative mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <p className="text-sm font-bold uppercase tracking-widest text-[#fc9d2a]">Core Commitments</p>
+            <p className="text-sm font-bold uppercase tracking-widest text-[#fc9d2a]">
+              Core Commitments
+            </p>
             <h2 className="mt-2 text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
               Healthcare Built Around Access & Trust
             </h2>
@@ -152,9 +156,9 @@ function AboutPage() {
                   Healthcare Access is a Right
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
-                  We believe that access to quality healthcare is a fundamental right and not a privilege.
-                  Every medicine we produce and every initiative we undertake is centered on this belief,
-                  striving to bridge global healthcare gaps.
+                  We believe that access to quality healthcare is a fundamental right and not a
+                  privilege. Every medicine we produce and every initiative we undertake is centered
+                  on this belief, striving to bridge global healthcare gaps.
                 </p>
               </div>
             </div>
@@ -169,9 +173,9 @@ function AboutPage() {
                   Global Access & Reliability
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
-                  We are committed to enhancing global healthcare access, ensuring high-quality medicines
-                  reach those who need them most. We focus on research, ethical practices, regulatory
-                  excellence, and innovation.
+                  We are committed to enhancing global healthcare access, ensuring high-quality
+                  medicines reach those who need them most. We focus on research, ethical practices,
+                  regulatory excellence, and innovation.
                 </p>
               </div>
             </div>
@@ -186,9 +190,9 @@ function AboutPage() {
                   A New Chapter (Est. 2024)
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
-                  Our official incorporation on October 14, 2024, marked the beginning of a dedicated
-                  mission to make a lasting impact in the pharmaceutical world, ensuring quality
-                  healthcare remains a fundamental global right.
+                  Our official incorporation on October 14, 2024, marked the beginning of a
+                  dedicated mission to make a lasting impact in the pharmaceutical world, ensuring
+                  quality healthcare remains a fundamental global right.
                 </p>
               </div>
             </div>
@@ -203,9 +207,9 @@ function AboutPage() {
                   Ethical & Affordable Solutions
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
-                  We maintain strict adherence to quality and safety standards while keeping medicines
-                  affordable, serving chemists, stockists, healthcare professionals, and patients
-                  with trust and reliability.
+                  We maintain strict adherence to quality and safety standards while keeping
+                  medicines affordable, serving chemists, stockists, healthcare professionals, and
+                  patients with trust and reliability.
                 </p>
               </div>
             </div>
@@ -240,7 +244,7 @@ function WhoWeAreSection() {
             Who We Are
           </h2>
           <Link
-            to="/contact"
+            href="/contact"
             className="inline-flex w-fit items-center justify-center rounded-lg bg-[#006b60] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#0d8a7d]"
           >
             Discover More
@@ -317,4 +321,3 @@ function MissionVisionSection() {
     </Section>
   );
 }
-

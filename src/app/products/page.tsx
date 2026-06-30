@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import type { Metadata } from "next";
 import {
   PageHero,
   ProductCard,
@@ -7,17 +7,19 @@ import {
   SectionHeader,
 } from "@/components/RyomSiteLayout";
 
-export const Route = createFileRoute("/products")({
-  head: () => ({
-    meta: [
-      { title: "Shop - Ryom Remedies" },
-      { name: "description", content: "Browse Ryom Remedies products." },
-      { property: "og:title", content: "Shop - Ryom Remedies" },
-      { property: "og:description", content: "Browse Ryom Remedies products." },
-    ],
-  }),
-  component: ProductsPage,
-});
+export const metadata: Metadata = {
+  title: "Shop",
+  description: "Browse Ryom Remedies products.",
+  openGraph: {
+    title: "Shop - Ryom Remedies",
+    description: "Browse Ryom Remedies products.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Shop - Ryom Remedies",
+    description: "Browse Ryom Remedies products.",
+  },
+};
 
 const heroImage = "/page-header-bg-1-1.jpg";
 
@@ -56,7 +58,7 @@ const products = [
   },
 ];
 
-function ProductsPage() {
+export default function ProductsPage() {
   return (
     <RyomSiteLayout activePath="/products">
       <PageHero title="Our Products" eyebrow="Product Range" image={heroImage}>

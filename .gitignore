@@ -6,11 +6,8 @@ node_modules/
 # ======================
 # Build Output
 # ======================
-dist/
-dist-ssr/
-.output/
-.vinxi/
-.nitro/
+.next/
+out/
 
 # ======================
 # Environment & Credentials
@@ -31,11 +28,6 @@ dist-ssr/
 # Lovable Platform
 # ======================
 .lovable/
-
-# ======================
-# TanStack Generated
-# ======================
-.tanstack/
 
 # ======================
 # Logs

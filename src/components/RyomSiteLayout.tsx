@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
 import {
   ArrowRight,
   ChevronRight,
@@ -64,10 +66,7 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
   return (
     <header className="sticky top-0 z-50 border-b border-[#bcc9c6]/40 bg-[#f8f9fa]/95 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
-        <Link
-          to="/"
-          className="flex items-center transition-transform hover:scale-[0.98]"
-        >
+        <Link href="/" className="flex items-center transition-transform hover:scale-[0.98]">
           <img
             src="/RYOM.png"
             alt="Ryom Remedies Logo"
@@ -79,7 +78,7 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
           {navItems.map((item) => (
             <Link
               key={item.to}
-              to={item.to}
+              href={item.to}
               className={cx(
                 "px-3 py-2 text-sm font-semibold transition-colors",
                 item.to === activePath
@@ -94,7 +93,7 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
 
         <div className="flex items-center gap-2">
           <Link
-            to="/products"
+            href="/products"
             className="hidden items-center gap-2 rounded-lg bg-[#fc9d2a] px-5 py-2 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9841a] md:inline-flex"
           >
             <ShoppingBag className="h-4 w-4" aria-hidden="true" />
@@ -125,7 +124,7 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
             {navItems.map((item) => (
               <Link
                 key={item.to}
-                to={item.to}
+                href={item.to}
                 onClick={() => setIsOpen(false)}
                 className={cx(
                   "rounded-md px-3 py-3 text-sm font-semibold transition-colors",
@@ -158,12 +157,12 @@ export function PageHero({
   return (
     <section className="relative flex min-h-[260px] items-center justify-center overflow-hidden bg-[#006b60] px-4 py-20 text-center text-white sm:min-h-[320px] sm:px-6">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay"
+        className="absolute inset-0 bg-cover bg-center opacity-45"
         style={{ backgroundImage: `url("${image}")` }}
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-t from-[#00201c]/90 via-[#006b60]/40 to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-[#00201c]/90 via-[#006b60]/55 to-[#006b60]/20"
         aria-hidden="true"
       />
       <div className="relative z-10 mx-auto max-w-3xl">
@@ -172,7 +171,7 @@ export function PageHero({
           {title}
         </h1>
         <div className="mt-4 flex items-center justify-center gap-2 text-sm font-semibold text-white/80">
-          <Link to="/" className="transition hover:text-[#5edac8]">
+          <Link href="/" className="transition hover:text-[#5edac8]">
             Ryom Remedies
           </Link>
           <ChevronRight className="h-4 w-4" aria-hidden="true" />
@@ -303,13 +302,13 @@ export function ButtonLink({
 }) {
   return (
     <Link
-      to={to}
+      href={to}
       className={cx(
         "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold shadow-sm transition hover:-translate-y-0.5",
         variant === "primary" && "bg-[#006b60] text-white hover:bg-[#0d8a7d]",
         variant === "secondary" && "bg-[#fc9d2a] text-white hover:bg-[#d9841a]",
         variant === "outline" &&
-        "border border-[#006b60] bg-white text-[#006b60] hover:bg-[#f3f4f5]",
+          "border border-[#006b60] bg-white text-[#006b60] hover:bg-[#f3f4f5]",
       )}
     >
       {children}
@@ -485,15 +484,8 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
     <footer className="bg-[#006b60] text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-[1.2fr_0.8fr_1fr]">
         <div>
-          <Link
-            to="/"
-            className="flex items-center"
-          >
-            <img
-              src="/RYOM.png"
-              alt="Ryom Remedies Logo"
-              className="h-24 w-auto object-contain"
-            />
+          <Link href="/" className="flex items-center">
+            <img src="/RYOM.png" alt="Ryom Remedies Logo" className="h-24 w-auto object-contain" />
           </Link>
           <p className="mt-5 max-w-sm text-base leading-7 text-white/80">
             Pioneering advanced pharmaceutical solutions for a healthier tomorrow. Committed to
@@ -509,7 +501,7 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
             {navItems.map((item) => (
               <Link
                 key={item.to}
-                to={item.to}
+                href={item.to}
                 className={cx(
                   "inline-flex w-fit items-center gap-2 text-sm font-semibold transition hover:translate-x-1",
                   item.to === activePath ? "text-[#fc9d2a]" : "text-white/80 hover:text-white",

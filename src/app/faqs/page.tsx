@@ -1,27 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
 import { ArrowRight, FlaskConical, HelpCircle, Mail, Minus, Plus, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { PageHero, RyomSiteLayout } from "@/components/RyomSiteLayout";
-
-export const Route = createFileRoute("/faqs")({
-  head: () => ({
-    meta: [
-      { title: "FAQs - Ryom Remedies" },
-      {
-        name: "description",
-        content:
-          "Find answers to common questions about Ryom Remedies products, quality, distribution, and manufacturing services.",
-      },
-      { property: "og:title", content: "FAQs - Ryom Remedies" },
-      {
-        property: "og:description",
-        content:
-          "Answers to common questions about Ryom Remedies medicines, quality standards, and partnerships.",
-      },
-    ],
-  }),
-  component: FaqsPage,
-});
 
 const heroImage = "/page-header-bg-1-1.jpg";
 
@@ -58,7 +40,7 @@ const faqs = [
   },
 ];
 
-function FaqsPage() {
+export default function FaqsPage() {
   const [openItems, setOpenItems] = useState<string[]>([faqs[0].id]);
 
   function toggleFaq(id: string) {
@@ -187,7 +169,7 @@ function FaqsPage() {
             </p>
           </div>
           <Link
-            to="/contact"
+            href="/contact"
             className="inline-flex items-center gap-2 rounded-lg bg-[#fc9d2a] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9841a]"
           >
             Contact Us

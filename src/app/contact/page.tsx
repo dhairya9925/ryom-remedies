@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { lazy, Suspense } from "react";
+import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
+import LeafletMap from "@/components/LeafletMapDynamic";
 import {
   ContactInfoCard,
   PageHero,
@@ -9,38 +9,25 @@ import {
   SectionHeader,
 } from "@/components/RyomSiteLayout";
 
-const LeafletMap = lazy(() => import("@/components/LeafletMap"));
-
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact Us - Ryom Remedies" },
-      { name: "description", content: "Get in touch with Ryom Remedies." },
-      { property: "og:title", content: "Contact Us - Ryom Remedies" },
-      { property: "og:description", content: "Get in touch with Ryom Remedies." },
-    ],
-  }),
-  component: ContactPage,
-});
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get in touch with Ryom Remedies.",
+  openGraph: {
+    title: "Contact Us - Ryom Remedies",
+    description: "Get in touch with Ryom Remedies.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Contact Us - Ryom Remedies",
+    description: "Get in touch with Ryom Remedies.",
+  },
+};
 
 const heroImage = "/page-header-bg-1-1.jpg";
 
 const labImage = "/man-contact.png";
 
-function MapFallback() {
-  return (
-    <div className="flex h-[400px] items-center justify-center bg-[#edeeef]">
-      <div className="flex items-center gap-3 rounded-lg bg-white/90 px-6 py-4 text-[#0d8a7d] shadow-lg backdrop-blur-sm">
-        <MapPin className="h-6 w-6 text-[#fc9d2a]" aria-hidden="true" />
-        <span className="text-xl font-bold [font-family:Lexend,system-ui,sans-serif]">
-          Ahmedabad, Gujarat, India
-        </span>
-      </div>
-    </div>
-  );
-}
-
-function ContactPage() {
+export default function ContactPage() {
   return (
     <RyomSiteLayout activePath="/contact">
       <PageHero title="Contact" eyebrow="Get In Touch" image={heroImage}>
@@ -120,16 +107,13 @@ function ContactPage() {
 
       {/* ── Interactive Map ─────────────────────────────────── */}
       <section className="relative h-[400px] overflow-hidden">
-        <Suspense fallback={<MapFallback />}>
-          <LeafletMap
-            lat={23.0225}
-            lng={72.5714}
-            zoom={14}
-            popupText="Ryom Remedies — Ahmedabad, Gujarat, India"
-          />
-        </Suspense>
+        <LeafletMap
+          lat={23.0225}
+          lng={72.5714}
+          zoom={14}
+          popupText="Ryom Remedies — Ahmedabad, Gujarat, India"
+        />
       </section>
     </RyomSiteLayout>
   );
 }
-
