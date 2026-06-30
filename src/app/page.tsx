@@ -87,7 +87,7 @@ export default function Index() {
   return (
     <RyomSiteLayout activePath="/">
       <HeroSlider slides={heroSlides} interval={5000} />
-
+      <h1 className="text-center text-2xl font-bold">Preview-Next.js</h1>
       <Section tone="teal" className="pt-8 sm:pt-16">
         {/* Mobile only centered spinning logo */}
         <div className="mx-auto mb-8 flex justify-center sm:hidden">
