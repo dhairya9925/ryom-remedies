@@ -58,7 +58,7 @@ export default function FaqsPage() {
         </p>
       </PageHero>
 
-      <main className="relative overflow-hidden bg-[#006b60]">
+      <main className="relative overflow-hidden bg-[#39b5a3]">
         <div
           className="absolute inset-0 opacity-[0.06]"
           style={{
@@ -69,7 +69,7 @@ export default function FaqsPage() {
         />
         <section className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:py-20">
           <div>
-            <div className="mb-3 flex items-center gap-2 text-sm font-bold text-[#fc9d2a]">
+            <div className="mb-3 flex items-center gap-2 text-sm font-bold text-[#e88f18]">
               <FlaskConical className="h-5 w-5" aria-hidden="true" />
               <span>FAQs</span>
             </div>
@@ -83,7 +83,7 @@ export default function FaqsPage() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
               <div className="rounded-lg border border-white/15 bg-white/10 p-5 text-white backdrop-blur-sm">
-                <ShieldCheck className="mb-4 h-7 w-7 text-[#fc9d2a]" aria-hidden="true" />
+                <ShieldCheck className="mb-4 h-7 w-7 text-[#e88f18]" aria-hidden="true" />
                 <h3 className="font-bold [font-family:Lexend,system-ui,sans-serif]">
                   Quality First
                 </h3>
@@ -93,7 +93,7 @@ export default function FaqsPage() {
                 </p>
               </div>
               <div className="rounded-lg border border-white/15 bg-white/10 p-5 text-white backdrop-blur-sm">
-                <HelpCircle className="mb-4 h-7 w-7 text-[#fc9d2a]" aria-hidden="true" />
+                <HelpCircle className="mb-4 h-7 w-7 text-[#e88f18]" aria-hidden="true" />
                 <h3 className="font-bold [font-family:Lexend,system-ui,sans-serif]">
                   Need Details?
                 </h3>
@@ -121,10 +121,10 @@ export default function FaqsPage() {
                     onClick={() => toggleFaq(faq.id)}
                     className="flex w-full items-center justify-between gap-5 p-5 text-left transition hover:bg-white/5 sm:p-6"
                   >
-                    <span className="text-lg font-bold text-[#fc9d2a] sm:text-xl [font-family:Lexend,system-ui,sans-serif]">
+                    <span className="text-lg font-bold text-[#e88f18] sm:text-xl [font-family:Lexend,system-ui,sans-serif]">
                       {faq.question}
                     </span>
-                    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-[#006b60]">
+                    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-[#39b5a3]">
                       {isOpen ? (
                         <Minus className="h-5 w-5" aria-hidden="true" />
                       ) : (
@@ -156,11 +156,11 @@ export default function FaqsPage() {
       <section className="border-t border-[#e1e3e4] bg-[#f8f9fa] px-4 py-14 sm:px-6">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
-            <div className="mb-2 flex items-center gap-2 text-sm font-bold text-[#006b60]">
-              <Mail className="h-5 w-5 text-[#fc9d2a]" aria-hidden="true" />
+            <div className="mb-2 flex items-center gap-2 text-sm font-bold text-[#39b5a3]">
+              <Mail className="h-5 w-5 text-[#e88f18]" aria-hidden="true" />
               <span>Still have a question?</span>
             </div>
-            <h2 className="text-2xl font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+            <h2 className="text-2xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
               Talk to the Ryom Remedies team
             </h2>
             <p className="mt-2 max-w-2xl text-base leading-7 text-[#6b7280]">
@@ -170,7 +170,7 @@ export default function FaqsPage() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-[#fc9d2a] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9841a]"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#e88f18] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#c97912]"
           >
             Contact Us
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

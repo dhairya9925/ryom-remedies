@@ -67,11 +67,11 @@ export default function AboutPage() {
       {/* ── Brand Motto Section ──────────────────────────── */}
       <Section tone="white" className="text-center">
         <div className="mx-auto max-w-3xl space-y-4">
-          <p className="text-sm font-bold uppercase tracking-widest text-[#fc9d2a]">Our Motto</p>
-          <h2 className="text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+          <p className="text-sm font-bold uppercase tracking-widest text-[#e88f18]">Our Motto</p>
+          <h2 className="text-3xl font-bold text-[#2d9f90] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
             Spreading Health, Spreading Happiness
           </h2>
-          <div className="mx-auto h-1 w-20 rounded-full bg-[#fc9d2a]" />
+          <div className="mx-auto h-1 w-20 rounded-full bg-[#e88f18]" />
           <p className="mt-6 text-lg leading-8 text-[#3d4947]">
             At Ryom Remedies, we are guided by a simple yet powerful vision: to make high-quality,
             affordable healthcare accessible to all. We believe that good health is the foundation
@@ -84,15 +84,15 @@ export default function AboutPage() {
       {/* ── Name Significance ───────────────────────────── */}
       <Section tone="light" className="relative overflow-hidden">
         <div
-          className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#10a696]/5 blur-3xl"
+          className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#39b5a3]/5 blur-3xl"
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <p className="text-sm font-bold uppercase tracking-widest text-[#006b60]">
+            <p className="text-sm font-bold uppercase tracking-widest text-[#39b5a3]">
               Our Identity
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+            <h2 className="mt-2 text-3xl font-bold text-[#2d9f90] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
               What's in a Name?
             </h2>
           </div>
@@ -100,10 +100,10 @@ export default function AboutPage() {
           <div className="grid gap-8 md:grid-cols-2">
             {/* RYOM Card */}
             <div className="flex flex-col rounded-2xl border border-[#bcc9c6]/40 bg-white p-8 shadow-sm transition hover:shadow-md">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#e7f7f4] text-[#006b60]">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#e9f8f6] text-[#39b5a3]">
                 <Sparkles className="h-6 w-6" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+              <h3 className="text-xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
                 RYOM – Strength & Leadership
               </h3>
               <p className="mt-4 leading-relaxed text-[#3d4947]">
@@ -116,10 +116,10 @@ export default function AboutPage() {
 
             {/* OM Card */}
             <div className="flex flex-col rounded-2xl border border-[#bcc9c6]/40 bg-white p-8 shadow-sm transition hover:shadow-md">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#ffdcbe] text-[#8a5100]">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#fde2c1] text-[#8b4f05]">
                 <HeartPulse className="h-6 w-6" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-bold text-[#8a5100] [font-family:Lexend,system-ui,sans-serif]">
+              <h3 className="text-xl font-bold text-[#8b4f05] [font-family:Lexend,system-ui,sans-serif]">
                 OM – Harmony & Healing
               </h3>
               <p className="mt-4 leading-relaxed text-[#3d4947]">
@@ -137,10 +137,10 @@ export default function AboutPage() {
       <Section tone="white" className="relative">
         <div className="relative mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <p className="text-sm font-bold uppercase tracking-widest text-[#fc9d2a]">
+            <p className="text-sm font-bold uppercase tracking-widest text-[#e88f18]">
               Core Commitments
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+            <h2 className="mt-2 text-3xl font-bold text-[#2d9f90] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
               Healthcare Built Around Access & Trust
             </h2>
           </div>
@@ -148,11 +148,11 @@ export default function AboutPage() {
           <div className="grid gap-6 md:grid-cols-2">
             {/* Pillar 1 */}
             <div className="flex gap-5 rounded-xl border border-[#e1e3e4] bg-[#f8f9fa] p-6 shadow-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e7f7f4] text-[#006b60]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e9f8f6] text-[#39b5a3]">
                 <Compass className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+                <h4 className="text-lg font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
                   Healthcare Access is a Right
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
@@ -165,11 +165,11 @@ export default function AboutPage() {
 
             {/* Pillar 2 */}
             <div className="flex gap-5 rounded-xl border border-[#e1e3e4] bg-[#f8f9fa] p-6 shadow-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e7f7f4] text-[#006b60]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e9f8f6] text-[#39b5a3]">
                 <Globe className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+                <h4 className="text-lg font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
                   Global Access & Reliability
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
@@ -182,11 +182,11 @@ export default function AboutPage() {
 
             {/* Pillar 3 */}
             <div className="flex gap-5 rounded-xl border border-[#e1e3e4] bg-[#f8f9fa] p-6 shadow-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e7f7f4] text-[#006b60]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e9f8f6] text-[#39b5a3]">
                 <Award className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+                <h4 className="text-lg font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
                   A New Chapter (Est. 2024)
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
@@ -199,11 +199,11 @@ export default function AboutPage() {
 
             {/* Pillar 4 */}
             <div className="flex gap-5 rounded-xl border border-[#e1e3e4] bg-[#f8f9fa] p-6 shadow-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e7f7f4] text-[#006b60]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e9f8f6] text-[#39b5a3]">
                 <Scale className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+                <h4 className="text-lg font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
                   Ethical & Affordable Solutions
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed text-[#3d4947]">
@@ -240,12 +240,12 @@ function WhoWeAreSection() {
 
       <div className="relative mx-auto max-w-7xl">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <h2 className="text-4xl font-bold text-[#fc9d2a] sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
+          <h2 className="text-4xl font-bold text-[#e88f18] sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
             Who We Are
           </h2>
           <Link
             href="/contact"
-            className="inline-flex w-fit items-center justify-center rounded-lg bg-[#006b60] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#0d8a7d]"
+            className="inline-flex w-fit items-center justify-center rounded-lg bg-[#39b5a3] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#2d9f90]"
           >
             Discover More
           </Link>
@@ -260,10 +260,10 @@ function WhoWeAreSection() {
                 key={card.title}
                 className="relative rounded-lg border border-[#e1e3e4] bg-white p-7 pt-16 shadow-[0_10px_28px_rgba(0,0,0,0.10)] transition hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] md:p-10 md:pt-16"
               >
-                <div className="absolute -top-10 left-8 inline-flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-[#007c70] text-white shadow-xl">
+                <div className="absolute -top-10 left-8 inline-flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-[#39b5a3] text-white shadow-xl">
                   <Icon className="h-9 w-9" aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+                <h3 className="text-2xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
                   {card.title}
                 </h3>
                 <p className="mt-4 text-base leading-7 text-[#3d4947]">{card.description}</p>
@@ -290,7 +290,7 @@ function MissionVisionSection() {
             {missionItems.map((item) => (
               <li key={item} className="flex gap-3 rounded-lg bg-white/10 p-4 text-white/85">
                 <CheckCircle2
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#fc9d2a]"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#e88f18]"
                   aria-hidden="true"
                 />
                 <span>{item}</span>
@@ -300,10 +300,10 @@ function MissionVisionSection() {
         </div>
 
         <div className="rounded-lg bg-white p-7 text-[#191c1d] shadow-xl sm:p-8">
-          <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#e7f7f4] text-[#006b60]">
+          <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#e9f8f6] text-[#39b5a3]">
             <ShieldCheck className="h-7 w-7" aria-hidden="true" />
           </div>
-          <h2 className="text-3xl font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+          <h2 className="text-3xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
             Our Vision
           </h2>
           <p className="mt-5 text-base leading-7 text-[#3d4947]">
@@ -311,8 +311,8 @@ function MissionVisionSection() {
             healthcare and spreading wellness and happiness in every community we serve.
           </p>
           <div className="mt-7 flex items-center gap-3 rounded-lg bg-[#f8f9fa] p-4">
-            <HeartPulse className="h-6 w-6 shrink-0 text-[#fc9d2a]" aria-hidden="true" />
-            <p className="text-sm font-semibold text-[#006b60]">
+            <HeartPulse className="h-6 w-6 shrink-0 text-[#e88f18]" aria-hidden="true" />
+            <p className="text-sm font-semibold text-[#39b5a3]">
               Health is happiness, and every reliable medicine can help move a life forward.
             </p>
           </div>

@@ -32,7 +32,7 @@ export default function CareersPage() {
         <div className="mx-auto max-w-[900px] px-6 md:px-12 space-y-16 text-white">
           {/* Introduction */}
           <div className="space-y-6 text-lg leading-relaxed text-white/95">
-            <p className="text-2xl font-bold text-[#fc9d2a] mb-4 [font-family:Lexend,system-ui,sans-serif]">
+            <p className="text-2xl font-bold text-[#e88f18] mb-4 [font-family:Lexend,system-ui,sans-serif]">
               Careers at Ryom Remedies Private Limited: Join Our Mission to Spread Health &amp;
               Happiness.
             </p>
@@ -50,39 +50,39 @@ export default function CareersPage() {
 
           {/* Why Join Our Team? */}
           <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-[#fc9d2a] border-b border-[#0d8a7d] pb-4 [font-family:Lexend,system-ui,sans-serif]">
+            <h2 className="text-3xl font-bold text-[#e88f18] border-b border-[#2d9f90] pb-4 [font-family:Lexend,system-ui,sans-serif]">
               Why Join Our Team?
             </h2>
             <ul className="space-y-6 text-lg">
               <li className="flex items-start gap-4">
-                <TrendingUp className="h-6 w-6 text-[#fc9d2a] mt-1 shrink-0" aria-hidden="true" />
+                <TrendingUp className="h-6 w-6 text-[#e88f18] mt-1 shrink-0" aria-hidden="true" />
                 <div>
-                  <strong className="text-[#ffdcbe] font-semibold">High-Growth Industry:</strong> Be
+                  <strong className="text-[#fde2c1] font-semibold">High-Growth Industry:</strong> Be
                   part of the ever-expanding pharmaceutical sector with endless opportunities.
                 </div>
               </li>
               <li className="flex items-start gap-4">
                 <Heart
-                  className="h-6 w-6 text-[#fc9d2a] fill-current mt-1 shrink-0"
+                  className="h-6 w-6 text-[#e88f18] fill-current mt-1 shrink-0"
                   aria-hidden="true"
                 />
                 <div>
-                  <strong className="text-[#ffdcbe] font-semibold">Impactful Work:</strong> Help
+                  <strong className="text-[#fde2c1] font-semibold">Impactful Work:</strong> Help
                   doctors and healthcare providers access quality medicines for better patient care.
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <Award className="h-6 w-6 text-[#fc9d2a] mt-1 shrink-0" aria-hidden="true" />
+                <Award className="h-6 w-6 text-[#e88f18] mt-1 shrink-0" aria-hidden="true" />
                 <div>
-                  <strong className="text-[#ffdcbe] font-semibold">Career Progression:</strong>{" "}
+                  <strong className="text-[#fde2c1] font-semibold">Career Progression:</strong>{" "}
                   Fast-track your growth with structured training, performance incentives, and
                   leadership opportunities.
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <Brain className="h-6 w-6 text-[#fc9d2a] mt-1 shrink-0" aria-hidden="true" />
+                <Brain className="h-6 w-6 text-[#e88f18] mt-1 shrink-0" aria-hidden="true" />
                 <div>
-                  <strong className="text-[#ffdcbe] font-semibold">Skill Development:</strong> Gain
+                  <strong className="text-[#fde2c1] font-semibold">Skill Development:</strong> Gain
                   expertise in product knowledge, market strategies, and customer relationship
                   management.
                 </div>
@@ -92,29 +92,29 @@ export default function CareersPage() {
 
           {/* Who Should Apply? */}
           <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-[#fc9d2a] border-b border-[#0d8a7d] pb-4 [font-family:Lexend,system-ui,sans-serif]">
+            <h2 className="text-3xl font-bold text-[#e88f18] border-b border-[#2d9f90] pb-4 [font-family:Lexend,system-ui,sans-serif]">
               Who Should Apply?
             </h2>
-            <ul className="space-y-4 text-lg pl-2 border-l-2 border-[#fc9d2a]/50">
-              <li className="pl-4 relative before:absolute before:left-[-5px] before:top-2.5 before:w-2 before:h-2 before:bg-[#fc9d2a] before:rounded-full">
+            <ul className="space-y-4 text-lg pl-2 border-l-2 border-[#e88f18]/50">
+              <li className="pl-4 relative before:absolute before:left-[-5px] before:top-2.5 before:w-2 before:h-2 before:bg-[#e88f18] before:rounded-full">
                 Individuals with a background in pharma sales or a passion for the healthcare
                 industry.
               </li>
-              <li className="pl-4 relative before:absolute before:left-[-5px] before:top-2.5 before:w-2 before:h-2 before:bg-[#fc9d2a] before:rounded-full">
+              <li className="pl-4 relative before:absolute before:left-[-5px] before:top-2.5 before:w-2 before:h-2 before:bg-[#e88f18] before:rounded-full">
                 Excellent communication and persuasion skills.
               </li>
-              <li className="pl-4 relative before:absolute before:left-[-5px] before:top-2.5 before:w-2 before:h-2 before:bg-[#fc9d2a] before:rounded-full">
+              <li className="pl-4 relative before:absolute before:left-[-5px] before:top-2.5 before:w-2 before:h-2 before:bg-[#e88f18] before:rounded-full">
                 Strong ability to build relationships and drive sales growth.
               </li>
-              <li className="pl-4 relative before:absolute before:left-[-5px] before:top-2.5 before:w-2 before:h-2 before:bg-[#fc9d2a] before:rounded-full">
+              <li className="pl-4 relative before:absolute before:left-[-5px] before:top-2.5 before:w-2 before:h-2 before:bg-[#e88f18] before:rounded-full">
                 Self-motivated professionals eager to learn, perform, and grow.
               </li>
             </ul>
           </div>
 
           {/* Join Our Winning Team! */}
-          <div className="bg-[#0d8a7d]/20 p-8 rounded-xl border border-[#0d8a7d]/40 shadow-inner">
-            <h2 className="text-2xl font-bold text-[#fc9d2a] mb-4 [font-family:Lexend,system-ui,sans-serif]">
+          <div className="bg-[#2d9f90]/20 p-8 rounded-xl border border-[#2d9f90]/40 shadow-inner">
+            <h2 className="text-2xl font-bold text-[#e88f18] mb-4 [font-family:Lexend,system-ui,sans-serif]">
               Join Our Winning Team!
             </h2>
             <p className="text-lg text-white mb-6">
@@ -123,14 +123,14 @@ export default function CareersPage() {
               high-quality medicines!
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 bg-white p-6 rounded-lg text-[#191c1d] shadow-sm">
-              <div className="flex items-center gap-3 text-[#006b60] shrink-0">
-                <Mail className="h-8 w-8 text-[#006b60]" aria-hidden="true" />
+              <div className="flex items-center gap-3 text-[#39b5a3] shrink-0">
+                <Mail className="h-8 w-8 text-[#39b5a3]" aria-hidden="true" />
                 <span className="text-xl font-bold [font-family:Lexend,system-ui,sans-serif]">
                   Send your resume to:
                 </span>
               </div>
               <a
-                className="text-lg font-bold text-[#fc9d2a] hover:text-[#d9841a] transition-colors border-b border-transparent hover:border-[#d9841a]"
+                className="text-lg font-bold text-[#e88f18] hover:text-[#c97912] transition-colors border-b border-transparent hover:border-[#c97912]"
                 href="mailto:admin@ryomremedies.com"
               >
                 admin@ryomremedies.com

@@ -73,7 +73,7 @@ export default function LeafletMap({
           <div style="
             display:flex;align-items:center;justify-content:center;
             width:44px;height:44px;border-radius:50% 50% 50% 4px;
-            background:linear-gradient(135deg,#006b60 0%,#0d8a7d 100%);
+            background:linear-gradient(135deg,#39b5a3 0%,#2d9f90 100%);
             box-shadow:0 4px 14px rgba(0,107,96,.45);
             transform:rotate(-45deg);
           ">
@@ -95,7 +95,7 @@ export default function LeafletMap({
       L.marker([lat, lng], { icon: markerIcon })
         .addTo(map)
         .bindPopup(
-          `<div style="font-family:Lexend,system-ui,sans-serif;font-weight:600;font-size:14px;color:#006b60;min-width:160px;text-align:center;padding:4px 0;">
+          `<div style="font-family:Lexend,system-ui,sans-serif;font-weight:600;font-size:14px;color:#39b5a3;min-width:160px;text-align:center;padding:4px 0;">
              ${popupText}
            </div>`,
           { className: "ryom-popup" },
@@ -129,7 +129,7 @@ export default function LeafletMap({
         <div className="leaflet-map-skeleton">
           <div className="leaflet-map-skeleton-pulse" />
           <div className="leaflet-map-skeleton-label">
-            <MapPin className="h-5 w-5" style={{ color: "#fc9d2a" }} />
+            <MapPin className="h-5 w-5" style={{ color: "#e88f18" }} />
             <span>Loading map…</span>
           </div>
         </div>

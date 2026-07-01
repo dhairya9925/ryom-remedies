@@ -123,7 +123,7 @@ export function ProductBrowser() {
   return (
     <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
       <aside className="h-fit rounded-lg border border-[#e1e3e4] bg-white p-6 shadow-sm lg:sticky lg:top-24">
-        <h2 className="text-xl font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+        <h2 className="text-xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
           Categories
         </h2>
         <div className="mt-5 flex">
@@ -134,12 +134,12 @@ export function ProductBrowser() {
             id="product-search"
             type="search"
             placeholder="Search products"
-            className="min-w-0 flex-1 rounded-l-lg border border-[#e1e3e4] bg-[#f8f9fa] px-3 py-2 text-sm outline-none transition focus:border-[#10a696] focus:bg-white"
+            className="min-w-0 flex-1 rounded-l-lg border border-[#e1e3e4] bg-[#f8f9fa] px-3 py-2 text-sm outline-none transition focus:border-[#39b5a3] focus:bg-white"
           />
           <button
             type="button"
             aria-label="Search products"
-            className="inline-flex w-10 items-center justify-center rounded-r-lg bg-[#006b60] text-white transition hover:bg-[#0d8a7d]"
+            className="inline-flex w-10 items-center justify-center rounded-r-lg bg-[#39b5a3] text-white transition hover:bg-[#2d9f90]"
           >
             <Search className="h-4 w-4" aria-hidden="true" />
           </button>
@@ -149,7 +149,7 @@ export function ProductBrowser() {
             <li key={category}>
               <button
                 type="button"
-                className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#3d4947] transition hover:bg-[#f3f4f5] hover:text-[#006b60]"
+                className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#3d4947] transition hover:bg-[#f3f4f5] hover:text-[#39b5a3]"
               >
                 <span>{category}</span>
                 <span className="rounded-md bg-[#e7e8e9] px-2 py-0.5 text-xs">{count}</span>
@@ -157,8 +157,8 @@ export function ProductBrowser() {
             </li>
           ))}
         </ul>
-        <div className="mt-6 rounded-lg bg-[#e7f7f4] p-4 text-sm leading-6 text-[#3d4947]">
-          <p className="font-bold text-[#006b60]">Product Information</p>
+        <div className="mt-6 rounded-lg bg-[#e9f8f6] p-4 text-sm leading-6 text-[#3d4947]">
+          <p className="font-bold text-[#39b5a3]">Product Information</p>
           <p className="mt-1">
             Details shown here are for catalogue reference. Always follow the prescribing doctor and
             approved product literature.
@@ -194,7 +194,7 @@ function ProductDialogCard({ product }: { product: Product }) {
                 {product.name}
               </h3>
               <p className="mb-5 mt-2 text-sm leading-6 text-[#6b7280]">{product.composition}</p>
-              <span className="mt-auto inline-flex w-fit items-center gap-2 rounded-lg bg-[#006b60] px-4 py-3 text-sm font-bold text-white shadow-sm transition group-hover:bg-[#0d8a7d]">
+              <span className="mt-auto inline-flex w-fit items-center gap-2 rounded-lg bg-[#39b5a3] px-4 py-3 text-sm font-bold text-white shadow-sm transition group-hover:bg-[#2d9f90]">
                 Read More
                 <ArrowRight
                   className="h-4 w-4 transition group-hover:translate-x-1"
@@ -255,21 +255,21 @@ function ProductDialog({ product }: { product: Product }) {
             />
           </div>
 
-          <div className="mt-5 flex flex-col gap-4 rounded-lg bg-[#e7f7f4] p-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-5 flex flex-col gap-4 rounded-lg bg-[#e9f8f6] p-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex flex-wrap gap-2">
               {product.highlights.map((highlight) => (
                 <span
                   key={highlight}
                   className="inline-flex items-center gap-1.5 rounded-md bg-white px-2.5 py-1.5 text-xs font-bold text-[#3d4947]"
                 >
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#10a696]" aria-hidden="true" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#39b5a3]" aria-hidden="true" />
                   {highlight}
                 </span>
               ))}
             </div>
             <a
               href="/contact"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#fc9d2a] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9841a]"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#e88f18] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#c97912]"
             >
               Enquire Now
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -283,7 +283,7 @@ function ProductDialog({ product }: { product: Product }) {
 
 function DetailChip({ icon, label }: { icon: ReactNode; label: string }) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-md bg-[#e7f7f4] px-3 py-2 text-xs font-bold text-[#006b60]">
+    <span className="inline-flex items-center gap-2 rounded-md bg-[#e9f8f6] px-3 py-2 text-xs font-bold text-[#39b5a3]">
       {icon}
       {label}
     </span>
@@ -307,7 +307,7 @@ function DetailRow({
         last ? "" : "border-b border-[#e1e3e4]"
       }`}
     >
-      <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#f3f4f5] text-[#006b60]">
+      <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#f3f4f5] text-[#39b5a3]">
         {icon}
       </div>
       <p className="text-sm leading-6 text-[#6b7280]">

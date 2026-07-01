@@ -82,8 +82,8 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
               className={cx(
                 "px-3 py-2 text-sm font-semibold transition-colors",
                 item.to === activePath
-                  ? "border-b-2 border-[#006b60] text-[#006b60]"
-                  : "rounded-md text-[#3d4947] hover:bg-[#edeeef] hover:text-[#006b60]",
+                  ? "border-b-2 border-[#39b5a3] text-[#39b5a3]"
+                  : "rounded-md text-[#3d4947] hover:bg-[#edeeef] hover:text-[#39b5a3]",
               )}
             >
               {item.label}
@@ -94,7 +94,7 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
         <div className="flex items-center gap-2">
           <Link
             href="/products"
-            className="hidden items-center gap-2 rounded-lg bg-[#fc9d2a] px-5 py-2 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9841a] md:inline-flex"
+            className="hidden items-center gap-2 rounded-lg bg-[#e88f18] px-5 py-2 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#c97912] md:inline-flex"
           >
             <ShoppingBag className="h-4 w-4" aria-hidden="true" />
             Order Now
@@ -104,7 +104,7 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((open) => !open)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#bcc9c6]/60 text-[#006b60] transition hover:bg-[#edeeef] lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#bcc9c6]/60 text-[#39b5a3] transition hover:bg-[#edeeef] lg:hidden"
           >
             {isOpen ? (
               <X className="h-5 w-5" aria-hidden="true" />
@@ -129,8 +129,8 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
                 className={cx(
                   "rounded-md px-3 py-3 text-sm font-semibold transition-colors",
                   item.to === activePath
-                    ? "bg-[#e7f7f4] text-[#006b60]"
-                    : "text-[#3d4947] hover:bg-[#f3f4f5] hover:text-[#006b60]",
+                    ? "bg-[#e9f8f6] text-[#39b5a3]"
+                    : "text-[#3d4947] hover:bg-[#f3f4f5] hover:text-[#39b5a3]",
                 )}
               >
                 {item.label}
@@ -155,27 +155,27 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative flex min-h-[260px] items-center justify-center overflow-hidden bg-[#006b60] px-4 py-20 text-center text-white sm:min-h-[320px] sm:px-6">
+    <section className="relative flex min-h-[260px] items-center justify-center overflow-hidden bg-[#39b5a3] px-4 py-20 text-center text-white sm:min-h-[320px] sm:px-6">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-45"
         style={{ backgroundImage: `url("${image}")` }}
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-t from-[#00201c]/90 via-[#006b60]/55 to-[#006b60]/20"
+        className="absolute inset-0 bg-gradient-to-t from-[#00201c]/90 via-[#39b5a3]/55 to-[#39b5a3]/20"
         aria-hidden="true"
       />
       <div className="relative z-10 mx-auto max-w-3xl">
-        <p className="mb-3 text-sm font-bold text-[#ffdcbe]">{eyebrow}</p>
+        <p className="mb-3 text-sm font-bold text-[#fde2c1]">{eyebrow}</p>
         <h1 className="text-4xl font-bold sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
           {title}
         </h1>
         <div className="mt-4 flex items-center justify-center gap-2 text-sm font-semibold text-white/80">
-          <Link href="/" className="transition hover:text-[#5edac8]">
+          <Link href="/" className="transition hover:text-[#7bded2]">
             Ryom Remedies
           </Link>
           <ChevronRight className="h-4 w-4" aria-hidden="true" />
-          <span className="text-[#5edac8]">{title}</span>
+          <span className="text-[#7bded2]">{title}</span>
         </div>
         {children && <div className="mt-5 text-base leading-7 text-white/80">{children}</div>}
       </div>
@@ -210,10 +210,10 @@ export function HomeHero({
         aria-hidden="true"
       />
       <div className="relative z-10 mx-auto w-full max-w-7xl">
-        <div className="max-w-2xl rounded-lg border-l-4 border-[#006b60] bg-white/95 p-7 shadow-2xl backdrop-blur-sm sm:p-10">
-          <h1 className="text-4xl font-bold leading-tight text-[#006b60] sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
+        <div className="max-w-2xl rounded-lg border-l-4 border-[#39b5a3] bg-white/95 p-7 shadow-2xl backdrop-blur-sm sm:p-10">
+          <h1 className="text-4xl font-bold leading-tight text-[#39b5a3] sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
             {title}
-            <span className="block text-[#fc9d2a]">{highlight}</span>
+            <span className="block text-[#e88f18]">{highlight}</span>
           </h1>
           <p className="mt-5 border-l-2 border-[#bcc9c6] pl-4 text-lg leading-8 text-[#3d4947]">
             {description}
@@ -243,7 +243,7 @@ export function Section({
     <section
       className={cx(
         "px-4 py-16 sm:px-6 lg:py-20",
-        tone === "teal" && "bg-[#006b60] text-white",
+        tone === "teal" && "bg-[#39b5a3] text-white",
         tone === "light" && "bg-[#f8f9fa] text-[#191c1d]",
         tone === "white" && "bg-white text-[#191c1d]",
         className,
@@ -270,14 +270,14 @@ export function SectionHeader({
   return (
     <div className={cx("mb-10 max-w-3xl", centered && "mx-auto text-center")}>
       {eyebrow && (
-        <p className={cx("mb-3 text-sm font-bold", inverse ? "text-[#fc9d2a]" : "text-[#006b60]")}>
+        <p className={cx("mb-3 text-sm font-bold", inverse ? "text-[#e88f18]" : "text-[#39b5a3]")}>
           {eyebrow}
         </p>
       )}
       <h2
         className={cx(
           "text-3xl font-bold sm:text-4xl [font-family:Lexend,system-ui,sans-serif]",
-          inverse ? "text-white" : "text-[#0d8a7d]",
+          inverse ? "text-white" : "text-[#2d9f90]",
         )}
       >
         {title}
@@ -305,10 +305,10 @@ export function ButtonLink({
       href={to}
       className={cx(
         "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold shadow-sm transition hover:-translate-y-0.5",
-        variant === "primary" && "bg-[#006b60] text-white hover:bg-[#0d8a7d]",
-        variant === "secondary" && "bg-[#fc9d2a] text-white hover:bg-[#d9841a]",
+        variant === "primary" && "bg-[#39b5a3] text-white hover:bg-[#2d9f90]",
+        variant === "secondary" && "bg-[#e88f18] text-white hover:bg-[#c97912]",
         variant === "outline" &&
-          "border border-[#006b60] bg-white text-[#006b60] hover:bg-[#f3f4f5]",
+          "border border-[#39b5a3] bg-white text-[#39b5a3] hover:bg-[#f3f4f5]",
       )}
     >
       {children}
@@ -340,7 +340,7 @@ export function FeatureCard({
       <div
         className={cx(
           "mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg",
-          inverse ? "bg-white/10 text-[#fc9d2a]" : "bg-[#e7f7f4] text-[#006b60]",
+          inverse ? "bg-white/10 text-[#e88f18]" : "bg-[#e9f8f6] text-[#39b5a3]",
         )}
       >
         {icon}
@@ -348,7 +348,7 @@ export function FeatureCard({
       <h3
         className={cx(
           "text-xl font-bold [font-family:Lexend,system-ui,sans-serif]",
-          inverse ? "text-[#fc9d2a]" : "text-[#0d8a7d]",
+          inverse ? "text-[#e88f18]" : "text-[#2d9f90]",
         )}
       >
         {title}
@@ -391,20 +391,20 @@ export function SplitFeature({
           className="absolute -bottom-6 -right-6 z-20 flex animate-bounce items-center gap-4 rounded-xl border border-[#e1e3e4] bg-white p-4 shadow-xl"
           style={{ animationDuration: "3s" }}
         >
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e7f7f4]">
-            <ShieldCheck className="h-6 w-6 text-[#006b60]" aria-hidden="true" />
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e9f8f6]">
+            <ShieldCheck className="h-6 w-6 text-[#39b5a3]" aria-hidden="true" />
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">
               Certified
             </p>
-            <p className="text-sm font-bold text-[#006b60]">WHO Approved</p>
+            <p className="text-sm font-bold text-[#39b5a3]">WHO Approved</p>
           </div>
         </div>
       </div>
       <div>
-        <p className="mb-3 text-sm font-bold text-[#fc9d2a]">{eyebrow}</p>
-        <h2 className="text-3xl font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+        <p className="mb-3 text-sm font-bold text-[#e88f18]">{eyebrow}</p>
+        <h2 className="text-3xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
           {title}
         </h2>
         <div className="mt-5 space-y-4 text-base leading-7 text-[#3d4947]">{children}</div>
@@ -457,7 +457,7 @@ export function ContactInfoCard({
   href?: string;
 }) {
   const content = (
-    <div className="rounded-lg bg-[#006b60] p-6 text-white shadow-sm">
+    <div className="rounded-lg bg-[#39b5a3] p-6 text-white shadow-sm">
       <div className="flex items-start gap-4">
         <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10">
           {icon}
@@ -481,33 +481,43 @@ export function ContactInfoCard({
 
 function SiteFooter({ activePath }: { activePath: RoutePath }) {
   return (
-    <footer className="bg-[#006b60] text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-[1.2fr_0.8fr_1fr]">
+    <footer className="bg-[linear-gradient(110deg,#0c5a51_0%,#197d71_48%,#39b5a3_100%)] text-white">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:px-8 lg:grid-cols-[1.35fr_0.8fr_1fr] lg:gap-20">
         <div>
           <Link href="/" className="flex items-center">
-            <img src="/RYOM.png" alt="Ryom Remedies Logo" className="h-24 w-auto object-contain" />
+            <img
+              src="/RYOM.png"
+              alt="Ryom Remedies Logo"
+              className="h-20 w-auto max-w-full object-contain sm:h-24"
+            />
           </Link>
-          <p className="mt-5 max-w-sm text-base leading-7 text-white/80">
+          <p className="mt-6 max-w-sm text-base leading-7 text-[#d8f5f0]">
             Pioneering advanced pharmaceutical solutions for a healthier tomorrow. Committed to
             quality, affordability, and care.
           </p>
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#fc9d2a] [font-family:Lexend,system-ui,sans-serif]">
+          <h2 className="text-xl font-bold text-[#e88f18] [font-family:Lexend,system-ui,sans-serif]">
             Links
           </h2>
-          <nav className="mt-5 grid gap-3" aria-label="Footer navigation">
+          <nav className="mt-6 grid gap-3" aria-label="Footer navigation">
             {navItems.map((item) => (
               <Link
                 key={item.to}
                 href={item.to}
                 className={cx(
-                  "inline-flex w-fit items-center gap-2 text-sm font-semibold transition hover:translate-x-1",
-                  item.to === activePath ? "text-[#fc9d2a]" : "text-white/80 hover:text-white",
+                  "inline-flex w-fit items-center gap-3 text-sm font-semibold transition hover:translate-x-1",
+                  item.to === activePath ? "text-[#e88f18]" : "text-[#d8f5f0] hover:text-white",
                 )}
               >
-                <ChevronRight className="h-4 w-4" aria-hidden="true" />
+                <ChevronRight
+                  className={cx(
+                    "h-4 w-4",
+                    item.to === activePath ? "text-[#e88f18]" : "text-[#bce9e2]",
+                  )}
+                  aria-hidden="true"
+                />
                 {item.label}
               </Link>
             ))}
@@ -515,46 +525,46 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#fc9d2a] [font-family:Lexend,system-ui,sans-serif]">
+          <h2 className="text-xl font-bold text-[#e88f18] [font-family:Lexend,system-ui,sans-serif]">
             Contact
           </h2>
-          <ul className="mt-5 space-y-4 text-sm font-semibold text-white/80">
-            <li className="flex gap-3">
-              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#fc9d2a]" aria-hidden="true" />
+          <ul className="mt-6 space-y-5 text-sm font-semibold text-[#e3faf6]">
+            <li className="flex gap-4">
+              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#e88f18]" aria-hidden="true" />
               <span>Ahmedabad, Gujarat, India.</span>
             </li>
-            <li className="flex items-center gap-3">
-              <Phone className="h-5 w-5 shrink-0 text-[#fc9d2a]" aria-hidden="true" />
-              <a href="tel:+918888888888" className="transition hover:text-[#fc9d2a]">
+            <li className="flex items-center gap-4">
+              <Phone className="h-5 w-5 shrink-0 text-[#e88f18]" aria-hidden="true" />
+              <a href="tel:+918888888888" className="transition hover:text-[#e88f18]">
                 +91 88888 88888
               </a>
             </li>
-            <li className="flex items-center gap-3">
-              <Mail className="h-5 w-5 shrink-0 text-[#fc9d2a]" aria-hidden="true" />
-              <a href="mailto:info@ryomremedies.com" className="transition hover:text-[#fc9d2a]">
+            <li className="flex items-center gap-4">
+              <Mail className="h-5 w-5 shrink-0 text-[#e88f18]" aria-hidden="true" />
+              <a href="mailto:info@ryomremedies.com" className="transition hover:text-[#e88f18]">
                 info@ryomremedies.com
               </a>
             </li>
           </ul>
-          <div className="mt-6 flex gap-3">
+          <div className="mt-7 flex gap-3">
             <a
               href="#"
               aria-label="Share Ryom Remedies"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-[#fc9d2a]"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/12 text-white transition hover:bg-[#e88f18]"
             >
               <Share2 className="h-5 w-5" aria-hidden="true" />
             </a>
             <a
               href="#"
               aria-label="Visit Ryom Remedies online"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-[#fc9d2a]"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/12 text-white transition hover:bg-[#e88f18]"
             >
               <Globe2 className="h-5 w-5" aria-hidden="true" />
             </a>
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 px-4 py-6 text-center text-sm text-white/60">
+      <div className="border-t border-white/10 px-4 py-7 text-center text-sm text-[#c5eee8]/75">
         © Copyright 2026 Ryom Remedies Pvt. Ltd. All Rights Reserved.
       </div>
     </footer>

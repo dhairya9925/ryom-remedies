@@ -70,33 +70,33 @@ export default function ContactPage() {
             <form className="grid gap-4">
               <div className="grid gap-4 md:grid-cols-2">
                 <input
-                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#006b60] focus:bg-white"
+                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#39b5a3] focus:bg-white"
                   placeholder="Your name"
                   type="text"
                 />
                 <input
-                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#006b60] focus:bg-white"
+                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#39b5a3] focus:bg-white"
                   placeholder="Email address"
                   type="email"
                 />
                 <input
-                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#006b60] focus:bg-white"
+                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#39b5a3] focus:bg-white"
                   placeholder="Phone"
                   type="tel"
                 />
                 <input
-                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#006b60] focus:bg-white"
+                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#39b5a3] focus:bg-white"
                   placeholder="Company Name"
                   type="text"
                 />
               </div>
               <textarea
-                className="min-h-36 rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#006b60] focus:bg-white"
+                className="min-h-36 rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#39b5a3] focus:bg-white"
                 placeholder="Write a message"
               />
               <button
                 type="submit"
-                className="inline-flex w-fit rounded-lg bg-[#fc9d2a] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9841a]"
+                className="inline-flex w-fit rounded-lg bg-[#e88f18] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#c97912]"
               >
                 Send message
               </button>

@@ -110,8 +110,8 @@ export default function BlogPage() {
           <div>
             <div className="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div className="max-w-2xl">
-                <p className="mb-3 text-sm font-bold text-[#006b60]">Latest Articles</p>
-                <h2 className="text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+                <p className="mb-3 text-sm font-bold text-[#39b5a3]">Latest Articles</p>
+                <h2 className="text-3xl font-bold text-[#2d9f90] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
                   Healthcare knowledge for partners, professionals, and families
                 </h2>
               </div>
@@ -148,7 +148,7 @@ export default function BlogPage() {
                   aria-current={page === 1 ? "page" : undefined}
                   className={
                     page === 1
-                      ? "inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#006b60] text-sm font-bold text-white shadow-sm"
+                      ? "inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#39b5a3] text-sm font-bold text-white shadow-sm"
                       : "inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#bcc9c6] bg-white text-sm font-bold text-[#3d4947] transition hover:bg-[#edeeef]"
                   }
                 >
@@ -180,7 +180,7 @@ function FeaturedArticle({ post }: { post: (typeof posts)[number] }) {
       <div className="grid lg:grid-cols-[1.08fr_0.92fr]">
         <div className="relative min-h-[320px] bg-[#e7e8e9]">
           <img src={post.image} alt="" className="absolute inset-0 h-full w-full object-cover" />
-          <div className="absolute left-5 top-5 rounded-lg bg-[#fc9d2a] px-4 py-3 text-white shadow-md">
+          <div className="absolute left-5 top-5 rounded-lg bg-[#e88f18] px-4 py-3 text-white shadow-md">
             <span className="block text-2xl font-bold leading-none [font-family:Lexend,system-ui,sans-serif]">
               22
             </span>
@@ -188,9 +188,9 @@ function FeaturedArticle({ post }: { post: (typeof posts)[number] }) {
           </div>
         </div>
         <div className="flex flex-col justify-center p-6 sm:p-8">
-          <div className="mb-4 flex flex-wrap items-center gap-3 text-sm font-bold text-[#006b60]">
+          <div className="mb-4 flex flex-wrap items-center gap-3 text-sm font-bold text-[#39b5a3]">
             <span className="inline-flex items-center gap-2">
-              <Icon className="h-4 w-4 text-[#fc9d2a]" aria-hidden="true" />
+              <Icon className="h-4 w-4 text-[#e88f18]" aria-hidden="true" />
               {post.category}
             </span>
             <span className="inline-flex items-center gap-2 text-[#6b7280]">
@@ -198,7 +198,7 @@ function FeaturedArticle({ post }: { post: (typeof posts)[number] }) {
               {post.readTime}
             </span>
           </div>
-          <h3 className="text-2xl font-bold leading-tight text-[#0d8a7d] sm:text-3xl [font-family:Lexend,system-ui,sans-serif]">
+          <h3 className="text-2xl font-bold leading-tight text-[#2d9f90] sm:text-3xl [font-family:Lexend,system-ui,sans-serif]">
             {post.title}
           </h3>
           <p className="mt-4 text-base leading-7 text-[#4f5b58]">{post.summary}</p>
@@ -217,7 +217,7 @@ function FeaturedArticle({ post }: { post: (typeof posts)[number] }) {
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-md bg-[#e7f7f4] px-3 py-1 text-xs font-bold text-[#006b60]"
+                  className="rounded-md bg-[#e9f8f6] px-3 py-1 text-xs font-bold text-[#39b5a3]"
                 >
                   {tag}
                 </span>
@@ -225,7 +225,7 @@ function FeaturedArticle({ post }: { post: (typeof posts)[number] }) {
             </div>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 rounded-lg bg-[#006b60] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#0d8a7d]"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#39b5a3] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#2d9f90]"
             >
               Read More
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -251,15 +251,15 @@ function BlogCard({ post }: { post: (typeof posts)[number] }) {
         />
       </div>
       <div className="flex flex-1 flex-col p-5">
-        <div className="mb-3 flex items-center gap-2 text-sm font-bold text-[#10a696]">
+        <div className="mb-3 flex items-center gap-2 text-sm font-bold text-[#39b5a3]">
           <Icon className="h-4 w-4" aria-hidden="true" />
           <span>{post.category}</span>
         </div>
-        <h3 className="text-lg font-bold leading-snug text-[#0d8a7d] transition group-hover:text-[#d9841a] [font-family:Lexend,system-ui,sans-serif]">
+        <h3 className="text-lg font-bold leading-snug text-[#2d9f90] transition group-hover:text-[#c97912] [font-family:Lexend,system-ui,sans-serif]">
           {post.title}
         </h3>
         <p className="mt-3 flex-1 text-sm leading-6 text-[#6b7280]">{post.summary}</p>
-        <div className="mt-5 flex items-center justify-between border-t border-[#e1e3e4] pt-4 text-sm font-bold text-[#006b60]">
+        <div className="mt-5 flex items-center justify-between border-t border-[#e1e3e4] pt-4 text-sm font-bold text-[#39b5a3]">
           <span>{post.date}</span>
           <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
         </div>
@@ -280,12 +280,12 @@ function BlogSidebar() {
             id="blog-search"
             type="search"
             placeholder="Search here..."
-            className="min-w-0 flex-1 rounded-l-lg border border-[#e1e3e4] bg-[#f8f9fa] px-4 py-3 text-sm text-[#191c1d] outline-none transition focus:border-[#10a696] focus:bg-white"
+            className="min-w-0 flex-1 rounded-l-lg border border-[#e1e3e4] bg-[#f8f9fa] px-4 py-3 text-sm text-[#191c1d] outline-none transition focus:border-[#39b5a3] focus:bg-white"
           />
           <button
             type="submit"
             aria-label="Search"
-            className="inline-flex w-12 items-center justify-center rounded-r-lg bg-[#191c1d] text-white transition hover:bg-[#006b60]"
+            className="inline-flex w-12 items-center justify-center rounded-r-lg bg-[#191c1d] text-white transition hover:bg-[#39b5a3]"
           >
             <Search className="h-4 w-4" aria-hidden="true" />
           </button>
@@ -304,7 +304,7 @@ function BlogSidebar() {
               />
               <span>
                 <span className="block text-xs font-semibold text-[#6b7280]">{post.date}</span>
-                <span className="mt-1 block text-sm font-bold leading-snug text-[#191c1d] transition group-hover:text-[#006b60]">
+                <span className="mt-1 block text-sm font-bold leading-snug text-[#191c1d] transition group-hover:text-[#39b5a3]">
                   {post.title}
                 </span>
               </span>
@@ -319,7 +319,7 @@ function BlogSidebar() {
             <li key={category}>
               <Link
                 href="/blog"
-                className="flex items-center justify-between rounded-lg px-2 py-2 text-sm font-semibold text-[#3d4947] transition hover:bg-[#f3f4f5] hover:text-[#006b60]"
+                className="flex items-center justify-between rounded-lg px-2 py-2 text-sm font-semibold text-[#3d4947] transition hover:bg-[#f3f4f5] hover:text-[#39b5a3]"
               >
                 <span>{category}</span>
                 <span className="rounded-md bg-[#e7e8e9] px-2 py-0.5 text-xs">{count}</span>
@@ -335,7 +335,7 @@ function BlogSidebar() {
             <Link
               key={tag}
               href="/blog"
-              className="inline-flex items-center gap-1 rounded-md bg-[#f3f4f5] px-3 py-2 text-xs font-bold text-[#4f5b58] transition hover:bg-[#e7f7f4] hover:text-[#006b60]"
+              className="inline-flex items-center gap-1 rounded-md bg-[#f3f4f5] px-3 py-2 text-xs font-bold text-[#4f5b58] transition hover:bg-[#e9f8f6] hover:text-[#39b5a3]"
             >
               <Tag className="h-3 w-3" aria-hidden="true" />
               {tag}
@@ -350,7 +350,7 @@ function BlogSidebar() {
 function SidebarPanel({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="rounded-lg border border-[#e1e3e4] bg-white p-6 shadow-sm">
-      <h2 className="text-lg font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+      <h2 className="text-lg font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
         {title}
       </h2>
       <div className="mt-3 h-px w-full bg-[#d6e3e1]" aria-hidden="true" />
