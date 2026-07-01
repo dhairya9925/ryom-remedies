@@ -24,7 +24,6 @@ export type RoutePath =
   | "/services"
   | "/products"
   | "/careers"
-  | "/blog"
   | "/faqs"
   | "/contact";
 
@@ -34,7 +33,6 @@ const navItems = [
   { label: "Our Services", to: "/services" },
   { label: "Our Products", to: "/products" },
   { label: "Careers", to: "/careers" },
-  { label: "Blog", to: "/blog" },
   { label: "FAQs", to: "/faqs" },
   { label: "Contact Us", to: "/contact" },
 ] as const satisfies ReadonlyArray<{ label: string; to: RoutePath }>;
