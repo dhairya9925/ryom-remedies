@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import {
   ArrowRight,
+  CalendarDays,
   ChevronLeft,
   ChevronRight,
+  Clock3,
   Microscope,
-  Newspaper,
   Pill,
   Scale,
+  Search,
   Sparkles,
+  Tag,
+  UserRound,
 } from "lucide-react";
 import { PageHero, RyomSiteLayout } from "@/components/RyomSiteLayout";
 
@@ -33,48 +38,64 @@ const heroImage = "/page-header-bg-1-1.jpg";
 
 const posts = [
   {
-    title: "Healthcare Trends & Innovation",
-    category: "Research",
+    title: "Healthcare Trends & Innovations",
+    category: "Digital Solution",
     icon: Microscope,
-    day: "22",
-    month: "Apr",
+    date: "April 22, 2024",
+    readTime: "5 min read",
     image: "/blog-7.jpg",
     summary:
-      "Exploring the latest technological advancements shaping clinical trials, patient care, and access to dependable medicines.",
+      "A practical look at how digital tools, research workflows, and accessible distribution are shaping more dependable patient care.",
+    tags: ["Healthcare", "Innovation"],
+    featured: true,
   },
   {
     title: "New Product Launches",
-    category: "Products",
+    category: "Product Updates",
     icon: Sparkles,
-    day: "22",
-    month: "Apr",
+    date: "April 22, 2024",
+    readTime: "4 min read",
     image: "/blog-3.jpg",
     summary:
-      "A look at our latest formulations and how thoughtful product development supports better healthcare outcomes.",
+      "What partners should know when new formulations enter the Ryom Remedies product range.",
+    tags: ["Products", "Distribution"],
   },
   {
     title: "Pharmaceutical Compliance & Regulations",
     category: "Compliance",
     icon: Scale,
-    day: "22",
-    month: "Apr",
+    date: "April 22, 2024",
+    readTime: "6 min read",
     image: "/blog-2.jpg",
     summary:
-      "Navigating pharmaceutical standards and our commitment to quality, traceability, and ethical business practices.",
+      "Quality, documentation, and responsible processes remain central to every medicine we support.",
+    tags: ["Quality", "Regulations"],
   },
   {
     title: "Expert Tips on Medicine Usage",
-    category: "Advice",
+    category: "Patient Care",
     icon: Pill,
-    day: "22",
-    month: "Apr",
+    date: "April 22, 2024",
+    readTime: "3 min read",
     image: "/blog-1.jpg",
-    summary:
-      "Practical guidance for patients and caregivers to use prescribed medicines safely and consistently.",
+    summary: "Simple, repeatable guidance for using prescribed medicines consistently and safely.",
+    tags: ["Care", "Dosage"],
   },
 ];
 
+const categories = [
+  ["Digital solution", 3],
+  ["Free testing", 2],
+  ["Laboratory", 4],
+  ["Healthcare", 5],
+  ["Pharmaceutical", 3],
+] as const;
+
+const tags = ["Development", "Digital", "Marketing", "Medicine", "Wellness"];
+
 export default function BlogPage() {
+  const [featuredPost, ...morePosts] = posts;
+
   return (
     <RyomSiteLayout activePath="/blog">
       <PageHero title="Blog" eyebrow="Insights & Updates" image={heroImage}>
@@ -85,66 +106,134 @@ export default function BlogPage() {
       </PageHero>
 
       <main className="bg-[#f8f9fa]">
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-20">
-          <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <div className="max-w-2xl">
-              <div className="mb-3 flex items-center gap-2 text-sm font-bold text-[#006b60]">
-                <Newspaper className="h-5 w-5 text-[#fc9d2a]" aria-hidden="true" />
-                <span>Latest Articles</span>
+        <section className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_340px] lg:py-20">
+          <div>
+            <div className="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div className="max-w-2xl">
+                <p className="mb-3 text-sm font-bold text-[#006b60]">Latest Articles</p>
+                <h2 className="text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+                  Healthcare knowledge for partners, professionals, and families
+                </h2>
               </div>
-              <h2 className="text-3xl font-bold text-[#0d8a7d] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
-                Practical healthcare knowledge, made easy to follow
-              </h2>
+              <p className="max-w-md text-base leading-7 text-[#6b7280]">
+                Browse updates inspired by the previous Ryom Remedies blog, redesigned for the new
+                site with a cleaner article flow.
+              </p>
             </div>
-            <p className="max-w-md text-base leading-7 text-[#6b7280]">
-              Explore guidance and updates designed for partners, professionals, and families who
-              value accessible, dependable healthcare.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {posts.map((post) => (
-              <BlogCard key={post.title} post={post} />
-            ))}
-          </div>
+            <FeaturedArticle post={featuredPost} />
 
-          <div
-            className="mt-14 flex items-center justify-center gap-2"
-            aria-label="Blog pagination"
-          >
-            <button
-              type="button"
-              aria-label="Previous page"
-              disabled
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#bcc9c6] text-[#6d7a77] opacity-50"
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {morePosts.map((post) => (
+                <BlogCard key={post.title} post={post} />
+              ))}
+            </div>
+
+            <div
+              className="mt-12 flex items-center justify-center gap-2"
+              aria-label="Blog pagination"
             >
-              <ChevronLeft className="h-5 w-5" aria-hidden="true" />
-            </button>
-            {[1, 2, 3].map((page) => (
               <button
                 type="button"
-                key={page}
-                aria-current={page === 1 ? "page" : undefined}
-                className={
-                  page === 1
-                    ? "inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#006b60] text-sm font-bold text-white shadow-sm"
-                    : "inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#bcc9c6] bg-white text-sm font-bold text-[#3d4947] transition hover:bg-[#edeeef]"
-                }
+                aria-label="Previous page"
+                disabled
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#bcc9c6] text-[#6d7a77] opacity-50"
               >
-                {page}
+                <ChevronLeft className="h-5 w-5" aria-hidden="true" />
               </button>
-            ))}
-            <button
-              type="button"
-              aria-label="Next page"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#bcc9c6] bg-white text-[#3d4947] transition hover:bg-[#edeeef]"
-            >
-              <ChevronRight className="h-5 w-5" aria-hidden="true" />
-            </button>
+              {[1, 2, 3].map((page) => (
+                <button
+                  type="button"
+                  key={page}
+                  aria-current={page === 1 ? "page" : undefined}
+                  className={
+                    page === 1
+                      ? "inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#006b60] text-sm font-bold text-white shadow-sm"
+                      : "inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#bcc9c6] bg-white text-sm font-bold text-[#3d4947] transition hover:bg-[#edeeef]"
+                  }
+                >
+                  {page}
+                </button>
+              ))}
+              <button
+                type="button"
+                aria-label="Next page"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#bcc9c6] bg-white text-[#3d4947] transition hover:bg-[#edeeef]"
+              >
+                <ChevronRight className="h-5 w-5" aria-hidden="true" />
+              </button>
+            </div>
           </div>
+
+          <BlogSidebar />
         </section>
       </main>
     </RyomSiteLayout>
+  );
+}
+
+function FeaturedArticle({ post }: { post: (typeof posts)[number] }) {
+  const Icon = post.icon;
+
+  return (
+    <article className="overflow-hidden rounded-lg border border-[#e1e3e4] bg-white shadow-[0_16px_45px_rgba(0,107,96,0.08)]">
+      <div className="grid lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="relative min-h-[320px] bg-[#e7e8e9]">
+          <img src={post.image} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute left-5 top-5 rounded-lg bg-[#fc9d2a] px-4 py-3 text-white shadow-md">
+            <span className="block text-2xl font-bold leading-none [font-family:Lexend,system-ui,sans-serif]">
+              22
+            </span>
+            <span className="text-xs font-bold uppercase">Apr</span>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center p-6 sm:p-8">
+          <div className="mb-4 flex flex-wrap items-center gap-3 text-sm font-bold text-[#006b60]">
+            <span className="inline-flex items-center gap-2">
+              <Icon className="h-4 w-4 text-[#fc9d2a]" aria-hidden="true" />
+              {post.category}
+            </span>
+            <span className="inline-flex items-center gap-2 text-[#6b7280]">
+              <Clock3 className="h-4 w-4" aria-hidden="true" />
+              {post.readTime}
+            </span>
+          </div>
+          <h3 className="text-2xl font-bold leading-tight text-[#0d8a7d] sm:text-3xl [font-family:Lexend,system-ui,sans-serif]">
+            {post.title}
+          </h3>
+          <p className="mt-4 text-base leading-7 text-[#4f5b58]">{post.summary}</p>
+          <div className="mt-5 flex flex-wrap items-center gap-3 border-y border-[#e1e3e4] py-4 text-sm font-semibold text-[#6b7280]">
+            <span className="inline-flex items-center gap-2">
+              <UserRound className="h-4 w-4" aria-hidden="true" />
+              ryom_remedies_admin
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <CalendarDays className="h-4 w-4" aria-hidden="true" />
+              {post.date}
+            </span>
+          </div>
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap gap-2">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-md bg-[#e7f7f4] px-3 py-1 text-xs font-bold text-[#006b60]"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#006b60] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#0d8a7d]"
+            >
+              Read More
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </article>
   );
 }
 
@@ -152,7 +241,7 @@ function BlogCard({ post }: { post: (typeof posts)[number] }) {
   const Icon = post.icon;
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#e1e3e4] bg-white shadow-[0_4px_20px_rgba(16,166,150,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(0,0,0,0.09)]">
+    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#e1e3e4] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(0,0,0,0.09)]">
       <div className="relative aspect-[4/3] overflow-hidden bg-[#edeeef]">
         <img
           src={post.image}
@@ -160,30 +249,112 @@ function BlogCard({ post }: { post: (typeof posts)[number] }) {
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           loading="lazy"
         />
-        <div className="absolute right-4 top-4 flex h-14 w-14 flex-col items-center justify-center rounded-full border-2 border-white bg-[#fc9d2a] text-white shadow-md">
-          <span className="text-xl font-bold leading-none [font-family:Lexend,system-ui,sans-serif]">
-            {post.day}
-          </span>
-          <span className="text-xs font-bold">{post.month}</span>
-        </div>
       </div>
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-5">
         <div className="mb-3 flex items-center gap-2 text-sm font-bold text-[#10a696]">
           <Icon className="h-4 w-4" aria-hidden="true" />
           <span>{post.category}</span>
         </div>
-        <h3 className="text-xl font-bold text-[#0d8a7d] transition group-hover:text-[#d9841a] [font-family:Lexend,system-ui,sans-serif]">
+        <h3 className="text-lg font-bold leading-snug text-[#0d8a7d] transition group-hover:text-[#d9841a] [font-family:Lexend,system-ui,sans-serif]">
           {post.title}
         </h3>
         <p className="mt-3 flex-1 text-sm leading-6 text-[#6b7280]">{post.summary}</p>
-        <Link
-          href="/contact"
-          className="mt-6 inline-flex items-center justify-between rounded-lg bg-[#f3f4f5] px-4 py-3 text-sm font-bold text-[#006b60] transition hover:bg-[#e7e8e9] hover:text-[#d9841a]"
-        >
-          Read More
+        <div className="mt-5 flex items-center justify-between border-t border-[#e1e3e4] pt-4 text-sm font-bold text-[#006b60]">
+          <span>{post.date}</span>
           <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
-        </Link>
+        </div>
       </div>
     </article>
+  );
+}
+
+function BlogSidebar() {
+  return (
+    <aside className="space-y-6 lg:sticky lg:top-24 lg:h-fit">
+      <SidebarPanel title="Search">
+        <form className="flex" action="/blog">
+          <label className="sr-only" htmlFor="blog-search">
+            Search blog
+          </label>
+          <input
+            id="blog-search"
+            type="search"
+            placeholder="Search here..."
+            className="min-w-0 flex-1 rounded-l-lg border border-[#e1e3e4] bg-[#f8f9fa] px-4 py-3 text-sm text-[#191c1d] outline-none transition focus:border-[#10a696] focus:bg-white"
+          />
+          <button
+            type="submit"
+            aria-label="Search"
+            className="inline-flex w-12 items-center justify-center rounded-r-lg bg-[#191c1d] text-white transition hover:bg-[#006b60]"
+          >
+            <Search className="h-4 w-4" aria-hidden="true" />
+          </button>
+        </form>
+      </SidebarPanel>
+
+      <SidebarPanel title="Recent Posts">
+        <div className="grid gap-4">
+          {posts.slice(0, 3).map((post) => (
+            <Link key={post.title} href="/blog" className="group grid grid-cols-[72px_1fr] gap-3">
+              <img
+                src={post.image}
+                alt=""
+                className="h-16 w-full rounded-md object-cover"
+                loading="lazy"
+              />
+              <span>
+                <span className="block text-xs font-semibold text-[#6b7280]">{post.date}</span>
+                <span className="mt-1 block text-sm font-bold leading-snug text-[#191c1d] transition group-hover:text-[#006b60]">
+                  {post.title}
+                </span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </SidebarPanel>
+
+      <SidebarPanel title="Categories">
+        <ul className="grid gap-2">
+          {categories.map(([category, count]) => (
+            <li key={category}>
+              <Link
+                href="/blog"
+                className="flex items-center justify-between rounded-lg px-2 py-2 text-sm font-semibold text-[#3d4947] transition hover:bg-[#f3f4f5] hover:text-[#006b60]"
+              >
+                <span>{category}</span>
+                <span className="rounded-md bg-[#e7e8e9] px-2 py-0.5 text-xs">{count}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </SidebarPanel>
+
+      <SidebarPanel title="Tags">
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <Link
+              key={tag}
+              href="/blog"
+              className="inline-flex items-center gap-1 rounded-md bg-[#f3f4f5] px-3 py-2 text-xs font-bold text-[#4f5b58] transition hover:bg-[#e7f7f4] hover:text-[#006b60]"
+            >
+              <Tag className="h-3 w-3" aria-hidden="true" />
+              {tag}
+            </Link>
+          ))}
+        </div>
+      </SidebarPanel>
+    </aside>
+  );
+}
+
+function SidebarPanel({ title, children }: { title: string; children: ReactNode }) {
+  return (
+    <section className="rounded-lg border border-[#e1e3e4] bg-white p-6 shadow-sm">
+      <h2 className="text-lg font-bold text-[#0d8a7d] [font-family:Lexend,system-ui,sans-serif]">
+        {title}
+      </h2>
+      <div className="mt-3 h-px w-full bg-[#d6e3e1]" aria-hidden="true" />
+      <div className="mt-5">{children}</div>
+    </section>
   );
 }
