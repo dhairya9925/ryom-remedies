@@ -269,7 +269,7 @@ function ProductDialog({ product }: { product: Product }) {
             </div>
             <a
               href="/contact"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#e88f18] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#c97912]"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#F6D32D] px-4 py-2.5 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#C9A400]"
             >
               Enquire Now
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

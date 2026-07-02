@@ -92,7 +92,7 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
         <div className="flex items-center gap-2">
           <Link
             href="/products"
-            className="hidden items-center gap-2 rounded-lg bg-[#e88f18] px-5 py-2 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#c97912] md:inline-flex"
+            className="hidden items-center gap-2 rounded-lg bg-[#F6D32D] px-5 py-2 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#C9A400] md:inline-flex"
           >
             <ShoppingBag className="h-4 w-4" aria-hidden="true" />
             Order Now
@@ -164,7 +164,7 @@ export function PageHero({
         aria-hidden="true"
       />
       <div className="relative z-10 mx-auto max-w-3xl">
-        <p className="mb-3 text-sm font-bold text-[#fde2c1]">{eyebrow}</p>
+        <p className="mb-3 text-sm font-bold text-[#FFF6C7]">{eyebrow}</p>
         <h1 className="text-4xl font-bold sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
           {title}
         </h1>
@@ -211,7 +211,7 @@ export function HomeHero({
         <div className="max-w-2xl rounded-lg border-l-4 border-[#39b5a3] bg-white/95 p-7 shadow-2xl backdrop-blur-sm sm:p-10">
           <h1 className="text-4xl font-bold leading-tight text-[#39b5a3] sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
             {title}
-            <span className="block text-[#e88f18]">{highlight}</span>
+            <span className="block text-[#F6D32D]">{highlight}</span>
           </h1>
           <p className="mt-5 border-l-2 border-[#bcc9c6] pl-4 text-lg leading-8 text-[#3d4947]">
             {description}
@@ -268,7 +268,7 @@ export function SectionHeader({
   return (
     <div className={cx("mb-10 max-w-3xl", centered && "mx-auto text-center")}>
       {eyebrow && (
-        <p className={cx("mb-3 text-sm font-bold", inverse ? "text-[#e88f18]" : "text-[#39b5a3]")}>
+        <p className={cx("mb-3 text-sm font-bold", inverse ? "text-[#F6D32D]" : "text-[#39b5a3]")}>
           {eyebrow}
         </p>
       )}
@@ -304,7 +304,7 @@ export function ButtonLink({
       className={cx(
         "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold shadow-sm transition hover:-translate-y-0.5",
         variant === "primary" && "bg-[#39b5a3] text-white hover:bg-[#2d9f90]",
-        variant === "secondary" && "bg-[#e88f18] text-white hover:bg-[#c97912]",
+        variant === "secondary" && "bg-[#F6D32D] text-[#173f39] hover:bg-[#C9A400]",
         variant === "outline" &&
           "border border-[#39b5a3] bg-white text-[#39b5a3] hover:bg-[#f3f4f5]",
       )}
@@ -338,7 +338,7 @@ export function FeatureCard({
       <div
         className={cx(
           "mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg",
-          inverse ? "bg-white/10 text-[#e88f18]" : "bg-[#e9f8f6] text-[#39b5a3]",
+          inverse ? "bg-white/10 text-[#F6D32D]" : "bg-[#e9f8f6] text-[#39b5a3]",
         )}
       >
         {icon}
@@ -346,7 +346,7 @@ export function FeatureCard({
       <h3
         className={cx(
           "text-xl font-bold [font-family:Lexend,system-ui,sans-serif]",
-          inverse ? "text-[#e88f18]" : "text-[#2d9f90]",
+          inverse ? "text-[#F6D32D]" : "text-[#2d9f90]",
         )}
       >
         {title}
@@ -401,7 +401,7 @@ export function SplitFeature({
         </div>
       </div>
       <div>
-        <p className="mb-3 text-sm font-bold text-[#e88f18]">{eyebrow}</p>
+        <p className="mb-3 text-sm font-bold text-[#F6D32D]">{eyebrow}</p>
         <h2 className="text-3xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
           {title}
         </h2>
@@ -496,7 +496,7 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#e88f18] [font-family:Lexend,system-ui,sans-serif]">
+          <h2 className="text-xl font-bold text-[#F6D32D] [font-family:Lexend,system-ui,sans-serif]">
             Links
           </h2>
           <nav className="mt-6 grid gap-3" aria-label="Footer navigation">
@@ -506,13 +506,13 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
                 href={item.to}
                 className={cx(
                   "inline-flex w-fit items-center gap-3 text-sm font-semibold transition hover:translate-x-1",
-                  item.to === activePath ? "text-[#e88f18]" : "text-[#d8f5f0] hover:text-white",
+                  item.to === activePath ? "text-[#F6D32D]" : "text-[#d8f5f0] hover:text-white",
                 )}
               >
                 <ChevronRight
                   className={cx(
                     "h-4 w-4",
-                    item.to === activePath ? "text-[#e88f18]" : "text-[#bce9e2]",
+                    item.to === activePath ? "text-[#F6D32D]" : "text-[#bce9e2]",
                   )}
                   aria-hidden="true"
                 />
@@ -523,23 +523,23 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#e88f18] [font-family:Lexend,system-ui,sans-serif]">
+          <h2 className="text-xl font-bold text-[#F6D32D] [font-family:Lexend,system-ui,sans-serif]">
             Contact
           </h2>
           <ul className="mt-6 space-y-5 text-sm font-semibold text-[#e3faf6]">
             <li className="flex gap-4">
-              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#e88f18]" aria-hidden="true" />
+              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#F6D32D]" aria-hidden="true" />
               <span>Ahmedabad, Gujarat, India.</span>
             </li>
             <li className="flex items-center gap-4">
-              <Phone className="h-5 w-5 shrink-0 text-[#e88f18]" aria-hidden="true" />
-              <a href="tel:+918888888888" className="transition hover:text-[#e88f18]">
+              <Phone className="h-5 w-5 shrink-0 text-[#F6D32D]" aria-hidden="true" />
+              <a href="tel:+918888888888" className="transition hover:text-[#F6D32D]">
                 +91 88888 88888
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <Mail className="h-5 w-5 shrink-0 text-[#e88f18]" aria-hidden="true" />
-              <a href="mailto:info@ryomremedies.com" className="transition hover:text-[#e88f18]">
+              <Mail className="h-5 w-5 shrink-0 text-[#F6D32D]" aria-hidden="true" />
+              <a href="mailto:info@ryomremedies.com" className="transition hover:text-[#F6D32D]">
                 info@ryomremedies.com
               </a>
             </li>
@@ -548,14 +548,14 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
             <a
               href="#"
               aria-label="Share Ryom Remedies"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/12 text-white transition hover:bg-[#e88f18]"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/12 text-white transition hover:bg-[#F6D32D] hover:text-[#173f39]"
             >
               <Share2 className="h-5 w-5" aria-hidden="true" />
             </a>
             <a
               href="#"
               aria-label="Visit Ryom Remedies online"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/12 text-white transition hover:bg-[#e88f18]"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/12 text-white transition hover:bg-[#F6D32D] hover:text-[#173f39]"
             >
               <Globe2 className="h-5 w-5" aria-hidden="true" />
             </a>

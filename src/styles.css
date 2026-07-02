@@ -70,7 +70,7 @@
   --popover-foreground: oklch(0.129 0.042 264.695);
   --primary: oklch(0.701 0.11 181.298);
   --primary-foreground: oklch(0.145 0.035 185);
-  --secondary: oklch(0.727 0.157 65.539);
+  --secondary: oklch(0.871 0.169 96.015);
   --secondary-foreground: oklch(0.145 0.035 185);
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
@@ -105,7 +105,7 @@
   --popover-foreground: oklch(0.984 0.003 247.858);
   --primary: oklch(0.701 0.11 181.298);
   --primary-foreground: oklch(0.145 0.035 185);
-  --secondary: oklch(0.727 0.157 65.539);
+  --secondary: oklch(0.871 0.169 96.015);
   --secondary-foreground: oklch(0.145 0.035 185);
   --muted: oklch(0.279 0.041 260.031);
   --muted-foreground: oklch(0.704 0.04 256.788);
@@ -306,7 +306,7 @@
 
 .hero-slider__heading-highlight {
   display: block;
-  color: #e88f18;
+  color: #F6D32D;
 }
 
 .hero-slider__description {
@@ -432,8 +432,8 @@
 }
 
 .hero-slider__dot--active {
-  border-color: #e88f18;
-  background: #e88f18;
+  border-color: #F6D32D;
+  background: #F6D32D;
   transform: scale(1.2);
 }
 
@@ -451,7 +451,7 @@
 
 .hero-slider__progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #39b5a3, #e88f18);
+  background: linear-gradient(90deg, #39b5a3, #F6D32D);
   animation: slider-progress linear forwards;
 }
 
@@ -606,6 +606,13 @@
   box-shadow: 0 4px 12px rgba(0, 107, 96, 0.12);
 }
 
+@media (hover: hover) {
+  .services-card:hover .services-card__icon {
+    background-color: #39b5a3;
+    color: white;
+  }
+}
+
 /* ═══════════════════════════════════════════════════════════
    Touch Device Behavior Overrides (@media hover: none)
    ═══════════════════════════════════════════════════════════ */
@@ -642,5 +649,17 @@
   .hero-slider__btn:active {
     transform: scale(0.96) !important;
     transition: transform 0.1s ease !important;
+  }
+}
+
+@media (hover: none) and (max-width: 767px) {
+  .services-card:active {
+    transform: translateY(-0.25rem) !important;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25) !important;
+  }
+
+  .services-card:active .services-card__icon {
+    background-color: #39b5a3 !important;
+    color: white !important;
   }
 }

@@ -66,7 +66,7 @@ export default function ServicesPage() {
 
         {/* Why choose? Header */}
         <div className="mt-16 mb-10 text-left">
-          <h2 className="text-3xl font-bold text-[#e88f18] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+          <h2 className="text-3xl font-bold text-[#F6D32D] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
             Why choose?
           </h2>
         </div>
@@ -78,10 +78,10 @@ export default function ServicesPage() {
             return (
               <div
                 key={service.title}
-                className="group flex items-center gap-6 rounded-2xl bg-white p-6 md:p-8 shadow-lg border border-[#e1e3e4]/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                className="services-card flex items-center gap-6 rounded-2xl bg-white p-6 md:p-8 shadow-lg border border-[#e1e3e4]/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 {/* Centered left icon block */}
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#e9f8f6] text-[#39b5a3] transition-all duration-300 group-hover:bg-[#39b5a3] group-hover:text-white">
+                <div className="services-card__icon flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#e9f8f6] text-[#39b5a3] transition-all duration-300">
                   <Icon className="h-8 w-8" aria-hidden="true" />
                 </div>
                 {/* Right content block */}

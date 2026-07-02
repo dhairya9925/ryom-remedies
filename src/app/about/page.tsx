@@ -67,11 +67,11 @@ export default function AboutPage() {
       {/* ── Brand Motto Section ──────────────────────────── */}
       <Section tone="white" className="text-center">
         <div className="mx-auto max-w-3xl space-y-4">
-          <p className="text-sm font-bold uppercase tracking-widest text-[#e88f18]">Our Motto</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-[#F6D32D]">Our Motto</p>
           <h2 className="text-3xl font-bold text-[#2d9f90] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
             Spreading Health, Spreading Happiness
           </h2>
-          <div className="mx-auto h-1 w-20 rounded-full bg-[#e88f18]" />
+          <div className="mx-auto h-1 w-20 rounded-full bg-[#F6D32D]" />
           <p className="mt-6 text-lg leading-8 text-[#3d4947]">
             At Ryom Remedies, we are guided by a simple yet powerful vision: to make high-quality,
             affordable healthcare accessible to all. We believe that good health is the foundation
@@ -116,10 +116,10 @@ export default function AboutPage() {
 
             {/* OM Card */}
             <div className="flex flex-col rounded-2xl border border-[#bcc9c6]/40 bg-white p-8 shadow-sm transition hover:shadow-md">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#fde2c1] text-[#8b4f05]">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF6C7] text-[#705700]">
                 <HeartPulse className="h-6 w-6" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-bold text-[#8b4f05] [font-family:Lexend,system-ui,sans-serif]">
+              <h3 className="text-xl font-bold text-[#705700] [font-family:Lexend,system-ui,sans-serif]">
                 OM – Harmony & Healing
               </h3>
               <p className="mt-4 leading-relaxed text-[#3d4947]">
@@ -137,7 +137,7 @@ export default function AboutPage() {
       <Section tone="white" className="relative">
         <div className="relative mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <p className="text-sm font-bold uppercase tracking-widest text-[#e88f18]">
+            <p className="text-sm font-bold uppercase tracking-widest text-[#F6D32D]">
               Core Commitments
             </p>
             <h2 className="mt-2 text-3xl font-bold text-[#2d9f90] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
@@ -240,7 +240,7 @@ function WhoWeAreSection() {
 
       <div className="relative mx-auto max-w-7xl">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <h2 className="text-4xl font-bold text-[#e88f18] sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
+          <h2 className="text-4xl font-bold text-[#F6D32D] sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
             Who We Are
           </h2>
           <Link
@@ -290,7 +290,7 @@ function MissionVisionSection() {
             {missionItems.map((item) => (
               <li key={item} className="flex gap-3 rounded-lg bg-white/10 p-4 text-white/85">
                 <CheckCircle2
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#e88f18]"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#F6D32D]"
                   aria-hidden="true"
                 />
                 <span>{item}</span>
@@ -311,7 +311,7 @@ function MissionVisionSection() {
             healthcare and spreading wellness and happiness in every community we serve.
           </p>
           <div className="mt-7 flex items-center gap-3 rounded-lg bg-[#f8f9fa] p-4">
-            <HeartPulse className="h-6 w-6 shrink-0 text-[#e88f18]" aria-hidden="true" />
+            <HeartPulse className="h-6 w-6 shrink-0 text-[#F6D32D]" aria-hidden="true" />
             <p className="text-sm font-semibold text-[#39b5a3]">
               Health is happiness, and every reliable medicine can help move a life forward.
             </p>

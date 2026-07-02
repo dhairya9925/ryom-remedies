@@ -129,7 +129,7 @@ export default function LeafletMap({
         <div className="leaflet-map-skeleton">
           <div className="leaflet-map-skeleton-pulse" />
           <div className="leaflet-map-skeleton-label">
-            <MapPin className="h-5 w-5" style={{ color: "#e88f18" }} />
+            <MapPin className="h-5 w-5" style={{ color: "#F6D32D" }} />
             <span>Loading map…</span>
           </div>
         </div>

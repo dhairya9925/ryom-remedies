@@ -182,7 +182,7 @@ export default function Index() {
               key={value}
               className="rounded-lg border border-white/15 bg-white/10 p-6 text-center"
             >
-              <div className="mb-3 flex justify-center text-[#e88f18]">
+              <div className="mb-3 flex justify-center text-[#F6D32D]">
                 <Award className="h-8 w-8" aria-hidden="true" />
               </div>
               <p className="text-3xl font-bold [font-family:Lexend,system-ui,sans-serif]">
