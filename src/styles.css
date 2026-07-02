@@ -70,7 +70,7 @@
   --popover-foreground: oklch(0.129 0.042 264.695);
   --primary: oklch(0.701 0.11 181.298);
   --primary-foreground: oklch(0.145 0.035 185);
-  --secondary: oklch(0.871 0.169 96.015);
+  --secondary: oklch(0.836 0.169 89.133);
   --secondary-foreground: oklch(0.145 0.035 185);
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
@@ -105,7 +105,7 @@
   --popover-foreground: oklch(0.984 0.003 247.858);
   --primary: oklch(0.701 0.11 181.298);
   --primary-foreground: oklch(0.145 0.035 185);
-  --secondary: oklch(0.871 0.169 96.015);
+  --secondary: oklch(0.836 0.169 89.133);
   --secondary-foreground: oklch(0.145 0.035 185);
   --muted: oklch(0.279 0.041 260.031);
   --muted-foreground: oklch(0.704 0.04 256.788);
@@ -306,7 +306,7 @@
 
 .hero-slider__heading-highlight {
   display: block;
-  color: #F6D32D;
+  color: #F5C211;
 }
 
 .hero-slider__description {
@@ -432,8 +432,8 @@
 }
 
 .hero-slider__dot--active {
-  border-color: #F6D32D;
-  background: #F6D32D;
+  border-color: #F5C211;
+  background: #F5C211;
   transform: scale(1.2);
 }
 
@@ -451,7 +451,7 @@
 
 .hero-slider__progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #39b5a3, #F6D32D);
+  background: linear-gradient(90deg, #39b5a3, #F5C211);
   animation: slider-progress linear forwards;
 }
 
@@ -610,6 +610,45 @@
   .services-card:hover .services-card__icon {
     background-color: #39b5a3;
     color: white;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-card {
+    display: grid !important;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem 1.25rem;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .services-card__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+  }
+
+  .services-card__icon svg {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .services-card__content {
+    display: contents;
+  }
+
+  .services-card__title {
+    align-self: center;
+    font-size: 1.125rem;
+    line-height: 1.35;
+  }
+
+  .services-card__description {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    font-size: 0.9375rem;
+    line-height: 1.75;
   }
 }
 

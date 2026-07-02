@@ -66,7 +66,7 @@ export default function ServicesPage() {
 
         {/* Why choose? Header */}
         <div className="mt-16 mb-10 text-left">
-          <h2 className="text-3xl font-bold text-[#F6D32D] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
+          <h2 className="text-3xl font-bold text-[#F5C211] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
             Why choose?
           </h2>
         </div>
@@ -85,11 +85,11 @@ export default function ServicesPage() {
                   <Icon className="h-8 w-8" aria-hidden="true" />
                 </div>
                 {/* Right content block */}
-                <div className="flex-1 text-[#191c1d]">
-                  <h3 className="text-xl font-bold text-[#39b5a3] [font-family:Lexend,system-ui,sans-serif] leading-snug">
+                <div className="services-card__content flex-1 text-[#191c1d]">
+                  <h3 className="services-card__title text-xl font-bold text-[#39b5a3] [font-family:Lexend,system-ui,sans-serif] leading-snug">
                     {service.title}
                   </h3>
-                  <p className="mt-3 text-sm text-[#3d4947] leading-relaxed">
+                  <p className="services-card__description mt-3 text-sm text-[#3d4947] leading-relaxed">
                     {service.description}
                   </p>
                 </div>

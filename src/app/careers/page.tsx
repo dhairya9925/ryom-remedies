@@ -128,7 +128,7 @@ export default function CareersPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#F6D32D] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#C9A400]"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#F5C211] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#DFAE08]"
               >
                 Contact HR
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -160,7 +160,7 @@ export default function CareersPage() {
                 "Administration",
               ].map((area) => (
                 <div key={area} className="flex items-center gap-3 rounded-md bg-white px-4 py-3">
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-[#F6D32D]" aria-hidden="true" />
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-[#F5C211]" aria-hidden="true" />
                   {area}
                 </div>
               ))}
@@ -171,7 +171,7 @@ export default function CareersPage() {
 
       <Section tone="light" className="py-16 lg:py-24">
         <div className="mb-10 max-w-3xl">
-          <p className="text-sm font-bold uppercase tracking-widest text-[#F6D32D]">Why Join Us</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-[#F5C211]">Why Join Us</p>
           <h2 className="mt-3 text-3xl font-bold text-[#2d9f90] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
             A practical place to learn, contribute, and grow.
           </h2>
@@ -204,7 +204,7 @@ export default function CareersPage() {
           </div>
           <a
             href="mailto:admin@ryomremedies.com"
-            className="inline-flex w-fit items-center justify-center gap-2 rounded-lg bg-[#F6D32D] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#C9A400]"
+            className="inline-flex w-fit items-center justify-center gap-2 rounded-lg bg-[#F5C211] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#DFAE08]"
           >
             Share Profile
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -218,14 +218,14 @@ export default function CareersPage() {
                 key={`${opening.title}-${opening.location}`}
                 className="group relative overflow-hidden rounded-lg border border-white/70 bg-[linear-gradient(135deg,#ffffff_0%,#ffffff_62%,#eefbf8_100%)] p-6 shadow-[0_22px_55px_rgba(0,32,28,0.18)] ring-1 ring-[#39b5a3]/10 transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(0,32,28,0.24)] sm:p-7"
               >
-                <div className="absolute inset-y-0 left-0 w-1.5 bg-[#F6D32D]" aria-hidden="true" />
+                <div className="absolute inset-y-0 left-0 w-1.5 bg-[#F5C211]" aria-hidden="true" />
                 <div
                   className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#39b5a3]/10 blur-2xl transition group-hover:bg-[#39b5a3]/20"
                   aria-hidden="true"
                 />
                 <div className="relative flex flex-col justify-between gap-5 md:flex-row md:items-start">
                   <div>
-                    <span className="inline-flex rounded-full bg-[#FFF8D6] px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#705700]">
+                    <span className="inline-flex rounded-full bg-[#FFF7D6] px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#6B5200]">
                       {opening.department}
                     </span>
                     <h3 className="mt-2 text-2xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
@@ -258,7 +258,7 @@ export default function CareersPage() {
                   {opening.responsibilities.map((item) => (
                     <li key={item} className="flex gap-3">
                       <CheckCircle2
-                        className="mt-1 h-4 w-4 shrink-0 text-[#F6D32D]"
+                        className="mt-1 h-4 w-4 shrink-0 text-[#F5C211]"
                         aria-hidden="true"
                       />
                       <span>{item}</span>
@@ -282,7 +282,7 @@ export default function CareersPage() {
             </p>
             <a
               href="mailto:admin@ryomremedies.com"
-              className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-[#F6D32D] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#C9A400]"
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-[#F5C211] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#DFAE08]"
             >
               Send Resume
               <Mail className="h-4 w-4" aria-hidden="true" />
@@ -312,7 +312,7 @@ export default function CareersPage() {
                 className="flex gap-4 rounded-lg border border-[#e1e3e4] bg-[#f8f9fa] p-5 text-[#3d4947] shadow-sm"
               >
                 <GraduationCap
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#F6D32D]"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#F5C211]"
                   aria-hidden="true"
                 />
                 <p className="text-sm leading-6">{trait}</p>

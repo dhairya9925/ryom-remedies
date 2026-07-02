@@ -96,7 +96,7 @@ export default function ContactPage() {
               />
               <button
                 type="submit"
-                className="inline-flex w-fit rounded-lg bg-[#F6D32D] px-6 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#C9A400]"
+                className="inline-flex w-fit rounded-lg bg-[#F5C211] px-6 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#DFAE08]"
               >
                 Send message
               </button>

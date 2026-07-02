@@ -69,7 +69,7 @@ export default function FaqsPage() {
         />
         <section className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:py-20">
           <div>
-            <div className="mb-3 flex items-center gap-2 text-sm font-bold text-[#F6D32D]">
+            <div className="mb-3 flex items-center gap-2 text-sm font-bold text-[#F5C211]">
               <FlaskConical className="h-5 w-5" aria-hidden="true" />
               <span>FAQs</span>
             </div>
@@ -83,7 +83,7 @@ export default function FaqsPage() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
               <div className="rounded-lg border border-white/15 bg-white/10 p-5 text-white backdrop-blur-sm">
-                <ShieldCheck className="mb-4 h-7 w-7 text-[#F6D32D]" aria-hidden="true" />
+                <ShieldCheck className="mb-4 h-7 w-7 text-[#F5C211]" aria-hidden="true" />
                 <h3 className="font-bold [font-family:Lexend,system-ui,sans-serif]">
                   Quality First
                 </h3>
@@ -93,7 +93,7 @@ export default function FaqsPage() {
                 </p>
               </div>
               <div className="rounded-lg border border-white/15 bg-white/10 p-5 text-white backdrop-blur-sm">
-                <HelpCircle className="mb-4 h-7 w-7 text-[#F6D32D]" aria-hidden="true" />
+                <HelpCircle className="mb-4 h-7 w-7 text-[#F5C211]" aria-hidden="true" />
                 <h3 className="font-bold [font-family:Lexend,system-ui,sans-serif]">
                   Need Details?
                 </h3>
@@ -121,7 +121,7 @@ export default function FaqsPage() {
                     onClick={() => toggleFaq(faq.id)}
                     className="flex w-full items-center justify-between gap-5 p-5 text-left transition hover:bg-white/5 sm:p-6"
                   >
-                    <span className="text-lg font-bold text-[#F6D32D] sm:text-xl [font-family:Lexend,system-ui,sans-serif]">
+                    <span className="text-lg font-bold text-[#F5C211] sm:text-xl [font-family:Lexend,system-ui,sans-serif]">
                       {faq.question}
                     </span>
                     <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-[#39b5a3]">
@@ -157,7 +157,7 @@ export default function FaqsPage() {
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
             <div className="mb-2 flex items-center gap-2 text-sm font-bold text-[#39b5a3]">
-              <Mail className="h-5 w-5 text-[#F6D32D]" aria-hidden="true" />
+              <Mail className="h-5 w-5 text-[#F5C211]" aria-hidden="true" />
               <span>Still have a question?</span>
             </div>
             <h2 className="text-2xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
@@ -170,7 +170,7 @@ export default function FaqsPage() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-[#F6D32D] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#C9A400]"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#F5C211] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#DFAE08]"
           >
             Contact Us
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
