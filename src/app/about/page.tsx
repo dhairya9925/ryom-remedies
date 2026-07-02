@@ -67,11 +67,11 @@ export default function AboutPage() {
       {/* ── Brand Motto Section ──────────────────────────── */}
       <Section tone="white" className="text-center">
         <div className="mx-auto max-w-3xl space-y-4">
-          <p className="text-sm font-bold uppercase tracking-widest text-[#F5C211]">Our Motto</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-[#F39517]">Our Motto</p>
           <h2 className="text-3xl font-bold text-[#2d9f90] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
             Spreading Health, Spreading Happiness
           </h2>
-          <div className="mx-auto h-1 w-20 rounded-full bg-[#F5C211]" />
+          <div className="mx-auto h-1 w-20 rounded-full bg-[#F39517]" />
           <p className="mt-6 text-lg leading-8 text-[#3d4947]">
             At Ryom Remedies, we are guided by a simple yet powerful vision: to make high-quality,
             affordable healthcare accessible to all. We believe that good health is the foundation
@@ -116,10 +116,10 @@ export default function AboutPage() {
 
             {/* OM Card */}
             <div className="flex flex-col rounded-2xl border border-[#bcc9c6]/40 bg-white p-8 shadow-sm transition hover:shadow-md">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF2B8] text-[#6B5200]">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#F39517]/15 text-[#F39517]">
                 <HeartPulse className="h-6 w-6" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-bold text-[#6B5200] [font-family:Lexend,system-ui,sans-serif]">
+              <h3 className="text-xl font-bold text-[#F39517] [font-family:Lexend,system-ui,sans-serif]">
                 OM – Harmony & Healing
               </h3>
               <p className="mt-4 leading-relaxed text-[#3d4947]">
@@ -137,7 +137,7 @@ export default function AboutPage() {
       <Section tone="white" className="relative">
         <div className="relative mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <p className="text-sm font-bold uppercase tracking-widest text-[#F5C211]">
+            <p className="text-sm font-bold uppercase tracking-widest text-[#F39517]">
               Core Commitments
             </p>
             <h2 className="mt-2 text-3xl font-bold text-[#2d9f90] sm:text-4xl [font-family:Lexend,system-ui,sans-serif]">
@@ -240,7 +240,7 @@ function WhoWeAreSection() {
 
       <div className="relative mx-auto max-w-7xl">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <h2 className="text-4xl font-bold text-[#F5C211] sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
+          <h2 className="text-4xl font-bold text-[#F39517] sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
             Who We Are
           </h2>
           <Link
@@ -311,7 +311,7 @@ function MissionVisionSection() {
             healthcare and spreading wellness and happiness in every community we serve.
           </p>
           <div className="mt-7 flex items-center gap-3 rounded-lg bg-[#f8f9fa] p-4">
-            <HeartPulse className="h-6 w-6 shrink-0 text-[#F5C211]" aria-hidden="true" />
+            <HeartPulse className="h-6 w-6 shrink-0 text-[#F39517]" aria-hidden="true" />
             <p className="text-sm font-semibold text-[#39b5a3]">
               Health is happiness, and every reliable medicine can help move a life forward.
             </p>

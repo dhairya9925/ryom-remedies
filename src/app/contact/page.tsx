@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
+import ContactForm from "./ContactForm";
 import LeafletMap from "@/components/LeafletMapDynamic";
 import {
   ContactInfoCard,
@@ -67,40 +68,7 @@ export default function ContactPage() {
 
           <div className="rounded-lg border border-[#e1e3e4] bg-white p-6 shadow-sm">
             <SectionHeader eyebrow="Contact With Us" title="Feel free to write us anytime" />
-            <form className="grid gap-4">
-              <div className="grid gap-4 md:grid-cols-2">
-                <input
-                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#39b5a3] focus:bg-white"
-                  placeholder="Your name"
-                  type="text"
-                />
-                <input
-                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#39b5a3] focus:bg-white"
-                  placeholder="Email address"
-                  type="email"
-                />
-                <input
-                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#39b5a3] focus:bg-white"
-                  placeholder="Phone"
-                  type="tel"
-                />
-                <input
-                  className="rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#39b5a3] focus:bg-white"
-                  placeholder="Company Name"
-                  type="text"
-                />
-              </div>
-              <textarea
-                className="min-h-36 rounded-lg border border-[#e1e3e4] bg-[#f3f4f5] px-4 py-3 outline-none transition focus:border-[#39b5a3] focus:bg-white"
-                placeholder="Write a message"
-              />
-              <button
-                type="submit"
-                className="inline-flex w-fit rounded-lg bg-[#F5C211] px-6 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#DFAE08]"
-              >
-                Send message
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </Section>

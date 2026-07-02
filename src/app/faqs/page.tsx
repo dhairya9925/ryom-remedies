@@ -157,7 +157,7 @@ export default function FaqsPage() {
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
             <div className="mb-2 flex items-center gap-2 text-sm font-bold text-[#39b5a3]">
-              <Mail className="h-5 w-5 text-[#F5C211]" aria-hidden="true" />
+              <Mail className="h-5 w-5 text-[#F39517]" aria-hidden="true" />
               <span>Still have a question?</span>
             </div>
             <h2 className="text-2xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
@@ -170,7 +170,7 @@ export default function FaqsPage() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-[#F5C211] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#DFAE08]"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#F39517] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9820e]"
           >
             Contact Us
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

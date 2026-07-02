@@ -92,7 +92,7 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
         <div className="flex items-center gap-2">
           <Link
             href="/products"
-            className="hidden items-center gap-2 rounded-lg bg-[#F5C211] px-5 py-2 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#DFAE08] md:inline-flex"
+            className="hidden items-center gap-2 rounded-lg bg-[#F39517] px-5 py-2 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9820e] md:inline-flex"
           >
             <ShoppingBag className="h-4 w-4" aria-hidden="true" />
             Order Now
@@ -211,7 +211,7 @@ export function HomeHero({
         <div className="max-w-2xl rounded-lg border-l-4 border-[#39b5a3] bg-white/95 p-7 shadow-2xl backdrop-blur-sm sm:p-10">
           <h1 className="text-4xl font-bold leading-tight text-[#39b5a3] sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
             {title}
-            <span className="block text-[#F5C211]">{highlight}</span>
+            <span className="block text-[#F39517]">{highlight}</span>
           </h1>
           <p className="mt-5 border-l-2 border-[#bcc9c6] pl-4 text-lg leading-8 text-[#3d4947]">
             {description}
@@ -304,7 +304,7 @@ export function ButtonLink({
       className={cx(
         "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold shadow-sm transition hover:-translate-y-0.5",
         variant === "primary" && "bg-[#39b5a3] text-white hover:bg-[#2d9f90]",
-        variant === "secondary" && "bg-[#F5C211] text-[#173f39] hover:bg-[#DFAE08]",
+        variant === "secondary" && "bg-[#F39517] text-[#173f39] hover:bg-[#d9820e]",
         variant === "outline" &&
           "border border-[#39b5a3] bg-white text-[#39b5a3] hover:bg-[#f3f4f5]",
       )}
@@ -401,7 +401,7 @@ export function SplitFeature({
         </div>
       </div>
       <div>
-        <p className="mb-3 text-sm font-bold text-[#F5C211]">{eyebrow}</p>
+        <p className="mb-3 text-sm font-bold text-[#F39517]">{eyebrow}</p>
         <h2 className="text-3xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
           {title}
         </h2>
