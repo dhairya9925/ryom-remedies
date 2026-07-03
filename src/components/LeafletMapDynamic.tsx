@@ -17,8 +17,8 @@ function MapFallback() {
     <div className="flex h-[400px] items-center justify-center bg-[#edeeef]">
       <div className="flex items-center gap-3 rounded-lg bg-white/90 px-6 py-4 text-[#2d9f90] shadow-lg backdrop-blur-sm">
         <MapPin className="h-6 w-6 text-[#F39517]" aria-hidden="true" />
-        <span className="text-xl font-bold [font-family:Lexend,system-ui,sans-serif]">
-          Ahmedabad, Gujarat, India
+        <span className="max-w-lg text-center text-lg font-bold [font-family:Lexend,system-ui,sans-serif] sm:text-xl">
+          RYOM REMEDIES, RATNANJALI SOLITAIRE
         </span>
       </div>
     </div>

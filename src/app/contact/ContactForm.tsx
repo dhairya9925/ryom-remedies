@@ -13,8 +13,9 @@ type RecaptchaRenderParams = {
 declare global {
   interface Window {
     grecaptcha?: {
-      render: (container: HTMLElement, params: RecaptchaRenderParams) => number;
-      reset: (widgetId?: number) => void;
+      ready?: (callback: () => void) => void;
+      render?: (container: HTMLElement, params: RecaptchaRenderParams) => number;
+      reset?: (widgetId?: number) => void;
     };
   }
 }
@@ -34,8 +35,8 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
 
   const resetCaptcha = useCallback(() => {
-    if (widgetIdRef.current !== null) {
-      window.grecaptcha?.reset(widgetIdRef.current);
+    if (widgetIdRef.current !== null && typeof window.grecaptcha?.reset === "function") {
+      window.grecaptcha.reset(widgetIdRef.current);
     }
     setRecaptchaToken("");
   }, []);
@@ -49,24 +50,43 @@ export default function ContactForm() {
       return;
     }
 
-    widgetIdRef.current = window.grecaptcha.render(recaptchaRef.current, {
-      sitekey: siteKey,
-      callback: (token: string) => {
-        setRecaptchaToken(token);
-        setSubmitState("idle");
-        setMessage("");
-      },
-      "expired-callback": () => {
-        setRecaptchaToken("");
-        setSubmitState("error");
-        setMessage("Human verification expired. Please try again.");
-      },
-      "error-callback": () => {
-        setRecaptchaToken("");
+    const renderWidget = () => {
+      if (!recaptchaRef.current || widgetIdRef.current !== null) {
+        return;
+      }
+
+      if (typeof window.grecaptcha?.render !== "function") {
         setSubmitState("error");
         setMessage("Human verification could not load. Please try again.");
-      },
-    });
+        return;
+      }
+
+      widgetIdRef.current = window.grecaptcha.render(recaptchaRef.current, {
+        sitekey: siteKey,
+        callback: (token: string) => {
+          setRecaptchaToken(token);
+          setSubmitState("idle");
+          setMessage("");
+        },
+        "expired-callback": () => {
+          setRecaptchaToken("");
+          setSubmitState("error");
+          setMessage("Human verification expired. Please try again.");
+        },
+        "error-callback": () => {
+          setRecaptchaToken("");
+          setSubmitState("error");
+          setMessage("Human verification could not load. Please try again.");
+        },
+      });
+    };
+
+    if (typeof window.grecaptcha.ready === "function") {
+      window.grecaptcha.ready(renderWidget);
+      return;
+    }
+
+    renderWidget();
   }, [scriptReady, siteKey]);
 
   useEffect(() => {
@@ -129,10 +149,15 @@ export default function ContactForm() {
     <>
       {siteKey && (
         <Script
+          id="google-recaptcha"
           src="https://www.google.com/recaptcha/api.js?render=explicit"
           strategy="afterInteractive"
           onLoad={() => setScriptReady(true)}
           onReady={() => setScriptReady(true)}
+          onError={() => {
+            setSubmitState("error");
+            setMessage("Human verification could not load. Please try again.");
+          }}
         />
       )}
 

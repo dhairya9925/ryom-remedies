@@ -27,6 +27,9 @@ export const metadata: Metadata = {
 const heroImage = "/page-header-bg-1-1.jpg";
 
 const labImage = "/man-contact.png";
+const address =
+  "RYOM REMEDIES\nSECOND FLOOR, 208, RATNANJALI SOLITAIRE, PRERNATIRTH DERASAR ROAD SATELLITE";
+const mapsLink = "https://maps.app.goo.gl/7h7KGWYkSDHhQkMW8?g_st=aw";
 
 export default function ContactPage() {
   return (
@@ -56,7 +59,8 @@ export default function ContactPage() {
             <ContactInfoCard
               icon={<MapPin className="h-5 w-5" aria-hidden="true" />}
               label="Location"
-              value="Ahmedabad, Gujarat, India"
+              value={address}
+              href={mapsLink}
             />
             <img
               src={labImage}
@@ -76,10 +80,10 @@ export default function ContactPage() {
       {/* ── Interactive Map ─────────────────────────────────── */}
       <section className="relative h-[400px] overflow-hidden">
         <LeafletMap
-          lat={23.0225}
-          lng={72.5714}
+          lat={23.018503}
+          lng={72.519002}
           zoom={14}
-          popupText="Ryom Remedies — Ahmedabad, Gujarat, India"
+          popupText={address.replace("\n", " — ")}
         />
       </section>
     </RyomSiteLayout>

@@ -462,7 +462,7 @@ export function ContactInfoCard({
         </div>
         <div>
           <p className="text-sm font-semibold text-white/70">{label}</p>
-          <p className="mt-1 break-words text-lg font-bold">{value}</p>
+          <p className="mt-1 whitespace-pre-line break-words text-lg font-bold">{value}</p>
         </div>
       </div>
     </div>
@@ -529,7 +529,11 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
           <ul className="mt-6 space-y-5 text-sm font-semibold text-[#e3faf6]">
             <li className="flex gap-4">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#F5C211]" aria-hidden="true" />
-              <span>Ahmedabad, Gujarat, India.</span>
+              <span>
+                RYOM REMEDIES
+                <br />
+                SECOND FLOOR, 208, RATNANJALI SOLITAIRE, PRERNATIRTH DERASAR ROAD SATELLITE.
+              </span>
             </li>
             <li className="flex items-center gap-4">
               <Phone className="h-5 w-5 shrink-0 text-[#F5C211]" aria-hidden="true" />

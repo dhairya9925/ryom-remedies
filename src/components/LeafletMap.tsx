@@ -5,16 +5,16 @@ import type { Map as LeafletMapInstance } from "leaflet";
 import { MapPin } from "lucide-react";
 
 /* ──────────────────────────────────────────────────────────
-   Ryom Remedies – Ahmedabad, Gujarat, India
+   Ryom Remedies – Ratnanjali Solitaire, Satellite
    ────────────────────────────────────────────────────────── */
-const RYOM_LAT = 23.0225;
-const RYOM_LNG = 72.5714;
+const RYOM_LAT = 23.018503;
+const RYOM_LNG = 72.519002;
 const DEFAULT_ZOOM = 14;
 
 interface LeafletMapProps {
-  /** Override latitude (defaults to Ahmedabad) */
+  /** Override latitude */
   lat?: number;
-  /** Override longitude (defaults to Ahmedabad) */
+  /** Override longitude */
   lng?: number;
   /** Zoom level 1-18 */
   zoom?: number;
@@ -34,7 +34,7 @@ export default function LeafletMap({
   lat = RYOM_LAT,
   lng = RYOM_LNG,
   zoom = DEFAULT_ZOOM,
-  popupText = "Ryom Remedies — Ahmedabad, Gujarat, India",
+  popupText = "RYOM REMEDIES — SECOND FLOOR, 208, RATNANJALI SOLITAIRE, PRERNATIRTH DERASAR ROAD SATELLITE",
   className = "",
 }: LeafletMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
