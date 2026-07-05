@@ -165,7 +165,7 @@ export async function getPublishedJobOpenings(): Promise<JobOpeningData[]> {
       employmentType: opening.employmentType,
       summary: opening.summary,
       responsibilities: (opening.responsibilities ?? []).map(
-        (responsibility) => responsibility.item,
+        (responsibility: { item: string; id?: string | null }) => responsibility.item,
       ),
       applicationEmail: opening.applicationEmail ?? "admin@ryomremedies.com",
       externalApplicationUrl: opening.externalApplicationUrl ?? null,
