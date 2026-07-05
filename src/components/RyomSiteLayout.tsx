@@ -17,6 +17,7 @@ import {
   X,
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
+import { PageImageLoadGate } from "@/components/PageImageLoadGate";
 import { companyAddressLines, companyEmail } from "@/lib/company";
 
 export type RoutePath =
@@ -51,10 +52,12 @@ export function RyomSiteLayout({
 }) {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#191c1d] [font-family:Urbanist,system-ui,sans-serif]">
-      <SiteHeader activePath={activePath} />
-      {children}
-      <SiteFooter activePath={activePath} />
-      <WhatsAppButton />
+      <PageImageLoadGate>
+        <SiteHeader activePath={activePath} />
+        {children}
+        <SiteFooter activePath={activePath} />
+        <WhatsAppButton />
+      </PageImageLoadGate>
     </div>
   );
 }
