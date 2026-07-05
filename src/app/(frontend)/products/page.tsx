@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero, RyomSiteLayout, Section, SectionHeader } from "@/components/RyomSiteLayout";
+import { getActiveProducts, getProductCategories } from "@/lib/queries";
 import { ProductBrowser } from "./ProductBrowser";
 
 export const metadata: Metadata = {
@@ -18,7 +19,11 @@ export const metadata: Metadata = {
 
 const heroImage = "/page-header-bg-1-1.jpg";
 
-export default function ProductsPage() {
+export const dynamic = "force-dynamic";
+
+export default async function ProductsPage() {
+  const [products, categories] = await Promise.all([getActiveProducts(), getProductCategories()]);
+
   return (
     <RyomSiteLayout activePath="/products">
       <PageHero title="Our Products" eyebrow="Product Range" image={heroImage}>
@@ -33,7 +38,7 @@ export default function ProductsPage() {
           title="Pharmaceutical products"
           description="Explore product information in a focused popup designed from the older product detail reference."
         />
-        <ProductBrowser />
+        <ProductBrowser products={products} categories={categories} />
       </Section>
     </RyomSiteLayout>
   );

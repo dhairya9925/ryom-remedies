@@ -8,6 +8,9 @@ node_modules/
 # ======================
 .next/
 out/
+dist/
+tsconfig.tsbuildinfo
+next-env.d.ts
 
 # ======================
 # Environment & Credentials
@@ -25,9 +28,12 @@ out/
 *.keystore
 
 # ======================
-# Lovable Platform
+# Payload CMS (auto-generated)
 # ======================
-.lovable/
+media/
+*.db
+payload-types.ts
+src/app/(payload)/admin/importMap.js
 
 # ======================
 # Logs
@@ -62,4 +68,14 @@ lerna-debug.log*
 # ======================
 .DS_Store
 Thumbs.db
-.vercel
+
+# ======================
+# Hosting / Deployment
+# ======================
+.vercel/
+.netlify/
+
+# ======================
+# Misc
+# ======================
+.lovable/

@@ -157,7 +157,7 @@ export default function Index() {
           centered
           eyebrow="Why Ryom"
           title="Healthcare solutions built around access and trust"
-          description="Reusable page data like this can later be supplied from Payload CMS without changing the layout components."
+          description="Our approach combines affordable pricing with quality-first manufacturing and ethical business practices."
         />
         <div className="grid gap-6 md:grid-cols-3">
           {highlights.map((item) => (

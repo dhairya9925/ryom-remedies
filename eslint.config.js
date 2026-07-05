@@ -7,7 +7,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: [".next", "out", "next-env.d.ts"],
+    ignores: [".next", "out", "next-env.d.ts", "src/app/(payload)/admin/importMap.js"],
   },
   {
     plugins: nextPlugin.flatConfig.coreWebVitals.plugins,

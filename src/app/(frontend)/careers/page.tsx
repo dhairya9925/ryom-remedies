@@ -12,6 +12,7 @@ import {
   UsersRound,
 } from "lucide-react";
 import { PageHero, RyomSiteLayout, Section } from "@/components/RyomSiteLayout";
+import { getPublishedJobOpenings } from "@/lib/queries";
 
 export const metadata: Metadata = {
   title: "Careers",
@@ -28,44 +29,6 @@ export const metadata: Metadata = {
 };
 
 const heroImage = "/page-header-bg-1-1.jpg";
-
-type CareerOpening = {
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  summary: string;
-  responsibilities: string[];
-};
-
-const openings: CareerOpening[] = [
-  {
-    title: "Medical Representative",
-    department: "Sales",
-    location: "Ahmedabad, Gujarat",
-    type: "Full-time",
-    summary:
-      "Represent Ryom Remedies in the field by building strong relationships with doctors, pharmacies, and healthcare partners.",
-    responsibilities: [
-      "Promote assigned product portfolio with accurate product knowledge.",
-      "Plan regular doctor and retailer visits across the assigned territory.",
-      "Track market feedback, competitor activity, and monthly sales performance.",
-    ],
-  },
-  {
-    title: "Quality Assurance Executive",
-    department: "Quality",
-    location: "Ahmedabad, Gujarat",
-    type: "Full-time",
-    summary:
-      "Support quality documentation, vendor coordination, and process follow-ups to help maintain dependable pharmaceutical standards.",
-    responsibilities: [
-      "Maintain quality records, product documentation, and compliance checklists.",
-      "Coordinate with manufacturing and distribution partners for quality updates.",
-      "Assist internal reviews and follow up on corrective actions when required.",
-    ],
-  },
-];
 
 const values = [
   {
@@ -95,7 +58,11 @@ const idealTraits = [
   "A patient-first mindset with respect for compliance and ethical business practice.",
 ];
 
-export default function CareersPage() {
+export const dynamic = "force-dynamic";
+
+export default async function CareersPage() {
+  const openings = await getPublishedJobOpenings();
+
   return (
     <RyomSiteLayout activePath="/careers">
       <PageHero title="Careers" eyebrow="Join Our Mission" image={heroImage}>
@@ -237,14 +204,17 @@ export default function CareersPage() {
                         {opening.location}
                       </span>
                       <span className="inline-flex rounded-full bg-[#f3f4f5] px-3 py-1.5">
-                        {opening.type}
+                        {opening.employmentType}
                       </span>
                     </div>
                   </div>
                   <a
-                    href={`mailto:admin@ryomremedies.com?subject=Application for ${encodeURIComponent(
-                      opening.title,
-                    )}`}
+                    href={
+                      opening.externalApplicationUrl ||
+                      `mailto:${opening.applicationEmail}?subject=Application for ${encodeURIComponent(
+                        opening.title,
+                      )}`
+                    }
                     className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#39b5a3] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-[#39b5a3]/25 transition hover:-translate-y-0.5 hover:bg-[#2d9f90]"
                   >
                     Apply Now

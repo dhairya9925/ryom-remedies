@@ -19,107 +19,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import type { CategoryData, ProductData } from "@/lib/queries";
 
-type Product = {
-  name: string;
-  image: string;
-  category: string;
-  packSize: string;
-  composition: string;
-  effects: string;
-  uses: string;
-  sideEffects: string;
-  highlights: string[];
+type ProductBrowserProps = {
+  products: ProductData[];
+  categories: CategoryData[];
 };
 
-const categories = [
-  ["Pain & Inflammation", 2],
-  ["Anti Biotics", 3],
-  ["Anti Allergic", 1],
-  ["Anti Emetic", 1],
-  ["GI Disorders", 2],
-] as const;
-
-const products: Product[] = [
-  {
-    name: "Ryoalert-LC",
-    image: "/products/ryoalert-lc.jpg",
-    category: "Anti Allergic",
-    packSize: "10 x 10 Tablets",
-    composition: "Montelukast Sodium and Levocetirizine Hydrochloride Tablets IP",
-    effects:
-      "Levocetirizine helps reduce allergic symptoms, while Montelukast blocks leukotrienes that can trigger asthma and allergic reactions.",
-    uses: "Allergies, hay fever, asthma, and allergic rhinitis.",
-    sideEffects: "Drowsiness, dry mouth, headache, and rare mood changes.",
-    highlights: ["Allergy support", "Tablet format", "Prescription medicine"],
-  },
-  {
-    name: "Ryocort 6",
-    image: "/products/ryocort.jpg",
-    category: "Anti Inflammatory",
-    packSize: "10 x 10 Tablets",
-    composition: "Deflazacort Tablets 6 mg",
-    effects:
-      "A corticosteroid formulation used under medical supervision to help manage inflammation and immune response.",
-    uses: "Inflammatory and allergic conditions as advised by a registered medical practitioner.",
-    sideEffects:
-      "May include stomach discomfort, fluid retention, mood changes, or raised blood sugar.",
-    highlights: ["6 mg strength", "Tablet format", "Doctor guided use"],
-  },
-  {
-    name: "Ryomace-P",
-    image: "/products/ryomace-p.jpg",
-    category: "Pain & Inflammation",
-    packSize: "10 x 10 Tablets",
-    composition: "Aceclofenac and Paracetamol Tablets IP",
-    effects:
-      "Combines an anti-inflammatory pain reliever with an analgesic and antipyretic for symptomatic relief.",
-    uses: "Pain, inflammation, fever, and musculoskeletal discomfort as prescribed.",
-    sideEffects:
-      "Acidity, nausea, stomach discomfort, dizziness, or allergic reaction in sensitive patients.",
-    highlights: ["Pain relief", "Fever support", "Combination tablet"],
-  },
-  {
-    name: "Ryomentin",
-    image: "/products/ryomentin.jpg",
-    category: "Anti Biotics",
-    packSize: "10 x 10 Tablets",
-    composition: "Amoxycillin and Potassium Clavulanate Tablets IP",
-    effects:
-      "An antibiotic combination where clavulanate helps protect amoxycillin from bacterial resistance mechanisms.",
-    uses: "Bacterial infections only when prescribed by a healthcare professional.",
-    sideEffects:
-      "Nausea, loose stools, stomach discomfort, skin rash, or allergy in susceptible patients.",
-    highlights: ["Antibiotic", "Tablet format", "Complete course advised"],
-  },
-  {
-    name: "Ryomentin 457 Dry Syrup",
-    image: "/products/ryomentin-dry-syrup.jpg",
-    category: "Anti Biotics",
-    packSize: "30 ml dry syrup",
-    composition: "Amoxycillin and Potassium Clavulanate Oral Suspension IP",
-    effects:
-      "A reconstituted oral suspension designed for dose flexibility where syrup format is clinically preferred.",
-    uses: "Bacterial infections only as directed by the prescribing doctor.",
-    sideEffects:
-      "Loose stools, nausea, stomach discomfort, rash, or allergy in sensitive patients.",
-    highlights: ["Dry syrup", "Oral suspension", "Pediatric friendly format"],
-  },
-  {
-    name: "Ryomicin 250",
-    image: "/products/ryomicin-250.jpg",
-    category: "Anti Biotics",
-    packSize: "10 x 6 Tablets",
-    composition: "Azithromycin Tablets IP 250 mg",
-    effects:
-      "A macrolide antibiotic that helps stop the growth of susceptible bacteria when used as prescribed.",
-    uses: "Bacterial infections where azithromycin is clinically indicated.",
-    sideEffects: "Nausea, abdominal discomfort, diarrhea, headache, or rare allergic reactions.",
-    highlights: ["250 mg strength", "Antibiotic", "Doctor guided use"],
-  },
-];
-
-export function ProductBrowser() {
+export function ProductBrowser({ products, categories }: ProductBrowserProps) {
   return (
     <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
       <aside className="h-fit rounded-lg border border-[#e1e3e4] bg-white p-6 shadow-sm lg:sticky lg:top-24">
@@ -145,14 +52,16 @@ export function ProductBrowser() {
           </button>
         </div>
         <ul className="mt-5 space-y-2">
-          {categories.map(([category, count]) => (
-            <li key={category}>
+          {categories.map((category) => (
+            <li key={category.id}>
               <button
                 type="button"
                 className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#3d4947] transition hover:bg-[#f3f4f5] hover:text-[#39b5a3]"
               >
-                <span>{category}</span>
-                <span className="rounded-md bg-[#e7e8e9] px-2 py-0.5 text-xs">{count}</span>
+                <span>{category.name}</span>
+                <span className="rounded-md bg-[#e7e8e9] px-2 py-0.5 text-xs">
+                  {category.productCount}
+                </span>
               </button>
             </li>
           ))}
@@ -166,16 +75,40 @@ export function ProductBrowser() {
         </div>
       </aside>
 
-      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-        {products.map((product) => (
-          <ProductDialogCard key={product.name} product={product} />
-        ))}
-      </div>
+      {products.length > 0 ? (
+        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {products.map((product) => (
+            <ProductDialogCard key={product.id} product={product} />
+          ))}
+        </div>
+      ) : (
+        <div className="flex items-center justify-center rounded-lg border border-dashed border-[#e1e3e4] bg-[#f8f9fa] p-12 text-center">
+          <div>
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#e9f8f6] text-[#39b5a3] shadow-sm">
+              <PackageCheck className="h-7 w-7" aria-hidden="true" />
+            </div>
+            <h3 className="mt-5 text-xl font-bold text-[#2d9f90] [font-family:Lexend,system-ui,sans-serif]">
+              Products coming soon
+            </h3>
+            <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-[#6b7280]">
+              Our product catalog is being updated. Please check back soon or contact us for product
+              information.
+            </p>
+            <a
+              href="/contact"
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-[#39b5a3] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#2d9f90]"
+            >
+              Contact Us
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-function ProductDialogCard({ product }: { product: Product }) {
+function ProductDialogCard({ product }: { product: ProductData }) {
   return (
     <Dialog>
       <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#e1e3e4] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
@@ -210,7 +143,7 @@ function ProductDialogCard({ product }: { product: Product }) {
   );
 }
 
-function ProductDialog({ product }: { product: Product }) {
+function ProductDialog({ product }: { product: ProductData }) {
   return (
     <DialogContent className="max-h-[88vh] w-[calc(100vw-2rem)] max-w-4xl overflow-y-auto border-0 bg-white p-0 shadow-2xl sm:rounded-lg">
       <div className="grid lg:grid-cols-[340px_1fr]">
