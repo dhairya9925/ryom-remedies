@@ -9,6 +9,7 @@ import {
   Section,
   SectionHeader,
 } from "@/components/RyomSiteLayout";
+import { companyAddress, companyAddressInline, companyEmail } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -27,8 +28,6 @@ export const metadata: Metadata = {
 const heroImage = "/page-header-bg-1-1.jpg";
 
 const labImage = "/man-contact.png";
-const address =
-  "RYOM REMEDIES\nSECOND FLOOR, 208, RATNANJALI SOLITAIRE, PRERNATIRTH DERASAR ROAD SATELLITE";
 const mapsLink = "https://maps.app.goo.gl/7h7KGWYkSDHhQkMW8?g_st=aw";
 
 export default function ContactPage() {
@@ -53,13 +52,13 @@ export default function ContactPage() {
             <ContactInfoCard
               icon={<Mail className="h-5 w-5" aria-hidden="true" />}
               label="Send email"
-              value="info@ryomremedies.com"
-              href="mailto:info@ryomremedies.com"
+              value={companyEmail}
+              href={`mailto:${companyEmail}`}
             />
             <ContactInfoCard
               icon={<MapPin className="h-5 w-5" aria-hidden="true" />}
               label="Location"
-              value={address}
+              value={companyAddress}
               href={mapsLink}
             />
             <img
@@ -79,12 +78,7 @@ export default function ContactPage() {
 
       {/* ── Interactive Map ─────────────────────────────────── */}
       <section className="relative h-[400px] overflow-hidden">
-        <LeafletMap
-          lat={23.018503}
-          lng={72.519002}
-          zoom={14}
-          popupText={address.replace("\n", " — ")}
-        />
+        <LeafletMap lat={23.018503} lng={72.519002} zoom={14} popupText={companyAddressInline} />
       </section>
     </RyomSiteLayout>
   );

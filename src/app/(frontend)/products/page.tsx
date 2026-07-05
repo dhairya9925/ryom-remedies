@@ -4,15 +4,15 @@ import { getActiveProducts, getProductCategories } from "@/lib/queries";
 import { ProductBrowser } from "./ProductBrowser";
 
 export const metadata: Metadata = {
-  title: "Shop",
+  title: "Our Products",
   description: "Browse Ryom Remedies products.",
   openGraph: {
-    title: "Shop - Ryom Remedies",
+    title: "Our Products - Ryom Remedies",
     description: "Browse Ryom Remedies products.",
   },
   twitter: {
     card: "summary",
-    title: "Shop - Ryom Remedies",
+    title: "Our Products - Ryom Remedies",
     description: "Browse Ryom Remedies products.",
   },
 };
@@ -26,7 +26,7 @@ export default async function ProductsPage() {
 
   return (
     <RyomSiteLayout activePath="/products">
-      <PageHero title="Our Products" eyebrow="Product Range" image={heroImage}>
+      <PageHero title="Product Range" eyebrow="Product Range" image={heroImage}>
         <p>
           Browse Ryom Remedies products and connect with our team for ordering, distribution, and
           documentation support.

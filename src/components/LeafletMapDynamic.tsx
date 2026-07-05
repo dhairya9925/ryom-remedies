@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { MapPin } from "lucide-react";
 import type { ComponentProps } from "react";
 import type LeafletMapComponent from "./LeafletMap";
+import { companyAddressInline } from "@/lib/company";
 
 type LeafletMapProps = ComponentProps<typeof LeafletMapComponent>;
 
@@ -18,7 +19,7 @@ function MapFallback() {
       <div className="flex items-center gap-3 rounded-lg bg-white/90 px-6 py-4 text-[#2d9f90] shadow-lg backdrop-blur-sm">
         <MapPin className="h-6 w-6 text-[#F39517]" aria-hidden="true" />
         <span className="max-w-lg text-center text-lg font-bold [font-family:Lexend,system-ui,sans-serif] sm:text-xl">
-          RYOM REMEDIES, RATNANJALI SOLITAIRE
+          {companyAddressInline}
         </span>
       </div>
     </div>

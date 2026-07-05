@@ -17,6 +17,7 @@ import {
   X,
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
+import { companyAddressLines, companyEmail } from "@/lib/company";
 
 export type RoutePath =
   | "/"
@@ -31,7 +32,7 @@ const navItems = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
   { label: "Our Services", to: "/services" },
-  { label: "Our Products", to: "/products" },
+  { label: "Product Range", to: "/products" },
   { label: "Careers", to: "/careers" },
   { label: "FAQs", to: "/faqs" },
   { label: "Contact Us", to: "/contact" },
@@ -60,6 +61,8 @@ export function RyomSiteLayout({
 
 function SiteHeader({ activePath }: { activePath: RoutePath }) {
   const [isOpen, setIsOpen] = useState(false);
+  const getHeaderNavLabel = (item: (typeof navItems)[number]) =>
+    item.to === "/products" ? "Our Products" : item.label;
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#bcc9c6]/40 bg-[#f8f9fa]/95 shadow-sm backdrop-blur-md">
@@ -84,7 +87,7 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
                   : "rounded-md text-[#3d4947] hover:bg-[#edeeef] hover:text-[#39b5a3]",
               )}
             >
-              {item.label}
+              {getHeaderNavLabel(item)}
             </Link>
           ))}
         </nav>
@@ -131,7 +134,7 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
                     : "text-[#3d4947] hover:bg-[#f3f4f5] hover:text-[#39b5a3]",
                 )}
               >
-                {item.label}
+                {getHeaderNavLabel(item)}
               </Link>
             ))}
           </div>
@@ -152,6 +155,8 @@ export function PageHero({
   image: string;
   children?: ReactNode;
 }) {
+  const displayTitle = eyebrow || title;
+
   return (
     <section className="relative flex min-h-[260px] items-center justify-center overflow-hidden bg-[#39b5a3] px-4 py-20 text-center text-white sm:min-h-[320px] sm:px-6">
       <div
@@ -164,16 +169,15 @@ export function PageHero({
         aria-hidden="true"
       />
       <div className="relative z-10 mx-auto max-w-3xl">
-        <p className="mb-3 text-sm font-bold text-[#FFF2B8]">{eyebrow}</p>
         <h1 className="text-4xl font-bold sm:text-5xl [font-family:Lexend,system-ui,sans-serif]">
-          {title}
+          {displayTitle}
         </h1>
         <div className="mt-4 flex items-center justify-center gap-2 text-sm font-semibold text-white/80">
           <Link href="/" className="transition hover:text-[#7bded2]">
             Ryom Remedies
           </Link>
           <ChevronRight className="h-4 w-4" aria-hidden="true" />
-          <span className="text-[#7bded2]">{title}</span>
+          <span className="text-[#7bded2]">{displayTitle}</span>
         </div>
         {children && <div className="mt-5 text-base leading-7 text-white/80">{children}</div>}
       </div>
@@ -213,7 +217,7 @@ export function HomeHero({
             {title}
             <span className="block text-[#F39517]">{highlight}</span>
           </h1>
-          <p className="mt-5 border-l-2 border-[#bcc9c6] pl-4 text-lg leading-8 text-[#3d4947]">
+          <p className="mt-5 border-l-2 border-[#bcc9c6] pl-4 text-xl leading-9 text-[#3d4947]">
             {description}
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
@@ -530,9 +534,12 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
             <li className="flex gap-4">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#F5C211]" aria-hidden="true" />
               <span>
-                RYOM REMEDIES
-                <br />
-                SECOND FLOOR, 208, RATNANJALI SOLITAIRE, PRERNATIRTH DERASAR ROAD SATELLITE.
+                {companyAddressLines.map((line, index) => (
+                  <span key={line}>
+                    {line}
+                    {index < companyAddressLines.length - 1 && <br />}
+                  </span>
+                ))}
               </span>
             </li>
             <li className="flex items-center gap-4">
@@ -543,8 +550,8 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
             </li>
             <li className="flex items-center gap-4">
               <Mail className="h-5 w-5 shrink-0 text-[#F5C211]" aria-hidden="true" />
-              <a href="mailto:info@ryomremedies.com" className="transition hover:text-[#F5C211]">
-                info@ryomremedies.com
+              <a href={`mailto:${companyEmail}`} className="transition hover:text-[#F5C211]">
+                {companyEmail}
               </a>
             </li>
           </ul>

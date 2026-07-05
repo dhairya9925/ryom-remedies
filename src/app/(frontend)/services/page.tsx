@@ -60,7 +60,7 @@ export default function ServicesPage() {
 
       <Section tone="teal" className="relative overflow-hidden py-16 sm:py-20">
         {/* Intro text */}
-        <div className="mx-auto max-w-4xl text-lg leading-8 text-white/95">
+        <div className="mx-auto max-w-4xl text-xl leading-9 text-white/95">
           <p>{introText}</p>
         </div>
 

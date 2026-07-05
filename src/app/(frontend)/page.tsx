@@ -56,7 +56,7 @@ const heroSlides: HeroSlide[] = [
     description:
       "Affordable & High-Quality Medicines — our strategic collaboration ensures the highest standards of quality and affordability.",
     image: "/slider-1-3.jpg",
-    primaryCta: { label: "Our Products", to: "/products" },
+    primaryCta: { label: "Product Range", to: "/products" },
     secondaryCta: { label: "Contact Us", to: "/contact" },
   },
 ];
@@ -100,14 +100,14 @@ export default function Index() {
         <SectionHeader
           centered
           inverse
-          title="Ryom Remedies Pvt. Ltd. – Spreading Health, Spreading Happiness"
+          title="Ryom Remedies Pvt. Ltd. – Spreading Health & Happiness"
         />
-        <div className="mx-auto max-w-4xl space-y-6 text-center text-lg leading-8 text-white/90">
+        <div className="mx-auto max-w-4xl space-y-6 text-center text-xl leading-9 text-white/90">
           <p>
             At Ryom Remedies Pvt. Ltd., we believe that good health is the foundation of a happy
-            life. Guided by our motto, “Spreading Health, Spreading Happiness,” we are committed to
-            making high-quality, affordable medicines accessible to all, ensuring that no one is
-            left behind in the journey toward well-being.
+            life. Guided by our motto, “Spreading Health & Happiness,” we are committed to making
+            high-quality, affordable medicines accessible to all, ensuring that no one is left
+            behind in the journey toward well-being.
           </p>
           <p>
             As a visionary pharmaceutical company, we strive to bridge healthcare gaps by delivering

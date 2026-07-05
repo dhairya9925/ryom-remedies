@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { Map as LeafletMapInstance } from "leaflet";
 import { MapPin } from "lucide-react";
+import { companyAddressInline } from "@/lib/company";
 
 /* ──────────────────────────────────────────────────────────
    Ryom Remedies – Ratnanjali Solitaire, Satellite
@@ -34,7 +35,7 @@ export default function LeafletMap({
   lat = RYOM_LAT,
   lng = RYOM_LNG,
   zoom = DEFAULT_ZOOM,
-  popupText = "RYOM REMEDIES — SECOND FLOOR, 208, RATNANJALI SOLITAIRE, PRERNATIRTH DERASAR ROAD SATELLITE",
+  popupText = companyAddressInline,
   className = "",
 }: LeafletMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
