@@ -1,13 +1,16 @@
 import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 
+const r2PublicUrl = process.env.NEXT_PUBLIC_R2_PUBLIC_URL || "https://media.ryomremedies.com";
+const r2PublicHost = new URL(r2PublicUrl).hostname;
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "media.ryomremedies.com",
+        hostname: r2PublicHost,
       },
     ],
   },

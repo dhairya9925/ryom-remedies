@@ -64,13 +64,20 @@ async function verifyCMS() {
     throw new Error(`Expected frontend queries to return at least 2 job openings.`);
   }
 
-  const absoluteMediaUrl = frontendProducts.find((product) =>
-    product.image.startsWith("http://localhost"),
-  );
+  const r2PublicUrl = process.env.NEXT_PUBLIC_R2_PUBLIC_URL?.replace(/\/$/, "");
+  const unexpectedMediaUrl = frontendProducts.find((product) => {
+    if (r2PublicUrl) {
+      return !product.image.startsWith(`${r2PublicUrl}/`);
+    }
 
-  if (absoluteMediaUrl) {
+    return product.image.startsWith("http://localhost");
+  });
+
+  if (unexpectedMediaUrl) {
     throw new Error(
-      `Expected product media URLs to be same-origin paths. Found ${absoluteMediaUrl.image}.`,
+      r2PublicUrl
+        ? `Expected product media URLs to use ${r2PublicUrl}. Found ${unexpectedMediaUrl.image}.`
+        : `Expected product media URLs to be same-origin paths. Found ${unexpectedMediaUrl.image}.`,
     );
   }
 

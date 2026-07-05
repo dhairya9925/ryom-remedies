@@ -40,11 +40,7 @@ export type JobOpeningData = {
 
 const getMediaUrl = (image: { filename?: string | null; url?: string | null } | null) => {
   if (image?.url) {
-    try {
-      return new URL(image.url).pathname;
-    } catch {
-      return image.url;
-    }
+    return image.url;
   }
 
   if (image?.filename) {
@@ -116,24 +112,31 @@ export async function getProductCategories(): Promise<CategoryData[]> {
       sort: "order",
     });
 
-    return await Promise.all(
-      result.docs.map(async (category) => {
-        const productCount = await payload.count({
-          collection: "products",
-          where: {
-            and: [{ category: { equals: category.id } }, { status: { equals: "active" } }],
-          },
-        });
+    const activeProducts = await payload.find({
+      collection: "products",
+      depth: 0,
+      limit: 100,
+      where: {
+        status: { equals: "active" },
+      },
+    });
 
-        return {
-          id: String(category.id),
-          name: category.name,
-          slug: category.slug,
-          productCount: productCount.totalDocs,
-          order: category.order ?? 0,
-        };
-      }),
+    const productCountByCategory = activeProducts.docs.reduce<Record<string, number>>(
+      (counts, product) => {
+        const categoryId = String(product.category);
+        counts[categoryId] = (counts[categoryId] ?? 0) + 1;
+        return counts;
+      },
+      {},
     );
+
+    return result.docs.map((category) => ({
+      id: String(category.id),
+      name: category.name,
+      slug: category.slug,
+      productCount: productCountByCategory[String(category.id)] ?? 0,
+      order: category.order ?? 0,
+    }));
   } catch (error) {
     console.error("Failed to fetch product categories from CMS.", error);
     return [];
