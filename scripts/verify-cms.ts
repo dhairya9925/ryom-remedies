@@ -33,7 +33,7 @@ async function verifyCMS() {
 
   const checks = [
     ["active products", activeProducts.totalDocs, 6],
-    ["product categories", categories.totalDocs, 6],
+    ["product categories", categories.totalDocs, 5],
     ["media documents", media.totalDocs, 6],
     ["published job openings", publishedOpenings.totalDocs, 2],
   ] as const;

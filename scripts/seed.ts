@@ -278,7 +278,7 @@ async function seed() {
       });
     }
 
-    categoryMap.set(category.name, doc.id);
+    categoryMap.set(category.name, Number(doc.id));
     console.log(`  ✓ ${category.name}`);
   }
 
@@ -319,7 +319,7 @@ async function seed() {
       });
     }
 
-    mediaMap.set(product.imageFilename, media.id);
+    mediaMap.set(product.imageFilename, Number(media.id));
     console.log(`  ✓ ${product.imageFilename}`);
   }
 
