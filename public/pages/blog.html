@@ -1,245 +1,589 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Blog - Ryom Remedies</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&amp;family=Urbanist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-secondary-fixed-variant": "#693c00", "tertiary-fixed": "#ffdbd0", "inverse-primary": "#5edac8", error: "#ba1a1a", secondary: "#8a5100", "primary-container": "#10a696", "on-primary-fixed-variant": "#005048", surface: "#f8f9fa", "inverse-on-surface": "#f0f1f2", outline: "#6d7a77", "surface-dark": "#1A1A2E", "on-tertiary-fixed": "#3a0b00", tertiary: "#99452a", "on-tertiary": "#ffffff", "surface-container-highest": "#e1e3e4", "surface-container-lowest": "#ffffff", "on-surface-variant": "#3d4947", "on-background": "#191c1d", "surface-container-low": "#f3f4f5", "on-error": "#ffffff", "whatsapp-green": "#25D366", "primary-fixed": "#7df7e4", "inverse-surface": "#2e3132", "tertiary-fixed-dim": "#ffb59e", "primary-fixed-dim": "#5edac8", "secondary-container": "#fc9d2a", "on-tertiary-fixed-variant": "#7b2f15", primary: "#006b60", "surface-container": "#edeeef", "accent-dark": "#D9841A", "text-primary": "#1F2937", "primary-dark": "#0D8A7D", "surface-bright": "#f8f9fa", "tertiary-container": "#dc7959", "error-container": "#ffdad6", "on-secondary-fixed": "#2c1600", "secondary-fixed": "#ffdcbe", "on-error-container": "#93000a", "text-muted": "#6B7280", "surface-variant": "#e1e3e4", "outline-variant": "#bcc9c6", "on-surface": "#191c1d", "secondary-fixed-dim": "#ffb86f", background: "#f8f9fa", "on-primary-container": "#00332d", "surface-tint": "#006b60", "on-tertiary-container": "#571500", "on-secondary-container": "#673b00", "on-primary": "#ffffff", "surface-dim": "#d9dadb", "on-secondary": "#ffffff", "on-primary-fixed": "#00201c", "surface-container-high": "#e7e8e9"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"stack-md": "16px", "grid-gutter": "24px", "stack-sm": "8px", "container-max": "1280px", "section-gap": "80px", "card-padding": "32px", "stack-lg": "24px"}, fontFamily: {"label-md": ["Urbanist"], "headline-xl": ["Lexend"], caption: ["Urbanist"], "body-lg": ["Urbanist"], "headline-lg-mobile": ["Lexend"], "headline-lg": ["Lexend"], "body-md": ["Urbanist"], "headline-md": ["Lexend"], headline: ["Lexend"], display: ["Lexend"], body: ["urbanist"], label: ["urbanist"]}, fontSize: {"label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600"}], "headline-xl": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], caption: ["12px", {lineHeight: "1.4", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "headline-lg-mobile": ["28px", {lineHeight: "1.2", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "600"}]}}}};</script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+<html class="" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog - Ryom Remedies</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&amp;family=Urbanist:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#693c00",
+              "tertiary-fixed": "#ffdbd0",
+              "inverse-primary": "#5edac8",
+              error: "#ba1a1a",
+              secondary: "#8a5100",
+              "primary-container": "#10a696",
+              "on-primary-fixed-variant": "#005048",
+              surface: "#f8f9fa",
+              "inverse-on-surface": "#f0f1f2",
+              outline: "#6d7a77",
+              "surface-dark": "#1A1A2E",
+              "on-tertiary-fixed": "#3a0b00",
+              tertiary: "#99452a",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e1e3e4",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#3d4947",
+              "on-background": "#191c1d",
+              "surface-container-low": "#f3f4f5",
+              "on-error": "#ffffff",
+              "whatsapp-green": "#25D366",
+              "primary-fixed": "#7df7e4",
+              "inverse-surface": "#2e3132",
+              "tertiary-fixed-dim": "#ffb59e",
+              "primary-fixed-dim": "#5edac8",
+              "secondary-container": "#fc9d2a",
+              "on-tertiary-fixed-variant": "#7b2f15",
+              primary: "#006b60",
+              "surface-container": "#edeeef",
+              "accent-dark": "#D9841A",
+              "text-primary": "#1F2937",
+              "primary-dark": "#0D8A7D",
+              "surface-bright": "#f8f9fa",
+              "tertiary-container": "#dc7959",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#2c1600",
+              "secondary-fixed": "#ffdcbe",
+              "on-error-container": "#93000a",
+              "text-muted": "#6B7280",
+              "surface-variant": "#e1e3e4",
+              "outline-variant": "#bcc9c6",
+              "on-surface": "#191c1d",
+              "secondary-fixed-dim": "#ffb86f",
+              background: "#f8f9fa",
+              "on-primary-container": "#00332d",
+              "surface-tint": "#006b60",
+              "on-tertiary-container": "#571500",
+              "on-secondary-container": "#673b00",
+              "on-primary": "#ffffff",
+              "surface-dim": "#d9dadb",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#00201c",
+              "surface-container-high": "#e7e8e9",
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+            spacing: {
+              "stack-md": "16px",
+              "grid-gutter": "24px",
+              "stack-sm": "8px",
+              "container-max": "1280px",
+              "section-gap": "80px",
+              "card-padding": "32px",
+              "stack-lg": "24px",
+            },
+            fontFamily: {
+              "label-md": ["Urbanist"],
+              "headline-xl": ["Lexend"],
+              caption: ["Urbanist"],
+              "body-lg": ["Urbanist"],
+              "headline-lg-mobile": ["Lexend"],
+              "headline-lg": ["Lexend"],
+              "body-md": ["Urbanist"],
+              "headline-md": ["Lexend"],
+              headline: ["Lexend"],
+              display: ["Lexend"],
+              body: ["urbanist"],
+              label: ["urbanist"],
+            },
+            fontSize: {
+              "label-md": [
+                "14px",
+                { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600" },
+              ],
+              "headline-xl": [
+                "48px",
+                { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" },
+              ],
+              caption: ["12px", { lineHeight: "1.4", fontWeight: "500" }],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-lg-mobile": ["28px", { lineHeight: "1.2", fontWeight: "600" }],
+              "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
+              "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+              "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .material-symbols-outlined.fill {
+        font-variation-settings: "FILL" 1;
+      }
+
+      /* Subtle float animation for hero elements */
+      @keyframes subtleFloat {
+        0% {
+          transform: translateY(0px);
         }
-        .material-symbols-outlined.fill {
-            font-variation-settings: 'FILL' 1;
+        50% {
+          transform: translateY(-5px);
         }
-        
-        /* Subtle float animation for hero elements */
-        @keyframes subtleFloat {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0px); }
+        100% {
+          transform: translateY(0px);
         }
-        .animate-float {
-            animation: subtleFloat 6s ease-in-out infinite;
-        }
+      }
+      .animate-float {
+        animation: subtleFloat 6s ease-in-out infinite;
+      }
     </style>
-</head>
-<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar -->
-<nav class="bg-surface/90 dark:bg-surface-dark/90 backdrop-blur-md text-primary dark:text-inverse-primary docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm bg-surface dark:bg-surface-dark">
-<div class="flex justify-between items-center w-full px-6 py-4 max-w-container-max mx-auto">
-<!-- Brand Logo -->
-<a class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary flex items-center gap-2 group hover:scale-95 duration-150" href="#">
-<span class="material-symbols-outlined text-secondary-container text-3xl group-hover:rotate-12 transition-transform">science</span>
-<span>Ryom Remedies</span>
-</a>
-<!-- Navigation Links (Desktop) -->
-<div class="hidden md:flex space-x-8 items-center text-label-md font-label-md">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md" href="/" target="_top">Home</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md" href="/about" target="_top">About Us</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md" href="/services" target="_top">Our Services</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md" href="/products" target="_top">Our Products</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md" href="/careers" target="_top">Careers</a>
-<!-- Active State (Semantically inferred as there is no specific "Blog" link in the array, but intent is clear) -->
-<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary px-3 py-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all" href="/blog" target="_top">Blog</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md" href="/contact" target="_top">Contact Us</a>
-</div>
-<!-- Trailing Action -->
-<a class="hidden md:inline-flex items-center justify-center bg-secondary-container hover:bg-accent-dark text-white text-label-md font-label-md py-2 px-6 rounded-lg transition-colors shadow-sm hover:shadow-md hover:-translate-y-0.5 duration-200" href="/products" target="_top">
-                Order Now
-            </a>
-<!-- Mobile Menu Toggle (Simplified) -->
-<button class="md:hidden text-on-surface p-2">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-<!-- Page Banner Hero -->
-<header class="relative w-full h-[300px] md:h-[400px] overflow-hidden flex items-center justify-center bg-primary-dark">
-<!-- Background Image -->
-<div class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-60" data-alt="A macro photograph of a modern laboratory environment focusing on a pristine microscope and sterile glassware filled with glowing blue and green chemical solutions. The lighting is crisp, cool, and cinematic, emphasizing the high-tech, precise nature of modern pharmaceutical research. The depth of field is shallow, blurring the background into a clean, professional clinical setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADJ4NgsSYopfoO0JYidjoxgrLhpSAkQ2RZbbNpM5-9pPmI7dm-J5BBaFDM4txoLvu3la5OIM6LqUAJ2SwQ_l8hwnBenH8N6IqFpjtIthoP3KD-5XskSm43NpjLXtQWMMy0FV3EbyU_wrElhlM-gMhkHr2DlSkWUVdctxw9ttUoQqFCoX6MvFXupiq4sWm2Wp4JU49sZO_3h7ghWV56wnDNnSqfd1rO9C1cpZzgkEwM7cs12TAxWtELAmFFb-ZTWWQMjOFcRam-Sic')"></div>
-<!-- Gradient Overlay -->
-<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/90 via-surface-dark/40 to-transparent"></div>
-<div class="relative z-10 text-center max-w-container-max mx-auto px-6 animate-float">
-<h1 class="text-headline-xl font-headline-xl text-white mb-stack-sm drop-shadow-lg">Blog</h1>
-<div class="flex items-center justify-center space-x-2 text-surface-container-highest text-label-md font-label-md">
-<a class="hover:text-inverse-primary transition-colors" href="/" target="_top">Ryom Remedies</a>
-<span class="material-symbols-outlined text-sm">chevron_right</span>
-<span class="text-inverse-primary font-bold">Blog</span>
-</div>
-</div>
-</header>
-<!-- Main Content Area -->
-<main class="py-section-gap px-6 max-w-container-max mx-auto">
-<!-- Blog Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-grid-gutter">
-<!-- Blog Card 1 -->
-<article class="group bg-white rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(16,166,150,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col h-full relative">
-<div class="relative h-64 overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Two scientists in full sterile protective suits operating complex analytical machinery in a brightly lit, modern cleanroom. The environment is impeccably clean with white and metallic surfaces reflecting cool fluorescent light. The focus is on the precision and advanced technology used in medical research." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj59as2aFncyFqXEG-xei9d0HDIJ2doWpBC5zA65DfydLJ9VJFNxlWGt5To9ETE-3UlZusU_onrlXDoHR2FKH1RLv6cy4A7HAfSLxpgYZrfwRGvAVk2uyAxNZKoNxmtMtAelYP-rMZ0AQ_qE3Xjl5qXSUcY1Aq_zRlumrycuk4dM1b-RT1hzi8bMkw7hTLtKpHjajWmIlHU91-zzvveyGypc8j2b--QPSJh1hDubzqX2itXaZQHYA3UeER31CQm1nrLWEsH5S7Clw"/>
-<!-- Date Badge -->
-<div class="absolute top-4 right-4 bg-secondary-container text-white w-14 h-14 rounded-full flex flex-col items-center justify-center shadow-md border-2 border-white transform rotate-3 group-hover:rotate-0 transition-transform">
-<span class="text-headline-md font-headline-md leading-none">22</span>
-<span class="text-caption font-caption uppercase tracking-wider">Apr</span>
-</div>
-</div>
-<div class="p-card-padding flex flex-col flex-grow relative z-10 bg-white">
-<div class="flex items-center gap-2 mb-stack-sm text-primary-container text-caption font-caption uppercase tracking-wide">
-<span class="material-symbols-outlined text-[16px]">biotech</span>
-<span>Research</span>
-</div>
-<h2 class="text-headline-md font-headline-md text-primary-dark mb-stack-md group-hover:text-secondary-container transition-colors line-clamp-2">Healthcare Trends &amp; Innovation</h2>
-<p class="text-body-md font-body-md text-text-muted mb-stack-lg flex-grow line-clamp-3">
-                        Exploring the latest technological advancements shaping the future of clinical trials and patient care globally.
-                    </p>
-<a class="inline-flex items-center text-primary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto bg-surface-container-low py-3 px-4 rounded-lg w-full justify-between" href="#">
-                        Read More
-                        <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- Blog Card 2 -->
-<article class="group bg-white rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(16,166,150,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col h-full relative">
-<div class="relative h-64 overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up of a gloved hand holding a test tube with a vibrant red liquid, illuminated against a slightly blurred background of a modern laboratory workspace with a laptop displaying data charts. The aesthetic conveys active scientific analysis and data-driven medical product development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsXRun8L-UdYcZc0PH3-deQgaeyyKivRVOzZZ8t9Yk935ptlBVWQ3owrMDsyNPzVP0-fpZXOSU8dKgsEgEOxgYQTSOnpz-Ku-ONFYg-LEGJfQAEgHP-K_EW8ddKXhHOCpgA6n5NdwGAlTYtVVOmg3o47iIP8Sz10Ox2ppUcZZdZpNGpndAHNnAhaEVmnr1C8JlLrwoLAncaM3Fm8xXl7-flkj_e8dGBmt_0aQxsA6CyAF9V1wH1EJpgk2WzeuGlZNIOoh-knjMlQ4"/>
-<!-- Date Badge -->
-<div class="absolute top-4 right-4 bg-secondary-container text-white w-14 h-14 rounded-full flex flex-col items-center justify-center shadow-md border-2 border-white transform rotate-3 group-hover:rotate-0 transition-transform">
-<span class="text-headline-md font-headline-md leading-none">22</span>
-<span class="text-caption font-caption uppercase tracking-wider">Apr</span>
-</div>
-</div>
-<div class="p-card-padding flex flex-col flex-grow relative z-10 bg-white">
-<div class="flex items-center gap-2 mb-stack-sm text-primary-container text-caption font-caption uppercase tracking-wide">
-<span class="material-symbols-outlined text-[16px]">new_releases</span>
-<span>Products</span>
-</div>
-<h2 class="text-headline-md font-headline-md text-primary-dark mb-stack-md group-hover:text-secondary-container transition-colors line-clamp-2">New Product Launches</h2>
-<p class="text-body-md font-body-md text-text-muted mb-stack-lg flex-grow line-clamp-3">
-                        Announcing our latest line of targeted therapies designed to improve patient outcomes with enhanced efficacy profiles.
-                    </p>
-<a class="inline-flex items-center text-primary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto bg-surface-container-low py-3 px-4 rounded-lg w-full justify-between" href="#">
-                        Read More
-                        <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- Blog Card 3 -->
-<article class="group bg-white rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(16,166,150,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col h-full relative">
-<div class="relative h-64 overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A team of professional researchers in lab coats reviewing documents and digital tablets in a brightly lit, organized laboratory office. The focus is on collaboration and strict adherence to protocol, emphasizing trust, safety, and regulatory compliance in the pharmaceutical industry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQk4qaYhqomuqyfxBge7f-k5YXsjrB1dp91rCq4EeGFLjjaHbjDvN9rqdvYwrcMBDHPLTAXB8V28L0UQu0vr0ctucvNSV8NFjWEd0b3PoNztcUuWxTrAqLEbHX79AMMxrfsldNCGfQ5MQ1ESn691Kb2UjacLnCU_8QW_yI-SKXLDHhDHdJHXKvPukR_-rCcslaViguFjjifw1e3Iy1kuBVFRCJ5xCO3UvOARos2HmDUuY4k1y_FlhLupoDw9hvhrqrOMA3_a_wYRc"/>
-<!-- Date Badge -->
-<div class="absolute top-4 right-4 bg-secondary-container text-white w-14 h-14 rounded-full flex flex-col items-center justify-center shadow-md border-2 border-white transform rotate-3 group-hover:rotate-0 transition-transform">
-<span class="text-headline-md font-headline-md leading-none">22</span>
-<span class="text-caption font-caption uppercase tracking-wider">Apr</span>
-</div>
-</div>
-<div class="p-card-padding flex flex-col flex-grow relative z-10 bg-white">
-<div class="flex items-center gap-2 mb-stack-sm text-primary-container text-caption font-caption uppercase tracking-wide">
-<span class="material-symbols-outlined text-[16px]">gavel</span>
-<span>Compliance</span>
-</div>
-<h2 class="text-headline-md font-headline-md text-primary-dark mb-stack-md group-hover:text-secondary-container transition-colors line-clamp-2">Pharmaceutical Compliance &amp; Regulations</h2>
-<p class="text-body-md font-body-md text-text-muted mb-stack-lg flex-grow line-clamp-3">
-                        Navigating the complex landscape of international pharmaceutical standards and our commitment to uncompromising quality.
-                    </p>
-<a class="inline-flex items-center text-primary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto bg-surface-container-low py-3 px-4 rounded-lg w-full justify-between" href="#">
-                        Read More
-                        <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- Blog Card 4 -->
-<article class="group bg-white rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(16,166,150,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col h-full relative">
-<div class="relative h-64 overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional pharmacist in a crisp white coat consulting with a patient in a modern, clean pharmacy setting. The environment is well-lit, conveying warmth, care, and approachability while maintaining a sterile, professional medical atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClJ7pK0QB4Y22qpjrt07-U5sSYUJ3xsuSINprFr02duSZmFx920zy5phAhw6oXOF9H0K59AqXFJC0ivQQyFTGiIGgn7YTW0crGLf4gW2L-Q49OMozcgFrazKQ0AWxJyKh8SUbdsH-IN79V8KwZA-PgyQqjNMBPVFCNwt6tFyHyq5b_FyIByzKgMF0e-Rw5T2SkAZ0-t4KXrhAKyOjjUch168oZZvaxrV4wu6Ciz_NlZz2Z2KN5OAtnpfQH5xPwu6eFgtnpblLODjk"/>
-<!-- Date Badge -->
-<div class="absolute top-4 right-4 bg-secondary-container text-white w-14 h-14 rounded-full flex flex-col items-center justify-center shadow-md border-2 border-white transform rotate-3 group-hover:rotate-0 transition-transform">
-<span class="text-headline-md font-headline-md leading-none">22</span>
-<span class="text-caption font-caption uppercase tracking-wider">Apr</span>
-</div>
-</div>
-<div class="p-card-padding flex flex-col flex-grow relative z-10 bg-white">
-<div class="flex items-center gap-2 mb-stack-sm text-primary-container text-caption font-caption uppercase tracking-wide">
-<span class="material-symbols-outlined text-[16px]">medical_services</span>
-<span>Advice</span>
-</div>
-<h2 class="text-headline-md font-headline-md text-primary-dark mb-stack-md group-hover:text-secondary-container transition-colors line-clamp-2">Expert Tips on Medicine Usage</h2>
-<p class="text-body-md font-body-md text-text-muted mb-stack-lg flex-grow line-clamp-3">
-                        Essential guidelines for patients to maximize therapeutic benefits while minimizing potential side effects.
-                    </p>
-<a class="inline-flex items-center text-primary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto bg-surface-container-low py-3 px-4 rounded-lg w-full justify-between" href="#">
-                        Read More
-                        <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</article>
-</div>
-<!-- Pagination (Simulated) -->
-<div class="mt-section-gap flex justify-center items-center gap-2">
-<button class="w-10 h-10 rounded-full bg-surface border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors disabled:opacity-50" disabled="">
-<span class="material-symbols-outlined">chevron_left</span>
-</button>
-<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-label-md shadow-sm">1</button>
-<button class="w-10 h-10 rounded-full bg-surface border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors font-label-md">2</button>
-<button class="w-10 h-10 rounded-full bg-surface border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors font-label-md">3</button>
-<button class="w-10 h-10 rounded-full bg-surface border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors">
-<span class="material-symbols-outlined">chevron_right</span>
-</button>
-</div>
-</main>
-<!-- Footer -->
-<footer class="bg-primary dark:bg-primary-dark text-on-primary dark:text-on-primary full-width grid grid-cols-1 md:grid-cols-3 gap-grid-gutter px-6 py-section-gap max-w-container-max mx-auto text-on-primary">
-<div class="flex flex-col gap-4">
-<a class="text-headline-md font-headline-md text-on-primary flex items-center gap-2" href="#">
-<span class="material-symbols-outlined text-secondary-container text-3xl">science</span>
-                 Ryom Remedies
-            </a>
-<p class="text-body-md font-body-md text-on-primary/80 max-w-sm mt-4">
-                Pioneering advanced pharmaceutical solutions for a healthier tomorrow. Committed to quality, innovation, and global well-being.
-            </p>
-</div>
-<div>
-<h3 class="text-headline-md font-headline-md mb-stack-lg text-secondary-container">Links</h3>
-<div class="flex flex-col gap-3">
-<a class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="/" target="_top">Home</a>
-<a class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="/about" target="_top">About Us</a>
-<a class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="/services" target="_top">Our Services</a>
-<a class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="/products" target="_top">Our Products</a>
-<a class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="/careers" target="_top">Careers</a>
-<!-- Active footer link state -->
-<a class="text-label-md font-label-md text-secondary-container font-bold hover:translate-x-1 transition-transform duration-200" href="#">Blogs</a>
-<a class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="/faqs" target="_top">FAQs</a>
-<a class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200" href="/contact" target="_top">Contact Us</a>
-</div>
-</div>
-<div>
-<h3 class="text-headline-md font-headline-md mb-stack-lg text-secondary-container">Contact</h3>
-<ul class="space-y-4 text-body-md font-body-md text-on-primary/90">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined mt-1 text-secondary-container">location_on</span>
-<span>123 Innovation Drive, Health-Tech Park, Cityville, ST 12345</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary-container">call</span>
-<span>+1 (800) 555-RYOM</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary-container">mail</span>
-<span>contact@ryomremedies.com</span>
-</li>
-</ul>
-</div>
-<!-- Copyright Banner -->
-<div class="col-span-1 md:col-span-3 border-t border-on-primary/20 pt-8 mt-8 text-center text-caption font-caption text-on-primary/60">
-            © Copyright 2026 Ryom Remedies Pvt. Ltd. All Rights Reserved.
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="bg-surface/90 dark:bg-surface-dark/90 backdrop-blur-md text-primary dark:text-inverse-primary docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm bg-surface dark:bg-surface-dark"
+    >
+      <div class="flex justify-between items-center w-full px-6 py-4 max-w-container-max mx-auto">
+        <!-- Brand Logo -->
+        <a
+          class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary flex items-center gap-2 group hover:scale-95 duration-150"
+          href="#"
+        >
+          <span
+            class="material-symbols-outlined text-secondary-container text-3xl group-hover:rotate-12 transition-transform"
+            >science</span
+          >
+          <span>Ryom Remedies</span>
+        </a>
+        <!-- Navigation Links (Desktop) -->
+        <div class="hidden md:flex space-x-8 items-center text-label-md font-label-md">
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md"
+            href="/"
+            target="_top"
+            >Home</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md"
+            href="/about"
+            target="_top"
+            >About Us</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md"
+            href="/services"
+            target="_top"
+            >Our Services</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md"
+            href="/products"
+            target="_top"
+            >Our Products</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md"
+            href="/careers"
+            target="_top"
+            >Careers</a
+          >
+          <!-- Active State (Semantically inferred as there is no specific "Blog" link in the array, but intent is clear) -->
+          <a
+            class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary px-3 py-2 hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all"
+            href="/blog"
+            target="_top"
+            >Blog</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-md"
+            href="/contact"
+            target="_top"
+            >Contact Us</a
+          >
         </div>
-</footer>
-<!-- Floating Action Button (WhatsApp) -->
-<a class="bg-whatsapp-green dark:bg-whatsapp-green text-white text-label-md font-label-md rounded-full p-4 fixed bottom-8 right-8 z-50 shadow-xl shadow-whatsapp-green/20 hover:scale-110 hover:shadow-2xl transition-all duration-300 animate-pulse flex items-center justify-center" href="#">
-<span class="material-symbols-outlined fill text-3xl">chat</span>
-</a>
-</body></html>
+        <!-- Trailing Action -->
+        <a
+          class="hidden md:inline-flex items-center justify-center bg-secondary-container hover:bg-accent-dark text-white text-label-md font-label-md py-2 px-6 rounded-lg transition-colors shadow-sm hover:shadow-md hover:-translate-y-0.5 duration-200"
+          href="/products"
+          target="_top"
+        >
+          Order Now
+        </a>
+        <!-- Mobile Menu Toggle (Simplified) -->
+        <button class="md:hidden text-on-surface p-2">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Page Banner Hero -->
+    <header
+      class="relative w-full h-[300px] md:h-[400px] overflow-hidden flex items-center justify-center bg-primary-dark"
+    >
+      <!-- Background Image -->
+      <div
+        class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-60"
+        data-alt="A macro photograph of a modern laboratory environment focusing on a pristine microscope and sterile glassware filled with glowing blue and green chemical solutions. The lighting is crisp, cool, and cinematic, emphasizing the high-tech, precise nature of modern pharmaceutical research. The depth of field is shallow, blurring the background into a clean, professional clinical setting."
+        style="
+          background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuADJ4NgsSYopfoO0JYidjoxgrLhpSAkQ2RZbbNpM5-9pPmI7dm-J5BBaFDM4txoLvu3la5OIM6LqUAJ2SwQ_l8hwnBenH8N6IqFpjtIthoP3KD-5XskSm43NpjLXtQWMMy0FV3EbyU_wrElhlM-gMhkHr2DlSkWUVdctxw9ttUoQqFCoX6MvFXupiq4sWm2Wp4JU49sZO_3h7ghWV56wnDNnSqfd1rO9C1cpZzgkEwM7cs12TAxWtELAmFFb-ZTWWQMjOFcRam-Sic&quot;);
+        "
+      ></div>
+      <!-- Gradient Overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-surface-dark/90 via-surface-dark/40 to-transparent"
+      ></div>
+      <div class="relative z-10 text-center max-w-container-max mx-auto px-6 animate-float">
+        <h1 class="text-headline-xl font-headline-xl text-white mb-stack-sm drop-shadow-lg">
+          Blog
+        </h1>
+        <div
+          class="flex items-center justify-center space-x-2 text-surface-container-highest text-label-md font-label-md"
+        >
+          <a class="hover:text-inverse-primary transition-colors" href="/" target="_top"
+            >Ryom Remedies</a
+          >
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-inverse-primary font-bold">Blog</span>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content Area -->
+    <main class="py-section-gap px-6 max-w-container-max mx-auto">
+      <!-- Blog Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-grid-gutter">
+        <!-- Blog Card 1 -->
+        <article
+          class="group bg-white rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(16,166,150,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col h-full relative"
+        >
+          <div class="relative h-64 overflow-hidden bg-surface-container">
+            <img
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="Two scientists in full sterile protective suits operating complex analytical machinery in a brightly lit, modern cleanroom. The environment is impeccably clean with white and metallic surfaces reflecting cool fluorescent light. The focus is on the precision and advanced technology used in medical research."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj59as2aFncyFqXEG-xei9d0HDIJ2doWpBC5zA65DfydLJ9VJFNxlWGt5To9ETE-3UlZusU_onrlXDoHR2FKH1RLv6cy4A7HAfSLxpgYZrfwRGvAVk2uyAxNZKoNxmtMtAelYP-rMZ0AQ_qE3Xjl5qXSUcY1Aq_zRlumrycuk4dM1b-RT1hzi8bMkw7hTLtKpHjajWmIlHU91-zzvveyGypc8j2b--QPSJh1hDubzqX2itXaZQHYA3UeER31CQm1nrLWEsH5S7Clw"
+            />
+            <!-- Date Badge -->
+            <div
+              class="absolute top-4 right-4 bg-secondary-container text-white w-14 h-14 rounded-full flex flex-col items-center justify-center shadow-md border-2 border-white transform rotate-3 group-hover:rotate-0 transition-transform"
+            >
+              <span class="text-headline-md font-headline-md leading-none">22</span>
+              <span class="text-caption font-caption uppercase tracking-wider">Apr</span>
+            </div>
+          </div>
+          <div class="p-card-padding flex flex-col flex-grow relative z-10 bg-white">
+            <div
+              class="flex items-center gap-2 mb-stack-sm text-primary-container text-caption font-caption uppercase tracking-wide"
+            >
+              <span class="material-symbols-outlined text-[16px]">biotech</span>
+              <span>Research</span>
+            </div>
+            <h2
+              class="text-headline-md font-headline-md text-primary-dark mb-stack-md group-hover:text-secondary-container transition-colors line-clamp-2"
+            >
+              Healthcare Trends &amp; Innovation
+            </h2>
+            <p class="text-body-md font-body-md text-text-muted mb-stack-lg flex-grow line-clamp-3">
+              Exploring the latest technological advancements shaping the future of clinical trials
+              and patient care globally.
+            </p>
+            <a
+              class="inline-flex items-center text-primary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto bg-surface-container-low py-3 px-4 rounded-lg w-full justify-between"
+              href="#"
+            >
+              Read More
+              <span
+                class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+        </article>
+        <!-- Blog Card 2 -->
+        <article
+          class="group bg-white rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(16,166,150,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col h-full relative"
+        >
+          <div class="relative h-64 overflow-hidden bg-surface-container">
+            <img
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="A close-up of a gloved hand holding a test tube with a vibrant red liquid, illuminated against a slightly blurred background of a modern laboratory workspace with a laptop displaying data charts. The aesthetic conveys active scientific analysis and data-driven medical product development."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsXRun8L-UdYcZc0PH3-deQgaeyyKivRVOzZZ8t9Yk935ptlBVWQ3owrMDsyNPzVP0-fpZXOSU8dKgsEgEOxgYQTSOnpz-Ku-ONFYg-LEGJfQAEgHP-K_EW8ddKXhHOCpgA6n5NdwGAlTYtVVOmg3o47iIP8Sz10Ox2ppUcZZdZpNGpndAHNnAhaEVmnr1C8JlLrwoLAncaM3Fm8xXl7-flkj_e8dGBmt_0aQxsA6CyAF9V1wH1EJpgk2WzeuGlZNIOoh-knjMlQ4"
+            />
+            <!-- Date Badge -->
+            <div
+              class="absolute top-4 right-4 bg-secondary-container text-white w-14 h-14 rounded-full flex flex-col items-center justify-center shadow-md border-2 border-white transform rotate-3 group-hover:rotate-0 transition-transform"
+            >
+              <span class="text-headline-md font-headline-md leading-none">22</span>
+              <span class="text-caption font-caption uppercase tracking-wider">Apr</span>
+            </div>
+          </div>
+          <div class="p-card-padding flex flex-col flex-grow relative z-10 bg-white">
+            <div
+              class="flex items-center gap-2 mb-stack-sm text-primary-container text-caption font-caption uppercase tracking-wide"
+            >
+              <span class="material-symbols-outlined text-[16px]">new_releases</span>
+              <span>Products</span>
+            </div>
+            <h2
+              class="text-headline-md font-headline-md text-primary-dark mb-stack-md group-hover:text-secondary-container transition-colors line-clamp-2"
+            >
+              New Product Launches
+            </h2>
+            <p class="text-body-md font-body-md text-text-muted mb-stack-lg flex-grow line-clamp-3">
+              Announcing our latest line of targeted therapies designed to improve patient outcomes
+              with enhanced efficacy profiles.
+            </p>
+            <a
+              class="inline-flex items-center text-primary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto bg-surface-container-low py-3 px-4 rounded-lg w-full justify-between"
+              href="#"
+            >
+              Read More
+              <span
+                class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+        </article>
+        <!-- Blog Card 3 -->
+        <article
+          class="group bg-white rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(16,166,150,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col h-full relative"
+        >
+          <div class="relative h-64 overflow-hidden bg-surface-container">
+            <img
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="A team of professional researchers in lab coats reviewing documents and digital tablets in a brightly lit, organized laboratory office. The focus is on collaboration and strict adherence to protocol, emphasizing trust, safety, and regulatory compliance in the pharmaceutical industry."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQk4qaYhqomuqyfxBge7f-k5YXsjrB1dp91rCq4EeGFLjjaHbjDvN9rqdvYwrcMBDHPLTAXB8V28L0UQu0vr0ctucvNSV8NFjWEd0b3PoNztcUuWxTrAqLEbHX79AMMxrfsldNCGfQ5MQ1ESn691Kb2UjacLnCU_8QW_yI-SKXLDHhDHdJHXKvPukR_-rCcslaViguFjjifw1e3Iy1kuBVFRCJ5xCO3UvOARos2HmDUuY4k1y_FlhLupoDw9hvhrqrOMA3_a_wYRc"
+            />
+            <!-- Date Badge -->
+            <div
+              class="absolute top-4 right-4 bg-secondary-container text-white w-14 h-14 rounded-full flex flex-col items-center justify-center shadow-md border-2 border-white transform rotate-3 group-hover:rotate-0 transition-transform"
+            >
+              <span class="text-headline-md font-headline-md leading-none">22</span>
+              <span class="text-caption font-caption uppercase tracking-wider">Apr</span>
+            </div>
+          </div>
+          <div class="p-card-padding flex flex-col flex-grow relative z-10 bg-white">
+            <div
+              class="flex items-center gap-2 mb-stack-sm text-primary-container text-caption font-caption uppercase tracking-wide"
+            >
+              <span class="material-symbols-outlined text-[16px]">gavel</span>
+              <span>Compliance</span>
+            </div>
+            <h2
+              class="text-headline-md font-headline-md text-primary-dark mb-stack-md group-hover:text-secondary-container transition-colors line-clamp-2"
+            >
+              Pharmaceutical Compliance &amp; Regulations
+            </h2>
+            <p class="text-body-md font-body-md text-text-muted mb-stack-lg flex-grow line-clamp-3">
+              Navigating the complex landscape of international pharmaceutical standards and our
+              commitment to uncompromising quality.
+            </p>
+            <a
+              class="inline-flex items-center text-primary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto bg-surface-container-low py-3 px-4 rounded-lg w-full justify-between"
+              href="#"
+            >
+              Read More
+              <span
+                class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+        </article>
+        <!-- Blog Card 4 -->
+        <article
+          class="group bg-white rounded-xl overflow-hidden border border-surface-variant shadow-[0_4px_20px_rgba(16,166,150,0.05)] hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col h-full relative"
+        >
+          <div class="relative h-64 overflow-hidden bg-surface-container">
+            <img
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="A professional pharmacist in a crisp white coat consulting with a patient in a modern, clean pharmacy setting. The environment is well-lit, conveying warmth, care, and approachability while maintaining a sterile, professional medical atmosphere."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuClJ7pK0QB4Y22qpjrt07-U5sSYUJ3xsuSINprFr02duSZmFx920zy5phAhw6oXOF9H0K59AqXFJC0ivQQyFTGiIGgn7YTW0crGLf4gW2L-Q49OMozcgFrazKQ0AWxJyKh8SUbdsH-IN79V8KwZA-PgyQqjNMBPVFCNwt6tFyHyq5b_FyIByzKgMF0e-Rw5T2SkAZ0-t4KXrhAKyOjjUch168oZZvaxrV4wu6Ciz_NlZz2Z2KN5OAtnpfQH5xPwu6eFgtnpblLODjk"
+            />
+            <!-- Date Badge -->
+            <div
+              class="absolute top-4 right-4 bg-secondary-container text-white w-14 h-14 rounded-full flex flex-col items-center justify-center shadow-md border-2 border-white transform rotate-3 group-hover:rotate-0 transition-transform"
+            >
+              <span class="text-headline-md font-headline-md leading-none">22</span>
+              <span class="text-caption font-caption uppercase tracking-wider">Apr</span>
+            </div>
+          </div>
+          <div class="p-card-padding flex flex-col flex-grow relative z-10 bg-white">
+            <div
+              class="flex items-center gap-2 mb-stack-sm text-primary-container text-caption font-caption uppercase tracking-wide"
+            >
+              <span class="material-symbols-outlined text-[16px]">medical_services</span>
+              <span>Advice</span>
+            </div>
+            <h2
+              class="text-headline-md font-headline-md text-primary-dark mb-stack-md group-hover:text-secondary-container transition-colors line-clamp-2"
+            >
+              Expert Tips on Medicine Usage
+            </h2>
+            <p class="text-body-md font-body-md text-text-muted mb-stack-lg flex-grow line-clamp-3">
+              Essential guidelines for patients to maximize therapeutic benefits while minimizing
+              potential side effects.
+            </p>
+            <a
+              class="inline-flex items-center text-primary font-label-md text-label-md hover:text-secondary-container transition-colors group/link mt-auto bg-surface-container-low py-3 px-4 rounded-lg w-full justify-between"
+              href="#"
+            >
+              Read More
+              <span
+                class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+        </article>
+      </div>
+      <!-- Pagination (Simulated) -->
+      <div class="mt-section-gap flex justify-center items-center gap-2">
+        <button
+          class="w-10 h-10 rounded-full bg-surface border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors disabled:opacity-50"
+          disabled=""
+        >
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button
+          class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-label-md shadow-sm"
+        >
+          1
+        </button>
+        <button
+          class="w-10 h-10 rounded-full bg-surface border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors font-label-md"
+        >
+          2
+        </button>
+        <button
+          class="w-10 h-10 rounded-full bg-surface border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors font-label-md"
+        >
+          3
+        </button>
+        <button
+          class="w-10 h-10 rounded-full bg-surface border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors"
+        >
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-primary dark:bg-primary-dark text-on-primary dark:text-on-primary full-width grid grid-cols-1 md:grid-cols-3 gap-grid-gutter px-6 py-section-gap max-w-container-max mx-auto text-on-primary"
+    >
+      <div class="flex flex-col gap-4">
+        <a
+          class="text-headline-md font-headline-md text-on-primary flex items-center gap-2"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-secondary-container text-3xl">science</span>
+          Ryom Remedies
+        </a>
+        <p class="text-body-md font-body-md text-on-primary/80 max-w-sm mt-4">
+          Pioneering advanced pharmaceutical solutions for a healthier tomorrow. Committed to
+          quality, innovation, and global well-being.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-headline-md font-headline-md mb-stack-lg text-secondary-container">
+          Links
+        </h3>
+        <div class="flex flex-col gap-3">
+          <a
+            class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200"
+            href="/"
+            target="_top"
+            >Home</a
+          >
+          <a
+            class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200"
+            href="/about"
+            target="_top"
+            >About Us</a
+          >
+          <a
+            class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200"
+            href="/services"
+            target="_top"
+            >Our Services</a
+          >
+          <a
+            class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200"
+            href="/products"
+            target="_top"
+            >Our Products</a
+          >
+          <a
+            class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200"
+            href="/careers"
+            target="_top"
+            >Careers</a
+          >
+          <!-- Active footer link state -->
+          <a
+            class="text-label-md font-label-md text-secondary-container font-bold hover:translate-x-1 transition-transform duration-200"
+            href="#"
+            >Blogs</a
+          >
+          <a
+            class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200"
+            href="/faqs"
+            target="_top"
+            >FAQs</a
+          >
+          <a
+            class="text-label-md font-label-md text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200"
+            href="/contact"
+            target="_top"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+      <div>
+        <h3 class="text-headline-md font-headline-md mb-stack-lg text-secondary-container">
+          Contact
+        </h3>
+        <ul class="space-y-4 text-body-md font-body-md text-on-primary/90">
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined mt-1 text-secondary-container">location_on</span>
+            <span>123 Innovation Drive, Health-Tech Park, Cityville, ST 12345</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary-container">call</span>
+            <span>+1 (800) 555-RYOM</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary-container">mail</span>
+            <span>contact@ryomremedies.com</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Copyright Banner -->
+      <div
+        class="col-span-1 md:col-span-3 border-t border-on-primary/20 pt-8 mt-8 text-center text-caption font-caption text-on-primary/60"
+      >
+        © Copyright 2026 Ryom Remedies Pvt. Ltd. All Rights Reserved.
+      </div>
+    </footer>
+    <!-- Floating Action Button (WhatsApp) -->
+    <a
+      class="bg-whatsapp-green dark:bg-whatsapp-green text-white text-label-md font-label-md rounded-full p-4 fixed bottom-8 right-8 z-50 shadow-xl shadow-whatsapp-green/20 hover:scale-110 hover:shadow-2xl transition-all duration-300 animate-pulse flex items-center justify-center"
+      href="#"
+    >
+      <span class="material-symbols-outlined fill text-3xl">chat</span>
+    </a>
+  </body>
+</html>

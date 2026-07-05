@@ -88,7 +88,9 @@ export async function getActiveProducts(): Promise<ProductData[]> {
         effects: product.effects,
         uses: product.uses,
         sideEffects: product.sideEffects,
-        highlights: (product.highlights ?? []).map((highlight) => highlight.label),
+        highlights: (product.highlights ?? []).map(
+          (highlight: { label: string; id?: string | null }) => highlight.label,
+        ),
         dosageForm: product.dosageForm ?? null,
         featured: product.featured ?? false,
         order: product.order ?? 0,

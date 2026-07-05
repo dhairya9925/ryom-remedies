@@ -74,11 +74,9 @@ const products: ProductSeed[] = [
     category: "Pain & Inflammation",
     packSize: "10 x 10 Tablets",
     composition: "Deflazacort Tablets IP 6 mg",
-    effects:
-      "A corticosteroid that reduces inflammation and suppresses the immune system.",
+    effects: "A corticosteroid that reduces inflammation and suppresses the immune system.",
     uses: "Autoimmune diseases, asthma, allergies, Duchenne muscular dystrophy, and severe inflammatory conditions.",
-    sideEffects:
-      "Weight gain, mood changes, increased blood sugar, and long-term bone weakening.",
+    sideEffects: "Weight gain, mood changes, increased blood sugar, and long-term bone weakening.",
     highlights: ["6 mg strength", "Tablet format", "Doctor guided use"],
     dosageForm: "tablet",
     order: 3,
@@ -125,8 +123,7 @@ const products: ProductSeed[] = [
     effects:
       "Broad-spectrum antibiotic that fights bacterial infections by inhibiting protein synthesis.",
     uses: "Respiratory infections, skin infections, ear infections, and sexually transmitted diseases.",
-    sideEffects:
-      "Nausea, diarrhea, stomach pain, and occasional liver enzyme elevation.",
+    sideEffects: "Nausea, diarrhea, stomach pain, and occasional liver enzyme elevation.",
     highlights: ["250 mg strength", "Antibiotic", "Doctor guided use"],
     dosageForm: "tablet",
     order: 6,
@@ -141,8 +138,7 @@ const products: ProductSeed[] = [
     effects:
       "Broad-spectrum antibiotic that fights bacterial infections by inhibiting protein synthesis.",
     uses: "Respiratory infections, skin infections, ear infections, and sexually transmitted diseases.",
-    sideEffects:
-      "Nausea, diarrhea, stomach pain, and occasional liver enzyme elevation.",
+    sideEffects: "Nausea, diarrhea, stomach pain, and occasional liver enzyme elevation.",
     highlights: ["500 mg strength", "Antibiotic", "Doctor guided use"],
     dosageForm: "tablet",
     order: 7,
@@ -156,11 +152,9 @@ const products: ProductSeed[] = [
     category: "Anti Emetic",
     packSize: "10 x 10 Tablets",
     composition: "Ondansetron Tablets IP 4 mg",
-    effects:
-      "Prevents nausea and vomiting by blocking serotonin receptors in the brain.",
+    effects: "Prevents nausea and vomiting by blocking serotonin receptors in the brain.",
     uses: "Used after chemotherapy, surgery, or severe nausea/vomiting from infections.",
-    sideEffects:
-      "Mild headache, constipation, dizziness, and rare heart rhythm disturbances.",
+    sideEffects: "Mild headache, constipation, dizziness, and rare heart rhythm disturbances.",
     highlights: ["Anti-emetic", "4 mg strength", "Post-surgery support"],
     dosageForm: "tablet",
     order: 8,
@@ -174,8 +168,7 @@ const products: ProductSeed[] = [
     category: "GI Disorders",
     packSize: "10 x 10 Tablets",
     composition: "Pantoprazole Gastro-Resistant Tablets IP 40 mg",
-    effects:
-      "Reduces stomach acid by blocking the proton pump in the stomach lining.",
+    effects: "Reduces stomach acid by blocking the proton pump in the stomach lining.",
     uses: "GERD, acid reflux, gastritis, stomach ulcers.",
     sideEffects:
       "Mild headache, nausea, diarrhea, and long-term use may lead to vitamin B12 deficiency.",
@@ -189,13 +182,11 @@ const products: ProductSeed[] = [
     imageFilename: "ryopanta-dsr.jpg",
     category: "GI Disorders",
     packSize: "10 x 10 Capsules",
-    composition:
-      "Pantoprazole Gastro-Resistant and Domperidone Prolonged Release Capsules IP",
+    composition: "Pantoprazole Gastro-Resistant and Domperidone Prolonged Release Capsules IP",
     effects:
       "Pantoprazole reduces stomach acid; Domperidone prevents nausea and improves digestion by enhancing stomach motility.",
     uses: "Acid reflux, GERD, gastritis, and nausea associated with acid disorders.",
-    sideEffects:
-      "Mild headache, diarrhea, stomach pain, and rare heart rhythm disturbances.",
+    sideEffects: "Mild headache, diarrhea, stomach pain, and rare heart rhythm disturbances.",
     highlights: ["Dual action", "Capsule format", "GI support"],
     dosageForm: "capsule",
     order: 10,
