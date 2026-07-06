@@ -2,7 +2,7 @@ export const companyAddressLines = [
   "RYOM REMEDIES",
   "SF/208, Ratnanjali Solitaire,",
   "Prernatirth Derasar Rd., Joshpur Cross Rd.,",
-  "Satellite, Ahmedabad, Gujrat, India 380015",
+  "Satellite, Ahmedabad, Gujarat, India 380015",
 ];
 
 export const companyAddress = companyAddressLines.join("\n");
