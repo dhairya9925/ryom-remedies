@@ -39,6 +39,9 @@ const navItems = [
   { label: "Contact Us", to: "/contact" },
 ] as const satisfies ReadonlyArray<{ label: string; to: RoutePath }>;
 
+const medicalDisclaimer =
+  "The content on this website is intended for informational purposes only and should not be considered a substitute for professional medical advice. Please consult a qualified healthcare professional and refer to the approved prescribing information before using any product.";
+
 function cx(...classes: Array<string | false | undefined>) {
   return classes.filter(Boolean).join(" ");
 }
@@ -577,6 +580,9 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-7 text-center text-sm text-[#c5eee8]/75">
+        <p className="mx-auto mb-4 max-w-5xl text-xs leading-6 text-[#d8f5f0]/80 sm:text-sm">
+          <strong className="font-bold text-[#f4fffd]">Disclaimer:</strong> {medicalDisclaimer}
+        </p>
         © Copyright 2026 Ryom Remedies Pvt. Ltd. All Rights Reserved.
       </div>
     </footer>

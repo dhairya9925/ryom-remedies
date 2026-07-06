@@ -66,13 +66,6 @@ export function ProductBrowser({ products, categories }: ProductBrowserProps) {
             </li>
           ))}
         </ul>
-        <div className="mt-6 rounded-lg bg-[#e9f8f6] p-4 text-sm leading-6 text-[#3d4947]">
-          <p className="font-bold text-[#39b5a3]">Product Information</p>
-          <p className="mt-1">
-            Details shown here are for catalogue reference. Always follow the prescribing doctor and
-            approved product literature.
-          </p>
-        </div>
       </aside>
 
       {products.length > 0 ? (

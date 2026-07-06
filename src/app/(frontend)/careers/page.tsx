@@ -5,7 +5,6 @@ import {
   CheckCircle2,
   GraduationCap,
   HeartPulse,
-  Mail,
   MapPin,
   Sparkles,
   TrendingUp,
@@ -99,13 +98,6 @@ export default async function CareersPage() {
               >
                 Contact HR
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </a>
-              <a
-                href="mailto:admin@ryomremedies.com"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/70 bg-white px-5 py-3 text-sm font-bold text-[#39b5a3] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#f3f4f5]"
-              >
-                Send Resume
-                <Mail className="h-4 w-4" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -247,16 +239,9 @@ export default async function CareersPage() {
               No active openings right now
             </h3>
             <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-[#3d4947]">
-              We are always glad to hear from capable professionals. Share your resume and area of
-              interest, and our team can keep your profile in mind for upcoming roles.
+              We are always glad to hear from capable professionals. Contact our team to discuss
+              current or upcoming roles.
             </p>
-            <a
-              href="mailto:admin@ryomremedies.com"
-              className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-[#F39517] px-5 py-3 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9820e]"
-            >
-              Send Resume
-              <Mail className="h-4 w-4" aria-hidden="true" />
-            </a>
           </div>
         )}
       </Section>
