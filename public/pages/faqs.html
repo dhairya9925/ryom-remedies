@@ -1,445 +1,573 @@
 <!doctype html>
 
 <html class="" lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>FAQs - Ryom Remedies</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&amp;family=Urbanist:wght@400;500;600;700&amp;display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "surface-container-low": "#f3f4f5",
-            "secondary-fixed": "#ffdcbe",
-            "primary-container": "#10a696",
-            background: "#f8f9fa",
-            "outline-variant": "#bcc9c6",
-            "on-surface-variant": "#3d4947",
-            "secondary-fixed-dim": "#ffb86f",
-            "on-secondary": "#ffffff",
-            surface: "#f8f9fa",
-            "inverse-on-surface": "#f0f1f2",
-            "on-error-container": "#93000a",
-            "on-error": "#ffffff",
-            error: "#ba1a1a",
-            outline: "#6d7a77",
-            "surface-variant": "#e1e3e4",
-            "inverse-surface": "#2e3132",
-            tertiary: "#99452a",
-            "accent-dark": "#D9841A",
-            "tertiary-fixed-dim": "#ffb59e",
-            "surface-container": "#edeeef",
-            "surface-dark": "#1A1A2E",
-            primary: "#006b60",
-            "surface-bright": "#f8f9fa",
-            "on-secondary-container": "#673b00",
-            "text-primary": "#1F2937",
-            "on-tertiary-fixed-variant": "#7b2f15",
-            "surface-container-high": "#e7e8e9",
-            "on-tertiary-container": "#571500",
-            secondary: "#8a5100",
-            "secondary-container": "#fc9d2a",
-            "primary-fixed": "#7df7e4",
-            "on-secondary-fixed": "#2c1600",
-            "primary-fixed-dim": "#5edac8",
-            "on-tertiary-fixed": "#3a0b00",
-            "on-secondary-fixed-variant": "#693c00",
-            "on-surface": "#191c1d",
-            "text-muted": "#6B7280",
-            "tertiary-container": "#dc7959",
-            "error-container": "#ffdad6",
-            "inverse-primary": "#5edac8",
-            "surface-container-highest": "#e1e3e4",
-            "primary-dark": "#0D8A7D",
-            "on-primary-fixed-variant": "#005048",
-            "surface-dim": "#d9dadb",
-            "surface-tint": "#006b60",
-            "whatsapp-green": "#25D366",
-            "tertiary-fixed": "#ffdbd0",
-            "on-primary": "#ffffff",
-            "surface-container-lowest": "#ffffff",
-            "on-primary-fixed": "#00201c",
-            "on-tertiary": "#ffffff",
-            "on-primary-container": "#00332d",
-            "on-background": "#191c1d",
-          },
-          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
-          spacing: {
-            "stack-sm": "8px",
-            "grid-gutter": "24px",
-            "container-max": "1280px",
-            "stack-md": "16px",
-            "stack-lg": "24px",
-            "section-gap": "80px",
-            "card-padding": "32px",
-          },
-          fontFamily: {
-            caption: ["Urbanist"],
-            "body-lg": ["Urbanist"],
-            "headline-md": ["Lexend"],
-            "label-md": ["Urbanist"],
-            "headline-xl": ["Lexend"],
-            "headline-lg-mobile": ["Lexend"],
-            "headline-lg": ["Lexend"],
-            "body-md": ["Urbanist"],
-            headline: ["Lexend"],
-            display: ["Lexend"],
-            body: ["urbanist"],
-            label: ["urbanist"],
-          },
-          fontSize: {
-            caption: ["12px", { lineHeight: "1.4", fontWeight: "500" }],
-            "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-            "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
-            "label-md": [
-              "14px",
-              { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600" },
-            ],
-            "headline-xl": [
-              "48px",
-              { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" },
-            ],
-            "headline-lg-mobile": ["28px", { lineHeight: "1.2", fontWeight: "600" }],
-            "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
-            "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FAQs - Ryom Remedies</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&amp;family=Urbanist:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#f3f4f5",
+              "secondary-fixed": "#ffdcbe",
+              "primary-container": "#10a696",
+              background: "#f8f9fa",
+              "outline-variant": "#bcc9c6",
+              "on-surface-variant": "#3d4947",
+              "secondary-fixed-dim": "#ffb86f",
+              "on-secondary": "#ffffff",
+              surface: "#f8f9fa",
+              "inverse-on-surface": "#f0f1f2",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              outline: "#6d7a77",
+              "surface-variant": "#e1e3e4",
+              "inverse-surface": "#2e3132",
+              tertiary: "#99452a",
+              "accent-dark": "#D9841A",
+              "tertiary-fixed-dim": "#ffb59e",
+              "surface-container": "#edeeef",
+              "surface-dark": "#1A1A2E",
+              primary: "#006b60",
+              "surface-bright": "#f8f9fa",
+              "on-secondary-container": "#673b00",
+              "text-primary": "#1F2937",
+              "on-tertiary-fixed-variant": "#7b2f15",
+              "surface-container-high": "#e7e8e9",
+              "on-tertiary-container": "#571500",
+              secondary: "#8a5100",
+              "secondary-container": "#fc9d2a",
+              "primary-fixed": "#7df7e4",
+              "on-secondary-fixed": "#2c1600",
+              "primary-fixed-dim": "#5edac8",
+              "on-tertiary-fixed": "#3a0b00",
+              "on-secondary-fixed-variant": "#693c00",
+              "on-surface": "#191c1d",
+              "text-muted": "#6B7280",
+              "tertiary-container": "#dc7959",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#5edac8",
+              "surface-container-highest": "#e1e3e4",
+              "primary-dark": "#0D8A7D",
+              "on-primary-fixed-variant": "#005048",
+              "surface-dim": "#d9dadb",
+              "surface-tint": "#006b60",
+              "whatsapp-green": "#25D366",
+              "tertiary-fixed": "#ffdbd0",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#00201c",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#00332d",
+              "on-background": "#191c1d",
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+            spacing: {
+              "stack-sm": "8px",
+              "grid-gutter": "24px",
+              "container-max": "1280px",
+              "stack-md": "16px",
+              "stack-lg": "24px",
+              "section-gap": "80px",
+              "card-padding": "32px",
+            },
+            fontFamily: {
+              caption: ["Urbanist"],
+              "body-lg": ["Urbanist"],
+              "headline-md": ["Lexend"],
+              "label-md": ["Urbanist"],
+              "headline-xl": ["Lexend"],
+              "headline-lg-mobile": ["Lexend"],
+              "headline-lg": ["Lexend"],
+              "body-md": ["Urbanist"],
+              headline: ["Lexend"],
+              display: ["Lexend"],
+              body: ["urbanist"],
+              label: ["urbanist"],
+            },
+            fontSize: {
+              caption: ["12px", { lineHeight: "1.4", fontWeight: "500" }],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+              "label-md": [
+                "14px",
+                { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600" },
+              ],
+              "headline-xl": [
+                "48px",
+                { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" },
+              ],
+              "headline-lg-mobile": ["28px", { lineHeight: "1.2", fontWeight: "600" }],
+              "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
+              "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+            },
           },
         },
-      },
-    };
-  </script>
-  <style>
-    .accordion-content {
-      transition:
-        max-height 0.3s ease-out,
-        padding 0.3s ease;
-      max-height: 0;
-      overflow: hidden;
-    }
+      };
+    </script>
+    <style>
+      .accordion-content {
+        transition:
+          max-height 0.3s ease-out,
+          padding 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+      }
 
-    .accordion-item.active .accordion-content {
-      max-height: 500px;
-      padding-bottom: 1rem;
-    }
+      .accordion-item.active .accordion-content {
+        max-height: 500px;
+        padding-bottom: 1rem;
+      }
 
-    .accordion-item.active .material-symbols-outlined.toggle-icon {
-      transform: rotate(180deg);
-    }
+      .accordion-item.active .material-symbols-outlined.toggle-icon {
+        transform: rotate(180deg);
+      }
 
-    .toggle-icon {
-      transition: transform 0.3s ease;
-    }
-  </style>
-</head>
+      .toggle-icon {
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
 
-<body
-  class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
-  <!-- TopNavBar -->
-  <nav
-    class="bg-surface/90 backdrop-blur-md text-primary font-label-md docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm transition-all">
-    <div class="flex justify-between items-center w-full px-6 py-4 max-w-container-max mx-auto">
-      <div class="text-headline-md font-headline-md font-bold text-primary">Ryom Remedies</div>
-      <div class="hidden md:flex items-center space-x-8">
-        <a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="/" target="_top">Home</a>
-        <a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="/about" target="_top">About
-          Us</a>
-        <a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="/services" target="_top">Our
-          Services</a>
-        <a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="/products" target="_top">Our
-          Products</a>
-        <a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="/careers"
-          target="_top">Careers</a>
-        <a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="/contact"
-          target="_top">Contact Us</a>
+  <body
+    class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="bg-surface/90 backdrop-blur-md text-primary font-label-md docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm transition-all"
+    >
+      <div class="flex justify-between items-center w-full px-6 py-4 max-w-container-max mx-auto">
+        <div class="text-headline-md font-headline-md font-bold text-primary">Ryom Remedies</div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors py-2"
+            href="/"
+            target="_top"
+            >Home</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors py-2"
+            href="/about"
+            target="_top"
+            >About Us</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors py-2"
+            href="/services"
+            target="_top"
+            >Our Services</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors py-2"
+            href="/products"
+            target="_top"
+            >Our Products</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors py-2"
+            href="/careers"
+            target="_top"
+            >Careers</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors py-2"
+            href="/contact"
+            target="_top"
+            >Contact Us</a
+          >
+        </div>
+        <div class="flex items-center space-x-4">
+          <button
+            class="bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed-dim px-6 py-2 rounded-lg font-label-md transition-colors shadow-sm hidden md:block"
+          >
+            Order Now
+          </button>
+          <button class="md:hidden text-on-surface-variant p-2">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
       </div>
-      <div class="flex items-center space-x-4">
-        <button
-          class="bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed-dim px-6 py-2 rounded-lg font-label-md transition-colors shadow-sm hidden md:block">
-          Order Now
-        </button>
-        <button class="md:hidden text-on-surface-variant p-2">
-          <span class="material-symbols-outlined">menu</span>
-        </button>
-      </div>
-    </div>
-  </nav>
-  <!-- Page Banner -->
-  <header class="relative w-full bg-primary overflow-hidden">
-    <div class="absolute inset-0 opacity-20"
-      data-alt="A macro shot of laboratory glassware and microscopes in a modern pharmaceutical research facility, bathed in cool blue and clinical teal light, shallow depth of field, representing scientific rigor and innovation."
-      style="
+    </nav>
+    <!-- Page Banner -->
+    <header class="relative w-full bg-primary overflow-hidden">
+      <div
+        class="absolute inset-0 opacity-20"
+        data-alt="A macro shot of laboratory glassware and microscopes in a modern pharmaceutical research facility, bathed in cool blue and clinical teal light, shallow depth of field, representing scientific rigor and innovation."
+        style="
           background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCYUk6xNCZIBGnX4_j4gZNkI_a2UI-6WMEM6xMcWcvywHjG8rZHXui16tkU6XLYg-rDyZxgItp4x6zEyp5ikeO8WQggaNvmY-0XRN1vCTGOg3gV0NOtd-jCSjvTH8COZwOZriehFK7rnV9-ChIMub4M6LBFD4bYtZCnxgS3x_v93nFhKeaWDIwgWUjiTic313sXQMwWtyazM98QqMrIlOkhtVy9z4Jm-qr6fWTwIjycv-WGAJIOLzr6ZuzLbe1L10JID-mlZyQGLHU&quot;);
           background-size: cover;
           background-position: center;
-        "></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
-    <div
-      class="relative max-w-container-max mx-auto px-6 py-24 md:py-32 flex flex-col items-center justify-center text-center">
-      <h1 class="text-headline-xl font-headline-xl text-on-primary mb-4 drop-shadow-md">FAQs</h1>
-      <nav class="flex items-center space-x-2 text-on-primary/80 font-label-md text-label-md">
-        <a class="hover:text-on-primary transition-colors" href="/" target="_top">Ryom Remedies</a>
-        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-        <span class="text-on-primary font-bold">FAQs</span>
-      </nav>
-    </div>
-  </header>
-  <!-- Main Content Area - Teal Background -->
-  <main class="flex-grow bg-primary w-full py-section-gap relative overflow-hidden">
-    <!-- Subtle Hexagon Pattern Background -->
-    <div class="absolute inset-0 opacity-5 pointer-events-none" style="
+        "
+      ></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+      <div
+        class="relative max-w-container-max mx-auto px-6 py-24 md:py-32 flex flex-col items-center justify-center text-center"
+      >
+        <h1 class="text-headline-xl font-headline-xl text-on-primary mb-4 drop-shadow-md">FAQs</h1>
+        <nav class="flex items-center space-x-2 text-on-primary/80 font-label-md text-label-md">
+          <a class="hover:text-on-primary transition-colors" href="/" target="_top"
+            >Ryom Remedies</a
+          >
+          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+          <span class="text-on-primary font-bold">FAQs</span>
+        </nav>
+      </div>
+    </header>
+    <!-- Main Content Area - Teal Background -->
+    <main class="flex-grow bg-primary w-full py-section-gap relative overflow-hidden">
+      <!-- Subtle Hexagon Pattern Background -->
+      <div
+        class="absolute inset-0 opacity-5 pointer-events-none"
+        style="
           background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);
-        "></div>
-    <div class="max-w-container-max mx-auto px-6 relative z-10">
-      <div class="mb-12">
-        <div class="flex items-center gap-2 text-secondary-container font-label-md mb-2">
-          <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1">science</span>
-          <span class="uppercase tracking-widest">FAQS</span>
-        </div>
-        <h2 class="text-headline-lg font-headline-lg md:text-headline-xl text-on-primary max-w-2xl">
-          Frequently asked question &amp; answers here
-        </h2>
-      </div>
-      <!-- Accordion Container -->
-      <div class="space-y-4 max-w-4xl">
-        <!-- FAQ Item 1 -->
-        <div
-          class="accordion-item border border-on-primary/20 rounded-lg bg-white/5 backdrop-blur-sm overflow-hidden active">
-          <button
-            class="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-container rounded-lg group"
-            onclick="this.parentElement.classList.toggle('active')">
+        "
+      ></div>
+      <div class="max-w-container-max mx-auto px-6 relative z-10">
+        <div class="mb-12">
+          <div class="flex items-center gap-2 text-secondary-container font-label-md mb-2">
             <span
-              class="text-headline-md font-headline-md text-secondary-container pr-8 group-hover:text-secondary-fixed transition-colors">What
-              types of medicines does Ryom Remedies offer?</span>
-            <div
-              class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
-              <span class="material-symbols-outlined toggle-icon">expand_more</span>
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >science</span
+            >
+            <span class="uppercase tracking-widest">FAQS</span>
+          </div>
+          <h2
+            class="text-headline-lg font-headline-lg md:text-headline-xl text-on-primary max-w-2xl"
+          >
+            Frequently asked question &amp; answers here
+          </h2>
+        </div>
+        <!-- Accordion Container -->
+        <div class="space-y-4 max-w-4xl">
+          <!-- FAQ Item 1 -->
+          <div
+            class="accordion-item border border-on-primary/20 rounded-lg bg-white/5 backdrop-blur-sm overflow-hidden active"
+          >
+            <button
+              class="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-container rounded-lg group"
+              onclick="this.parentElement.classList.toggle('active')"
+            >
+              <span
+                class="text-headline-md font-headline-md text-secondary-container pr-8 group-hover:text-secondary-fixed transition-colors"
+                >What types of medicines does Ryom Remedies offer?</span
+              >
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined toggle-icon">expand_more</span>
+              </div>
+            </button>
+            <div class="accordion-content px-6 text-on-primary/90 font-body-lg">
+              <p class="leading-relaxed">
+                We provide a diverse range of affordable and high-quality medicines covering
+                multiple therapeutic segments, including pain management, antibiotics,
+                gastroenterology, respiratory care, and chronic disease management.
+              </p>
             </div>
-          </button>
-          <div class="accordion-content px-6 text-on-primary/90 font-body-lg">
-            <p class="leading-relaxed">
-              We provide a diverse range of affordable and high-quality medicines covering
-              multiple therapeutic segments, including pain management, antibiotics,
-              gastroenterology, respiratory care, and chronic disease management.
-            </p>
+          </div>
+          <!-- FAQ Item 2 -->
+          <div
+            class="accordion-item border border-on-primary/20 rounded-lg bg-white/5 backdrop-blur-sm overflow-hidden"
+          >
+            <button
+              class="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-container rounded-lg group"
+              onclick="this.parentElement.classList.toggle('active')"
+            >
+              <span
+                class="text-headline-md font-headline-md text-secondary-container pr-8 group-hover:text-secondary-fixed transition-colors"
+                >Where can I purchase Ryom Remedies' products?</span
+              >
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined toggle-icon">add</span>
+              </div>
+            </button>
+            <div class="accordion-content px-6 text-on-primary/90 font-body-lg">
+              <p class="leading-relaxed">
+                Our products are available through authorized distributors, pharmacies, and select
+                healthcare providers across our operating regions. Please contact our sales team for
+                a distributor near you.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ Item 3 -->
+          <div
+            class="accordion-item border border-on-primary/20 rounded-lg bg-white/5 backdrop-blur-sm overflow-hidden"
+          >
+            <button
+              class="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-container rounded-lg group"
+              onclick="this.parentElement.classList.toggle('active')"
+            >
+              <span
+                class="text-headline-md font-headline-md text-secondary-container pr-8 group-hover:text-secondary-fixed transition-colors"
+                >Are your medicines WHO-approved?</span
+              >
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined toggle-icon">add</span>
+              </div>
+            </button>
+            <div class="accordion-content px-6 text-on-primary/90 font-body-lg">
+              <p class="leading-relaxed">
+                Yes, we adhere to strict quality control standards. Many of our manufacturing
+                facilities and products are certified by relevant international and national health
+                authorities, including WHO-GMP compliance.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ Item 4 -->
+          <div
+            class="accordion-item border border-on-primary/20 rounded-lg bg-white/5 backdrop-blur-sm overflow-hidden"
+          >
+            <button
+              class="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-container rounded-lg group"
+              onclick="this.parentElement.classList.toggle('active')"
+            >
+              <span
+                class="text-headline-md font-headline-md text-secondary-container pr-8 group-hover:text-secondary-fixed transition-colors"
+                >How can I become a distributor for Ryom Remedies?</span
+              >
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined toggle-icon">add</span>
+              </div>
+            </button>
+            <div class="accordion-content px-6 text-on-primary/90 font-body-lg">
+              <p class="leading-relaxed">
+                We are always looking to expand our network. Please visit our 'Contact Us' page and
+                select 'Partnership Inquiry' in the subject line to get in touch with our business
+                development team.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ Item 5 -->
+          <div
+            class="accordion-item border border-on-primary/20 rounded-lg bg-white/5 backdrop-blur-sm overflow-hidden"
+          >
+            <button
+              class="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-container rounded-lg group"
+              onclick="this.parentElement.classList.toggle('active')"
+            >
+              <span
+                class="text-headline-md font-headline-md text-secondary-container pr-8 group-hover:text-secondary-fixed transition-colors"
+                >Do you offer third-party or contract manufacturing?</span
+              >
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined toggle-icon">add</span>
+              </div>
+            </button>
+            <div class="accordion-content px-6 text-on-primary/90 font-body-lg">
+              <p class="leading-relaxed">
+                Yes, we provide extensive third-party and contract manufacturing services for a wide
+                range of pharmaceutical formulations. Contact our corporate office for detailed
+                capabilities and capacities.
+              </p>
+            </div>
           </div>
         </div>
-        <!-- FAQ Item 2 -->
-        <div class="accordion-item border border-on-primary/20 rounded-lg bg-white/5 backdrop-blur-sm overflow-hidden">
-          <button
-            class="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-container rounded-lg group"
-            onclick="this.parentElement.classList.toggle('active')">
-            <span
-              class="text-headline-md font-headline-md text-secondary-container pr-8 group-hover:text-secondary-fixed transition-colors">Where
-              can I purchase Ryom Remedies' products?</span>
-            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center">
-              <span class="material-symbols-outlined toggle-icon">add</span>
-            </div>
-          </button>
-          <div class="accordion-content px-6 text-on-primary/90 font-body-lg">
-            <p class="leading-relaxed">
-              Our products are available through authorized distributors, pharmacies, and select
-              healthcare providers across our operating regions. Please contact our sales team for
-              a distributor near you.
-            </p>
+      </div>
+    </main>
+    <!-- FloatingActionButton -->
+    <a
+      aria-label="Chat on WhatsApp"
+      class="bg-whatsapp-green text-white rounded-full p-4 fixed bottom-8 right-8 z-50 shadow-xl shadow-whatsapp-green/20 hover:scale-110 hover:shadow-2xl transition-all duration-300 animate-pulse flex items-center justify-center"
+      href="#"
+    >
+      <span
+        class="material-symbols-outlined text-[32px]"
+        style="font-variation-settings: &quot;FILL&quot; 1"
+        >chat</span
+      >
+    </a>
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary font-body-md full-width">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter px-6 py-section-gap max-w-container-max mx-auto border-t border-on-primary/10"
+      >
+        <div class="space-y-6 md:col-span-1">
+          <div
+            class="text-headline-md font-headline-md font-bold text-on-primary flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined text-[32px]">medication</span>
+            Ryom Remedies
+          </div>
+          <p class="text-on-primary/80 font-body-md">
+            There are many variations passages of Lorem Ipsum available, but the majority have
+            suffered alteration.
+          </p>
+          <div class="flex">
+            <input
+              class="w-full bg-white rounded-l-lg border-0 px-4 py-2 text-text-primary focus:ring-2 focus:ring-secondary-container outline-none font-body-md"
+              placeholder="Email"
+              type="email"
+            />
+            <button
+              class="bg-secondary-container text-on-secondary-container px-4 rounded-r-lg hover:bg-secondary-fixed transition-colors flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
           </div>
         </div>
-        <!-- FAQ Item 3 -->
-        <div class="accordion-item border border-on-primary/20 rounded-lg bg-white/5 backdrop-blur-sm overflow-hidden">
-          <button
-            class="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-container rounded-lg group"
-            onclick="this.parentElement.classList.toggle('active')">
-            <span
-              class="text-headline-md font-headline-md text-secondary-container pr-8 group-hover:text-secondary-fixed transition-colors">Are
-              your medicines WHO-approved?</span>
-            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center">
-              <span class="material-symbols-outlined toggle-icon">add</span>
-            </div>
-          </button>
-          <div class="accordion-content px-6 text-on-primary/90 font-body-lg">
-            <p class="leading-relaxed">
-              Yes, we adhere to strict quality control standards. Many of our manufacturing
-              facilities and products are certified by relevant international and national health
-              authorities, including WHO-GMP compliance.
-            </p>
-          </div>
+        <div class="space-y-4 md:col-span-1 md:ml-auto">
+          <h3 class="text-headline-md font-headline-md font-bold mb-4">Links</h3>
+          <ul class="space-y-3 font-label-md text-label-md">
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
+                href="/"
+                target="_top"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
+                href="/about"
+                target="_top"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
+                href="/services"
+                target="_top"
+                >Our Services</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
+                href="/products"
+                target="_top"
+                >Our Products</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
+                href="/careers"
+                target="_top"
+                >Careers</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
+                href="#"
+                >Blogs</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-secondary-container font-bold hover:translate-x-1 transition-transform duration-200 inline-block"
+                href="/faqs"
+                target="_top"
+                >FAQs</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
+                href="/contact"
+                target="_top"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
         </div>
-        <!-- FAQ Item 4 -->
-        <div class="accordion-item border border-on-primary/20 rounded-lg bg-white/5 backdrop-blur-sm overflow-hidden">
-          <button
-            class="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-container rounded-lg group"
-            onclick="this.parentElement.classList.toggle('active')">
-            <span
-              class="text-headline-md font-headline-md text-secondary-container pr-8 group-hover:text-secondary-fixed transition-colors">How
-              can I become a distributor for Ryom Remedies?</span>
-            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center">
-              <span class="material-symbols-outlined toggle-icon">add</span>
-            </div>
-          </button>
-          <div class="accordion-content px-6 text-on-primary/90 font-body-lg">
-            <p class="leading-relaxed">
-              We are always looking to expand our network. Please visit our 'Contact Us' page and
-              select 'Partnership Inquiry' in the subject line to get in touch with our business
-              development team.
-            </p>
-          </div>
-        </div>
-        <!-- FAQ Item 5 -->
-        <div class="accordion-item border border-on-primary/20 rounded-lg bg-white/5 backdrop-blur-sm overflow-hidden">
-          <button
-            class="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-container rounded-lg group"
-            onclick="this.parentElement.classList.toggle('active')">
-            <span
-              class="text-headline-md font-headline-md text-secondary-container pr-8 group-hover:text-secondary-fixed transition-colors">Do
-              you offer third-party or contract manufacturing?</span>
-            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center">
-              <span class="material-symbols-outlined toggle-icon">add</span>
-            </div>
-          </button>
-          <div class="accordion-content px-6 text-on-primary/90 font-body-lg">
-            <p class="leading-relaxed">
-              Yes, we provide extensive third-party and contract manufacturing services for a wide
-              range of pharmaceutical formulations. Contact our corporate office for detailed
-              capabilities and capacities.
-            </p>
+        <div class="space-y-4 md:col-span-2 md:pl-12">
+          <h3 class="text-headline-md font-headline-md font-bold mb-4">Contact</h3>
+          <ul class="space-y-4 font-body-md">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary-container shrink-0 mt-1"
+                >location_on</span
+              >
+              <span class="text-on-primary/90">Ahmedabad, Gujarat, India.</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary-container shrink-0">call</span>
+              <a
+                class="text-on-primary/90 hover:text-secondary-container transition-colors"
+                href="tel:+918286901115"
+                >+91 82869 01115</a
+              >
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary-container shrink-0">mail</span>
+              <a
+                class="text-on-primary/90 hover:text-secondary-container transition-colors"
+                href="mailto:info@ryomremedies.com"
+                >info@ryomremedies.com</a
+              >
+            </li>
+          </ul>
+          <div class="flex gap-4 pt-4">
+            <a
+              class="w-10 h-10 rounded-full bg-white/10 hover:bg-secondary-container flex items-center justify-center transition-colors text-white"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-[20px]">share</span>
+            </a>
+            <a
+              class="w-10 h-10 rounded-full bg-white/10 hover:bg-secondary-container flex items-center justify-center transition-colors text-white"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-[20px]">language</span>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  <!-- FloatingActionButton -->
-  <a aria-label="Chat on WhatsApp"
-    class="bg-whatsapp-green text-white rounded-full p-4 fixed bottom-8 right-8 z-50 shadow-xl shadow-whatsapp-green/20 hover:scale-110 hover:shadow-2xl transition-all duration-300 animate-pulse flex items-center justify-center"
-    href="#">
-    <span class="material-symbols-outlined text-[32px]" style="font-variation-settings: &quot;FILL&quot; 1">chat</span>
-  </a>
-  <!-- Footer -->
-  <footer class="bg-primary text-on-primary font-body-md full-width">
-    <div
-      class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter px-6 py-section-gap max-w-container-max mx-auto border-t border-on-primary/10">
-      <div class="space-y-6 md:col-span-1">
-        <div class="text-headline-md font-headline-md font-bold text-on-primary flex items-center gap-2">
-          <span class="material-symbols-outlined text-[32px]">medication</span>
-          Ryom Remedies
-        </div>
-        <p class="text-on-primary/80 font-body-md">
-          There are many variations passages of Lorem Ipsum available, but the majority have
-          suffered alteration.
-        </p>
-        <div class="flex">
-          <input
-            class="w-full bg-white rounded-l-lg border-0 px-4 py-2 text-text-primary focus:ring-2 focus:ring-secondary-container outline-none font-body-md"
-            placeholder="Email" type="email" />
-          <button
-            class="bg-secondary-container text-on-secondary-container px-4 rounded-r-lg hover:bg-secondary-fixed transition-colors flex items-center justify-center">
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </button>
-        </div>
+      <div
+        class="border-t border-on-primary/10 py-6 text-center text-on-primary/60 font-caption text-caption"
+      >
+        © Copyright 2026 Ryom Remedies Pvt. Ltd. All Rights Reserved.
       </div>
-      <div class="space-y-4 md:col-span-1 md:ml-auto">
-        <h3 class="text-headline-md font-headline-md font-bold mb-4">Links</h3>
-        <ul class="space-y-3 font-label-md text-label-md">
-          <li>
-            <a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
-              href="/" target="_top">Home</a>
-          </li>
-          <li>
-            <a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
-              href="/about" target="_top">About Us</a>
-          </li>
-          <li>
-            <a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
-              href="/services" target="_top">Our Services</a>
-          </li>
-          <li>
-            <a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
-              href="/products" target="_top">Our Products</a>
-          </li>
-          <li>
-            <a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
-              href="/careers" target="_top">Careers</a>
-          </li>
-          <li>
-            <a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
-              href="#">Blogs</a>
-          </li>
-          <li>
-            <a class="text-secondary-container font-bold hover:translate-x-1 transition-transform duration-200 inline-block"
-              href="/faqs" target="_top">FAQs</a>
-          </li>
-          <li>
-            <a class="text-on-primary/80 hover:text-on-primary hover:translate-x-1 transition-transform duration-200 inline-block"
-              href="/contact" target="_top">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-      <div class="space-y-4 md:col-span-2 md:pl-12">
-        <h3 class="text-headline-md font-headline-md font-bold mb-4">Contact</h3>
-        <ul class="space-y-4 font-body-md">
-          <li class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-secondary-container shrink-0 mt-1">location_on</span>
-            <span class="text-on-primary/90">Ahmedabad, Gujarat, India.</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-secondary-container shrink-0">call</span>
-            <a class="text-on-primary/90 hover:text-secondary-container transition-colors" href="tel:+918888888888">+91
-              88888 88888</a>
-          </li>
-          <li class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-secondary-container shrink-0">mail</span>
-            <a class="text-on-primary/90 hover:text-secondary-container transition-colors"
-              href="mailto:info@ryomremedies.com">info@ryomremedies.com</a>
-          </li>
-        </ul>
-        <div class="flex gap-4 pt-4">
-          <a class="w-10 h-10 rounded-full bg-white/10 hover:bg-secondary-container flex items-center justify-center transition-colors text-white"
-            href="#">
-            <span class="material-symbols-outlined text-[20px]">share</span>
-          </a>
-          <a class="w-10 h-10 rounded-full bg-white/10 hover:bg-secondary-container flex items-center justify-center transition-colors text-white"
-            href="#">
-            <span class="material-symbols-outlined text-[20px]">language</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="border-t border-on-primary/10 py-6 text-center text-on-primary/60 font-caption text-caption">
-      © Copyright 2026 Ryom Remedies Pvt. Ltd. All Rights Reserved.
-    </div>
-  </footer>
-  <script>
-    // Simple logic to change plus to minus on accordion toggle is handled via CSS and the 'active' class
-    // The script here ensures only one accordion can be fully open if desired, but for FAQs, multiple open is often fine.
-    document.querySelectorAll(".accordion-item button").forEach((button) => {
-      button.addEventListener("click", () => {
-        const item = button.parentElement;
-        const icon = button.querySelector(".toggle-icon");
+    </footer>
+    <script>
+      // Simple logic to change plus to minus on accordion toggle is handled via CSS and the 'active' class
+      // The script here ensures only one accordion can be fully open if desired, but for FAQs, multiple open is often fine.
+      document.querySelectorAll(".accordion-item button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.parentElement;
+          const icon = button.querySelector(".toggle-icon");
 
-        // Toggle active class on the clicked item
-        // item.classList.toggle('active'); // already handled inline for simplicity
+          // Toggle active class on the clicked item
+          // item.classList.toggle('active'); // already handled inline for simplicity
 
-        // Change icon based on state
-        if (item.classList.contains("active")) {
-          icon.textContent = "expand_more";
-          icon.style.transform = "rotate(180deg)";
-        } else {
-          icon.textContent = "add";
-          icon.style.transform = "rotate(0deg)";
-        }
+          // Change icon based on state
+          if (item.classList.contains("active")) {
+            icon.textContent = "expand_more";
+            icon.style.transform = "rotate(180deg)";
+          } else {
+            icon.textContent = "add";
+            icon.style.transform = "rotate(0deg)";
+          }
+        });
       });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

@@ -555,8 +555,8 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
             </li>
             <li className="flex items-center gap-4">
               <Phone className="h-5 w-5 shrink-0 text-[#F5C211]" aria-hidden="true" />
-              <a href="tel:+918888888888" className="transition hover:text-[#F5C211]">
-                +91 88888 88888
+              <a href="tel:+918286901115" className="transition hover:text-[#F5C211]">
+                +91 82869 01115
               </a>
             </li>
             <li className="flex items-center gap-4">

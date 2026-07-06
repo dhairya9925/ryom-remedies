@@ -46,8 +46,8 @@ export default function ContactPage() {
             <ContactInfoCard
               icon={<Phone className="h-5 w-5" aria-hidden="true" />}
               label="Have any question?"
-              value="+91 88888 88888"
-              href="tel:+918888888888"
+              value="+91 82869 01115"
+              href="tel:+918286901115"
             />
             <ContactInfoCard
               icon={<Mail className="h-5 w-5" aria-hidden="true" />}

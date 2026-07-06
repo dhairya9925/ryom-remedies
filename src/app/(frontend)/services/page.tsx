@@ -51,7 +51,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <RyomSiteLayout activePath="/services">
-      <PageHero title="Our Services" eyebrow="B2B Pharmaceutical Solutions" image={heroImage}>
+      <PageHero title="Our Services" eyebrow="Pharmaceutical Solutions" image={heroImage}>
         <p>
           Reliable pharmaceutical support for chemists, stockists, distributors, and healthcare
           institutions.
