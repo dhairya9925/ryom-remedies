@@ -3,6 +3,7 @@ import { Lexend, Urbanist } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { Providers } from "@/components/providers";
+import { getPayload } from "@/lib/payload";
 import "leaflet/dist/leaflet.css";
 import "@/styles.css";
 
@@ -45,10 +46,22 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({ children }: { children: ReactNode }) {
+  let enableOrderNow = true;
+
+  try {
+    const payload = await getPayload();
+    const settings = await payload.findGlobal({
+      slug: "site-settings",
+    });
+    enableOrderNow = settings.enableOrderNow ?? true;
+  } catch (error) {
+    console.error("Failed to fetch site settings:", error);
+  }
+
   return (
     <div className={`${lexend.variable} ${urbanist.variable}`}>
-      <Providers>{children}</Providers>
+      <Providers enableOrderNow={enableOrderNow}>{children}</Providers>
     </div>
   );
 }

@@ -20,6 +20,8 @@ import { useState, type ReactNode } from "react";
 import { PageImageLoadGate } from "@/components/PageImageLoadGate";
 import { companyAddressLines, companyEmail } from "@/lib/company";
 
+import { useSettings } from "./providers";
+
 export type RoutePath =
   | "/"
   | "/about"
@@ -66,6 +68,7 @@ export function RyomSiteLayout({
 }
 
 function SiteHeader({ activePath }: { activePath: RoutePath }) {
+  const { enableOrderNow } = useSettings();
   const [isOpen, setIsOpen] = useState(false);
   const getHeaderNavLabel = (item: (typeof navItems)[number]) =>
     item.to === "/products" ? "Our Products" : item.label;
@@ -99,13 +102,15 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            href="/products"
-            className="hidden items-center gap-2 rounded-lg bg-[#F39517] px-5 py-2 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9820e] md:inline-flex"
-          >
-            <ShoppingBag className="h-4 w-4" aria-hidden="true" />
-            Order Now
-          </Link>
+          {enableOrderNow && (
+            <Link
+              href="/products"
+              className="hidden items-center gap-2 rounded-lg bg-[#F39517] px-5 py-2 text-sm font-bold text-[#173f39] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d9820e] md:inline-flex"
+            >
+              <ShoppingBag className="h-4 w-4" aria-hidden="true" />
+              Order Now
+            </Link>
+          )}
           <button
             type="button"
             aria-label={isOpen ? "Close menu" : "Open menu"}

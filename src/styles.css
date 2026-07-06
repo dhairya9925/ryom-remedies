@@ -525,8 +525,7 @@
   min-height: 100vh;
   place-items: center;
   background:
-    radial-gradient(circle at center, rgba(57, 181, 163, 0.14), transparent 34rem),
-    #f8f9fa;
+    radial-gradient(circle at center, rgba(57, 181, 163, 0.14), transparent 34rem), #f8f9fa;
 }
 
 .ryom-page-loader__mark {

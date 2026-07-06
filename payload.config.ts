@@ -11,6 +11,7 @@ import { Media } from "./src/collections/Media";
 import { ProductCategories } from "./src/collections/ProductCategories";
 import { Products } from "./src/collections/Products";
 import { Users } from "./src/collections/Users";
+import { SiteSettings } from "./src/globals/SiteSettings";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -65,7 +66,7 @@ export default buildConfig({
     },
   }),
   editor: lexicalEditor(),
-  globals: [],
+  globals: [SiteSettings],
   plugins: [
     s3Storage({
       bucket: r2Config.bucket ?? "",
