@@ -53,11 +53,25 @@ const bundledProductImageUrls: Record<string, string> = {
 
 const isAbsoluteUrl = (url: string) => /^https?:\/\//i.test(url);
 
+const isConfiguredRemoteMediaUrl = (url: string) => {
+  const r2PublicUrl = process.env.NEXT_PUBLIC_R2_PUBLIC_URL;
+
+  if (!r2PublicUrl || !isAbsoluteUrl(url)) {
+    return false;
+  }
+
+  try {
+    return new URL(url).origin === new URL(r2PublicUrl).origin;
+  } catch {
+    return false;
+  }
+};
+
 const getMediaUrl = (
   image: { filename?: string | null; url?: string | null } | null,
   productSlug: string,
 ) => {
-  if (image?.url && isAbsoluteUrl(image.url)) {
+  if (image?.url && isConfiguredRemoteMediaUrl(image.url)) {
     return image.url;
   }
 
@@ -67,7 +81,7 @@ const getMediaUrl = (
     return bundledImageUrl;
   }
 
-  if (image?.url) {
+  if (image?.url && !isAbsoluteUrl(image.url)) {
     return image.url;
   }
 
