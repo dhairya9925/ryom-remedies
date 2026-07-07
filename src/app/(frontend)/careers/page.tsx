@@ -57,7 +57,7 @@ const idealTraits = [
   "A patient-first mindset with respect for compliance and ethical business practice.",
 ];
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export default async function CareersPage() {
   const openings = await getPublishedJobOpenings();

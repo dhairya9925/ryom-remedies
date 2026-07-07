@@ -2,10 +2,21 @@ import type { Metadata } from "next";
 import { Lexend, Urbanist } from "next/font/google";
 import type { ReactNode } from "react";
 
+import { unstable_cache } from "next/cache";
 import { Providers } from "@/components/providers";
 import { getPayload } from "@/lib/payload";
 import "leaflet/dist/leaflet.css";
 import "@/styles.css";
+
+const getCachedSettings = unstable_cache(
+  async () => {
+    const payload = await getPayload();
+    const settings = await payload.findGlobal({ slug: "site-settings" });
+    return { enableOrderNow: settings.enableOrderNow ?? true };
+  },
+  ["site-settings"],
+  { revalidate: 60 },
+);
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -50,11 +61,8 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   let enableOrderNow = true;
 
   try {
-    const payload = await getPayload();
-    const settings = await payload.findGlobal({
-      slug: "site-settings",
-    });
-    enableOrderNow = settings.enableOrderNow ?? true;
+    const cached = await getCachedSettings();
+    enableOrderNow = cached.enableOrderNow;
   } catch (error) {
     console.error("Failed to fetch site settings:", error);
   }

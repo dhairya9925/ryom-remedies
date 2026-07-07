@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   ArrowRight,
   BadgeInfo,
@@ -108,11 +109,12 @@ function ProductDialogCard({ product }: { product: ProductData }) {
         <DialogTrigger asChild>
           <button type="button" className="flex h-full flex-col text-left">
             <div className="relative aspect-[4/3] w-full bg-[#f3f4f5] p-6">
-              <img
+              <Image
                 src={product.image}
                 alt={`${product.name} packaging`}
-                className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
-                loading="lazy"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-contain transition duration-500 group-hover:scale-105"
               />
             </div>
             <div className="flex flex-1 flex-col border-t border-[#e1e3e4] p-6">
@@ -141,9 +143,11 @@ function ProductDialog({ product }: { product: ProductData }) {
     <DialogContent className="max-h-[88vh] w-[calc(100vw-2rem)] max-w-4xl overflow-y-auto border-0 bg-white p-0 shadow-2xl sm:rounded-lg">
       <div className="grid lg:grid-cols-[340px_1fr]">
         <div className="flex min-h-[260px] items-center justify-center bg-[#f8f9fa] p-5 lg:min-h-full">
-          <img
+          <Image
             src={product.image}
             alt={`${product.name} packaging`}
+            width={340}
+            height={300}
             className="max-h-[300px] w-full object-contain"
           />
         </div>

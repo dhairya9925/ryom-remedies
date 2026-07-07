@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -103,10 +104,13 @@ export default function HeroSlider({ slides, interval = 5000 }: HeroSliderProps)
 
       {/* ── Spinning Logo ──────────────────────────────── */}
       <div className="hero-slider__spinning-logo-container" aria-hidden="true">
-        <img
-          src="/Pneumonic Hi Res.png"
+        <Image
+          src="/pneumonic-logo.png"
+          width={128}
+          height={128}
           className="hero-slider__spinning-logo"
-          alt="Spinning Logo"
+          alt=""
+          priority
         />
       </div>
 

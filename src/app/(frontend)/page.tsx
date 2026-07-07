@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Award, FlaskConical, HeartPulse, ShieldCheck } from "lucide-react";
 import {
   ButtonLink,
@@ -37,7 +38,7 @@ const heroSlides: HeroSlide[] = [
     highlight: "Pharmaceutical Partner",
     description:
       "Ethical & Reliable Healthcare Solutions delivering high-quality, affordable medicines accessible to all.",
-    image: "/slider-1-1.png",
+    image: "/slider-1-1.webp",
     primaryCta: { label: "Explore Products", to: "/products" },
     secondaryCta: { label: "Partner With Us", to: "/contact" },
   },
@@ -91,10 +92,12 @@ export default function Index() {
       <Section tone="teal" className="pt-8 sm:pt-16">
         {/* Mobile only centered spinning logo */}
         <div className="mx-auto mb-8 flex justify-center sm:hidden">
-          <img
-            src="/Pneumonic Hi Res.png"
+          <Image
+            src="/pneumonic-logo.png"
+            width={112}
+            height={112}
             className="h-28 w-28 animate-[spin_20s_linear_infinite] opacity-95"
-            alt="Spinning Logo"
+            alt=""
           />
         </div>
         <SectionHeader

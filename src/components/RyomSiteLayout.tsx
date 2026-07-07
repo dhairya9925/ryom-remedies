@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -77,10 +78,13 @@ function SiteHeader({ activePath }: { activePath: RoutePath }) {
     <header className="sticky top-0 z-50 border-b border-[#bcc9c6]/40 bg-[#f8f9fa]/95 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center transition-transform hover:scale-[0.98]">
-          <img
+          <Image
             src="/RYOM.png"
+            width={150}
+            height={68}
             alt="Ryom Remedies Logo"
             className="h-8 w-auto object-contain sm:h-10"
+            priority
           />
         </Link>
 
@@ -393,12 +397,15 @@ export function SplitFeature({
           className="absolute -inset-3 rotate-3 rounded-2xl bg-[#d6e3e1] transition-transform duration-500 group-hover:rotate-6"
           aria-hidden="true"
         />
-        <img
-          src={image}
-          alt=""
-          className="relative z-10 h-[420px] w-full rounded-xl border border-[#e1e3e4] object-cover shadow-lg"
-          loading="lazy"
-        />
+        <div className="relative z-10 h-[420px] w-full overflow-hidden rounded-xl border border-[#e1e3e4] shadow-lg">
+          <Image
+            src={image}
+            alt=""
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover"
+          />
+        </div>
         {/* Floating Badge */}
         <div
           className="absolute -bottom-6 -right-6 z-20 flex animate-bounce items-center gap-4 rounded-xl border border-[#e1e3e4] bg-white p-4 shadow-xl"
@@ -437,11 +444,12 @@ export function ProductCard({ name, image }: { name: string; image: string }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#e1e3e4] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
       <div className="relative aspect-[4/3] bg-[#f3f4f5] p-6">
-        <img
+        <Image
           src={image}
           alt={`${name} packaging`}
-          className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
-          loading="lazy"
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-contain transition duration-500 group-hover:scale-105"
         />
       </div>
       <div className="flex flex-1 flex-col items-center border-t border-[#e1e3e4] p-6 text-center">
@@ -498,8 +506,10 @@ function SiteFooter({ activePath }: { activePath: RoutePath }) {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:px-8 lg:grid-cols-[1.35fr_0.8fr_1fr] lg:gap-20">
         <div>
           <Link href="/" className="flex items-center">
-            <img
+            <Image
               src="/RYOM.png"
+              width={200}
+              height={91}
               alt="Ryom Remedies Logo"
               className="h-20 w-auto max-w-full object-contain sm:h-24"
             />

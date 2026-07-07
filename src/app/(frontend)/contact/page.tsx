@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "./ContactForm";
 import LeafletMap from "@/components/LeafletMapDynamic";
@@ -61,11 +62,12 @@ export default function ContactPage() {
               value={companyAddress}
               href={mapsLink}
             />
-            <img
+            <Image
               src={labImage}
+              width={600}
+              height={288}
               alt=""
               className="h-72 w-full rounded-lg object-cover shadow-sm"
-              loading="lazy"
             />
           </div>
 

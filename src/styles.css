@@ -531,22 +531,10 @@
 .ryom-page-loader__mark {
   width: clamp(5rem, 12vw, 8rem);
   height: clamp(5rem, 12vw, 8rem);
-  animation: ryom-dna-loader-spin 1.35s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation: spin-slow 20s linear infinite;
   filter: drop-shadow(0 1rem 1.75rem rgba(25, 28, 29, 0.16));
   transform-origin: center;
   will-change: transform;
-}
-
-@keyframes ryom-dna-loader-spin {
-  0% {
-    transform: perspective(28rem) rotateY(0deg) rotateZ(0deg) scale(0.96);
-  }
-  50% {
-    transform: perspective(28rem) rotateY(180deg) rotateZ(8deg) scale(1);
-  }
-  100% {
-    transform: perspective(28rem) rotateY(360deg) rotateZ(0deg) scale(0.96);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
