@@ -38,7 +38,35 @@ export type JobOpeningData = {
   externalApplicationUrl: string | null;
 };
 
-const getMediaUrl = (image: { filename?: string | null; url?: string | null } | null) => {
+const bundledProductImageUrls: Record<string, string> = {
+  "ryoalert-lc": "/products/ryoalert-lc.jpg",
+  ryocort: "/products/ryocort.jpg",
+  "ryomace-p": "/products/ryomace-p.jpg",
+  ryomentin: "/products/ryomentin.jpg",
+  "ryomentin-dry-syrup": "/products/ryomentin-dry-syrup.jpg",
+  "ryomicin-250": "/products/ryomicin-250.jpg",
+  "ryomicin-500": "/products/ryomicin-500.jpg",
+  ryopanta: "/products/ryopanta.jpg",
+  "ryopanta-dsr": "/products/ryopanta-dsr.jpg",
+  ryoset: "/products/ryoset.jpg",
+};
+
+const isAbsoluteUrl = (url: string) => /^https?:\/\//i.test(url);
+
+const getMediaUrl = (
+  image: { filename?: string | null; url?: string | null } | null,
+  productSlug: string,
+) => {
+  if (image?.url && isAbsoluteUrl(image.url)) {
+    return image.url;
+  }
+
+  const bundledImageUrl = bundledProductImageUrls[productSlug];
+
+  if (bundledImageUrl) {
+    return bundledImageUrl;
+  }
+
   if (image?.url) {
     return image.url;
   }
@@ -47,7 +75,7 @@ const getMediaUrl = (image: { filename?: string | null; url?: string | null } | 
     return `/media/${image.filename}`;
   }
 
-  return "/products/placeholder.jpg";
+  return "/RYOM.png";
 };
 
 /**
@@ -76,7 +104,7 @@ export async function getActiveProducts(): Promise<ProductData[]> {
         id: String(product.id),
         name: product.name,
         slug: product.slug,
-        image: getMediaUrl(image),
+        image: getMediaUrl(image, product.slug),
         category: category?.name ?? "Uncategorized",
         categorySlug: category?.slug ?? "uncategorized",
         packSize: product.packSize,
