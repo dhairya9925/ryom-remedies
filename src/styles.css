@@ -144,6 +144,7 @@
 
 /* ═══════════════════════════════════════════════════════════
    Hero Slider
+   
    ═══════════════════════════════════════════════════════════ */
 
 .hero-slider {
@@ -191,6 +192,7 @@
     opacity: 0;
     transform: scale(1.1) translateX(3%);
   }
+
   to {
     opacity: 0.75;
     transform: scale(1.05) translateX(0);
@@ -202,6 +204,7 @@
     opacity: 0;
     transform: scale(1.1) translateX(-3%);
   }
+
   to {
     opacity: 0.75;
     transform: scale(1.05) translateX(0);
@@ -214,12 +217,10 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(
-    to right,
-    rgba(0, 32, 28, 0.92) 0%,
-    rgba(0, 32, 28, 0.65) 45%,
-    transparent 100%
-  );
+  background: linear-gradient(to right,
+      rgba(0, 32, 28, 0.92) 0%,
+      rgba(0, 32, 28, 0.65) 45%,
+      transparent 100%);
 }
 
 /* ── Inner container ─────────────────────────────────────── */
@@ -273,6 +274,7 @@
     opacity: 0;
     transform: translateY(28px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -284,6 +286,7 @@
     opacity: 0;
     transform: translateY(-28px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -461,6 +464,7 @@
   from {
     width: 0%;
   }
+
   to {
     width: 100%;
   }
@@ -508,6 +512,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -586,6 +591,7 @@
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }
@@ -684,6 +690,7 @@
    ═══════════════════════════════════════════════════════════ */
 
 @media (hover: none) {
+
   /* On touch-only devices, disable the sticky translate and shadow hover styles */
   [class*="hover:-translate-y-"]:hover,
   [class*="hover:shadow-"]:hover {
